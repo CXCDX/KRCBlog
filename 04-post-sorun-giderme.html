@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hatır Kırmızı Işık Yanıp Sönüyorsa Ne Yapmalı? | Karaca Dergi</title>
+<meta name="description" content="Karaca Hatır kahve makinesinde kırmızı ışık sorunu mu var? En sık karşılaşılan 5 nedeni ve adım adım çözümleri. Servise göndermeden önce deneyin.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bk:#1a1a1a;--warm:#2c2420;--cream:#f7f3ee;--sand:#e8e0d4;
+  --gold:#b8956a;--gold-lt:#d4b896;--gold-dk:#96764d;
+  --g50:#faf9f7;--g100:#f2f0ec;--g200:#e5e2dc;--g300:#ccc8c0;
+  --g500:#8c8279;--g700:#5c554d;--wh:#fff;
+  --red:#b83a3a;--red-lt:#fdf2f2;--red-bd:#f5d5d5;
+  --green:#2d7a4f;--green-lt:#f0faf4;--green-bd:#c6e9d4;
+  --amber:#92700a;--amber-lt:#fefbec;--amber-bd:#f5e6a3;
+  --blue:#2563eb;--blue-lt:#eff6ff;--blue-bd:#bfdbfe;
+  --serif:'Playfair Display',Georgia,'Times New Roman',serif;
+  --sans:'DM Sans',-apple-system,BlinkMacSystemFont,sans-serif;
+  --mx:1360px;--r:10px;
+  --ease:cubic-bezier(.4,0,.2,1);
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--bk);background:var(--wh);-webkit-font-smoothing:antialiased;overflow-x:hidden;line-height:1.6}
+a{color:inherit;text-decoration:none}button{font-family:inherit;cursor:pointer;border:none;background:none}img{max-width:100%;display:block;background:var(--g100)}
+.c{max-width:var(--mx);margin:0 auto;padding:0 40px}
+
+/* ══════ SHARED NAV ══════ */
+.ann{background:var(--warm);padding:9px 16px;text-align:center}
+.ann span{font-size:12px;font-weight:600;color:var(--gold-lt);letter-spacing:.04em}
+.nav{position:sticky;top:0;z-index:100;background:var(--wh);border-bottom:1px solid var(--g200);transition:box-shadow .3s}
+.nav.scrolled{box-shadow:0 2px 20px rgba(0,0,0,.06)}
+.nav-top{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:16px}
+.logo{font-family:var(--serif);font-size:26px;font-weight:700;color:var(--bk);letter-spacing:-.5px;white-space:nowrap;flex-shrink:0}
+.logo em{font-weight:400;color:var(--gold);font-size:18px;margin-left:4px;font-style:italic}
+.nav-search{display:flex;align-items:center;gap:8px;background:var(--g50);border:1px solid var(--g200);border-radius:100px;padding:8px 16px;width:100%;max-width:280px;transition:all .3s var(--ease)}
+.nav-search:focus-within{border-color:var(--gold);background:var(--wh)}
+.nav-search input{border:none;background:none;font-family:var(--sans);font-size:13px;color:var(--bk);width:100%;outline:none}
+.nav-search input::placeholder{color:var(--g500)}
+.nav-search svg{flex-shrink:0;width:16px;height:16px;color:var(--g500)}
+.nav-acts{display:flex;align-items:center;gap:4px;flex-shrink:0}
+.nav-icon{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;transition:background .2s}
+.nav-icon:hover{background:var(--g100)}
+.nav-icon svg{width:18px;height:18px;color:var(--g700)}
+.pillars{border-top:1px solid var(--g200);overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.pillars::-webkit-scrollbar{display:none}
+.pillar-row{display:flex;gap:0;min-width:max-content}
+.p-link{padding:11px 18px;font-size:12.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--g500);white-space:nowrap;position:relative;transition:color .2s}
+.p-link:hover{color:var(--bk)}
+.p-link.active{color:var(--gold-dk)}
+.p-link.active::after{content:'';position:absolute;bottom:0;left:18px;right:18px;height:2px;background:var(--gold)}
+
+/* ══════ BREADCRUMB ══════ */
+.bread{padding:16px 0;font-size:12.5px;color:var(--g500);display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.bread a{transition:color .2s}.bread a:hover{color:var(--bk)}
+.bread svg{width:12px;height:12px;color:var(--g300);flex-shrink:0}
+
+/* ══════ POST LAYOUT ══════ */
+.post-layout{display:grid;grid-template-columns:1fr 320px;gap:56px;padding-bottom:56px}
+
+/* ══════ ARTICLE ══════ */
+.post{max-width:100%}
+
+/* Status banner */
+.status-bar{display:flex;align-items:center;gap:10px;padding:12px 16px;border-radius:var(--r);margin-bottom:24px;font-size:13px;font-weight:600}
+.status-bar svg{width:18px;height:18px;flex-shrink:0}
+.status-bar.info{background:var(--blue-lt);border:1px solid var(--blue-bd);color:var(--blue)}
+.status-bar.warn{background:var(--amber-lt);border:1px solid var(--amber-bd);color:var(--amber)}
+
+/* Header */
+.post-type{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--wh);background:var(--red);padding:5px 14px;border-radius:100px;margin-bottom:14px}
+.post-type svg{width:14px;height:14px}
+.post h1{font-family:var(--serif);font-size:clamp(26px,3.5vw,40px);font-weight:700;line-height:1.15;color:var(--bk);margin-bottom:12px}
+.post-excerpt{font-size:17px;color:var(--g500);line-height:1.6;margin-bottom:20px}
+
+/* Applies-to bar */
+.applies{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.applies-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--g500);display:flex;align-items:center;gap:4px;margin-right:4px}
+.applies-chip{padding:4px 12px;border-radius:100px;font-size:12px;font-weight:600;border:1px solid var(--g200);color:var(--g700);background:var(--g50)}
+
+/* Author bar */
+.author-bar{display:flex;align-items:center;gap:14px;padding:20px 0;border-top:1px solid var(--g200);border-bottom:1px solid var(--g200);margin-bottom:32px}
+.ab-avatar{width:44px;height:44px;border-radius:50%;background:var(--sand);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;color:var(--g500);flex-shrink:0}
+.ab-info{flex:1}
+.ab-name{font-size:14px;font-weight:700;color:var(--bk)}
+.ab-role{font-size:12px;color:var(--g500)}
+.ab-date{font-size:12px;color:var(--g500);text-align:right;flex-shrink:0}
+.ab-date strong{display:block;font-weight:600;color:var(--g700)}
+
+/* TL;DR */
+.tldr{background:var(--warm);color:var(--wh);border-radius:var(--r);padding:20px 24px;margin-bottom:32px}
+.tldr-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--gold-lt);margin-bottom:6px}
+.tldr p{font-size:14px;line-height:1.6;opacity:.85;margin:0}
+
+/* Body */
+.post-body{font-size:16px;line-height:1.8;color:var(--warm)}
+.post-body h2{font-family:var(--serif);font-size:clamp(20px,2.5vw,26px);font-weight:700;color:var(--bk);margin:40px 0 16px;line-height:1.25;padding-top:8px}
+.post-body h3{font-size:18px;font-weight:700;color:var(--bk);margin:28px 0 12px}
+.post-body p{margin-bottom:18px}
+.post-body strong{color:var(--bk);font-weight:600}
+.post-body a{color:var(--gold-dk);text-decoration:underline;text-underline-offset:3px}
+
+/* Diagnostic flow card */
+.diag{border-radius:var(--r);border:1px solid var(--g200);overflow:hidden;margin:28px 0}
+.diag-header{background:var(--warm);color:var(--wh);padding:16px 20px;display:flex;align-items:center;gap:10px}
+.diag-header svg{width:20px;height:20px;color:var(--gold-lt);flex-shrink:0}
+.diag-header h3{font-size:15px;font-weight:700;margin:0}
+.diag-body{padding:0}
+.diag-row{display:flex;align-items:stretch;border-bottom:1px solid var(--g200)}
+.diag-row:last-child{border-bottom:none}
+.diag-symptom{flex:1;padding:14px 20px;font-size:14px;font-weight:600;color:var(--bk);display:flex;align-items:center;gap:8px;border-right:1px solid var(--g200)}
+.diag-symptom svg{width:16px;height:16px;flex-shrink:0}
+.diag-cause{flex:1;padding:14px 20px;font-size:13px;color:var(--g700)}
+.diag-fix{flex:1;padding:14px 20px;font-size:13px;color:var(--green);font-weight:600;display:flex;align-items:center;gap:6px;cursor:pointer;transition:background .2s}
+.diag-fix:hover{background:var(--green-lt)}
+.diag-fix svg{width:14px;height:14px;flex-shrink:0}
+.diag-labels{display:flex;border-bottom:2px solid var(--g200)}
+.diag-label{flex:1;padding:10px 20px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--g500)}
+.diag-label:not(:last-child){border-right:1px solid var(--g200)}
+
+/* Solution step cards */
+.solution{border-radius:var(--r);border:1px solid var(--g200);margin:24px 0;overflow:hidden;transition:border-color .2s}
+.solution:hover{border-color:var(--g300)}
+.sol-header{display:flex;align-items:center;gap:12px;padding:16px 20px;background:var(--g50);border-bottom:1px solid var(--g200);cursor:pointer}
+.sol-num{width:32px;height:32px;border-radius:50%;background:var(--warm);color:var(--wh);font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.sol-header h3{font-size:16px;font-weight:700;flex:1;margin:0}
+.sol-diff{font-size:11px;font-weight:600;padding:3px 10px;border-radius:100px;flex-shrink:0}
+.diff-easy{background:var(--green-lt);color:var(--green);border:1px solid var(--green-bd)}
+.diff-medium{background:var(--amber-lt);color:var(--amber);border:1px solid var(--amber-bd)}
+.diff-hard{background:var(--red-lt);color:var(--red);border:1px solid var(--red-bd)}
+.sol-body{padding:20px}
+.sol-body p{font-size:14px;line-height:1.7;color:var(--g700);margin-bottom:12px}
+.sol-steps{counter-reset:solstep;list-style:none;margin:0;padding:0}
+.sol-steps li{counter-increment:solstep;padding:10px 0;border-bottom:1px solid var(--g100);font-size:14px;line-height:1.6;display:flex;gap:10px;color:var(--warm)}
+.sol-steps li:last-child{border-bottom:none}
+.sol-steps li::before{content:counter(solstep) ".";font-weight:700;color:var(--gold-dk);min-width:20px;flex-shrink:0}
+
+/* Alert boxes */
+.alert{display:flex;gap:12px;padding:14px 16px;border-radius:var(--r);margin:20px 0;font-size:13.5px;line-height:1.6}
+.alert svg{width:18px;height:18px;flex-shrink:0;margin-top:2px}
+.alert-warn{background:var(--amber-lt);border:1px solid var(--amber-bd);color:var(--amber)}
+.alert-danger{background:var(--red-lt);border:1px solid var(--red-bd);color:var(--red)}
+.alert-success{background:var(--green-lt);border:1px solid var(--green-bd);color:var(--green)}
+.alert-info{background:var(--blue-lt);border:1px solid var(--blue-bd);color:var(--blue)}
+
+/* When to call service */
+.service-box{background:var(--red-lt);border:2px solid var(--red-bd);border-radius:var(--r);padding:24px;margin:32px 0}
+.service-box h3{font-size:16px;font-weight:700;color:var(--red);margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.service-box h3 svg{width:18px;height:18px}
+.service-box ul{list-style:none;margin:0;padding:0}
+.service-box li{padding:6px 0;font-size:14px;color:var(--warm);display:flex;align-items:baseline;gap:8px}
+.service-box li::before{content:'✕';color:var(--red);font-weight:700;font-size:12px;flex-shrink:0}
+.service-cta{display:inline-flex;align-items:center;gap:8px;margin-top:16px;padding:10px 20px;border-radius:8px;background:var(--red);color:var(--wh);font-size:13px;font-weight:700;transition:background .2s}
+.service-cta:hover{background:#963232}
+
+/* Inline product */
+.inline-prod{display:flex;gap:16px;align-items:center;background:var(--g50);border:1px solid var(--g200);border-radius:var(--r);padding:16px;margin:28px 0;transition:all .25s var(--ease);cursor:pointer}
+.inline-prod:hover{border-color:var(--gold);box-shadow:0 4px 20px rgba(184,149,106,.1)}
+.inline-prod-img{width:80px;height:80px;border-radius:8px;overflow:hidden;background:var(--wh);flex-shrink:0;display:flex;align-items:center;justify-content:center}
+.inline-prod-img img{max-width:100%;max-height:100%;object-fit:contain}
+.inline-prod-body{flex:1;min-width:0}
+.inline-prod-tag{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--gold-dk);margin-bottom:2px}
+.inline-prod-name{font-size:14px;font-weight:700;margin-bottom:2px}
+.inline-prod-price{font-size:13px;color:var(--g500)}
+.inline-prod-cta{font-size:12px;font-weight:700;color:var(--gold-dk);white-space:nowrap;flex-shrink:0}
+
+/* FAQ */
+.faq{margin:40px 0;border-top:2px solid var(--bk);padding-top:24px}
+.faq h2{font-family:var(--serif);font-size:22px;font-weight:700;margin-bottom:16px}
+.faq-item{border-bottom:1px solid var(--g200)}
+.faq-q{display:flex;align-items:center;justify-content:space-between;padding:16px 0;font-size:15px;font-weight:600;cursor:pointer;gap:12px;width:100%;text-align:left;color:var(--bk);transition:color .2s}
+.faq-q:hover{color:var(--gold-dk)}
+.faq-q svg{width:18px;height:18px;flex-shrink:0;transition:transform .3s;color:var(--g500)}
+.faq-item.open .faq-q svg{transform:rotate(180deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s var(--ease)}
+.faq-item.open .faq-a{max-height:300px}
+.faq-a p{font-size:14px;color:var(--g700);line-height:1.7;padding:0 0 16px}
+
+/* Tags */
+.post-tags{display:flex;flex-wrap:wrap;gap:8px;margin:32px 0;padding-top:24px;border-top:1px solid var(--g200)}
+.post-tag{padding:6px 14px;border-radius:100px;font-size:12px;font-weight:600;border:1px solid var(--g200);color:var(--g700);transition:all .2s}
+.post-tag:hover{border-color:var(--gold);color:var(--gold-dk)}
+
+/* ══════ SIDEBAR ══════ */
+.sidebar{position:sticky;top:80px;align-self:start;display:flex;flex-direction:column;gap:24px}
+.sb-hd{font-size:13px;font-weight:800;color:var(--bk);text-transform:uppercase;letter-spacing:.07em;margin-bottom:14px;padding-bottom:10px;border-bottom:2px solid var(--bk)}
+.toc a{display:block;padding:8px 0;font-size:13px;color:var(--g500);border-bottom:1px solid var(--g100);transition:all .2s}
+.toc a:hover,.toc a.active{color:var(--bk);padding-left:6px}
+.toc a.active{color:var(--gold-dk);font-weight:600;border-left:2px solid var(--gold);padding-left:12px}
+.sb-prod{border-radius:var(--r);border:1px solid var(--g200);overflow:hidden;background:var(--g50);transition:all .25s var(--ease)}
+.sb-prod:hover{border-color:var(--gold);box-shadow:0 4px 20px rgba(184,149,106,.12)}
+.sb-prod-vis{aspect-ratio:4/3;background:var(--wh);display:flex;align-items:center;justify-content:center;padding:20px}
+.sb-prod-vis img{max-height:100%;max-width:100%;object-fit:contain}
+.sb-prod-bd{padding:16px}
+.sb-prod-tag{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--gold-dk);margin-bottom:4px}
+.sb-prod-name{font-size:14.5px;font-weight:700;line-height:1.3;margin-bottom:6px}
+.sb-prod-stars{font-size:12px;color:#d4a017;margin-bottom:6px}
+.sb-prod-price{font-size:17px;font-weight:800;color:var(--bk);margin-bottom:3px}
+.sb-prod-inst{font-size:11px;color:var(--g500);margin-bottom:12px}
+.sb-prod-cta{display:block;text-align:center;padding:10px;border-radius:8px;background:var(--warm);color:var(--wh);font-size:13px;font-weight:700;transition:all .2s var(--ease)}
+.sb-prod-cta:hover{background:var(--gold)}
+
+/* Related links */
+.sb-related a{display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--g100);font-size:13px;color:var(--g700);transition:all .2s}
+.sb-related a:hover{color:var(--bk);padding-left:4px}
+.sb-related a span{font-size:11px;color:var(--g500)}
+
+.sb-nl{border-radius:var(--r);padding:24px;background:var(--warm);color:var(--wh)}
+.sb-nl h4{font-family:var(--serif);font-size:18px;font-weight:600;margin-bottom:6px}
+.sb-nl p{font-size:12px;color:rgba(255,255,255,.55);margin-bottom:14px;line-height:1.5}
+.sb-nl input{width:100%;padding:10px 12px;border-radius:8px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.06);color:var(--wh);font-family:var(--sans);font-size:13px;outline:none;margin-bottom:8px}
+.sb-nl input::placeholder{color:rgba(255,255,255,.3)}
+.sb-nl input:focus{border-color:var(--gold)}
+.sb-nl button{width:100%;padding:10px;border-radius:8px;background:var(--gold);color:var(--wh);font-size:13px;font-weight:700;transition:background .2s}
+.sb-nl button:hover{background:var(--gold-lt)}
+
+/* ══════ FOOTER ══════ */
+.ft{background:var(--g50);border-top:1px solid var(--g200);padding:48px 0 0}
+.ft-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;padding-bottom:32px;border-bottom:1px solid var(--g200)}
+.ft-brand{font-family:var(--serif);font-size:22px;font-weight:700;margin-bottom:12px}
+.ft-brand em{color:var(--gold);font-style:italic;font-weight:400;font-size:16px}
+.ft-desc{font-size:13px;color:var(--g500);line-height:1.6;max-width:280px}
+.ft-col-title{font-size:12px;font-weight:800;color:var(--bk);text-transform:uppercase;letter-spacing:.06em;margin-bottom:12px}
+.ft-col a{display:block;font-size:13px;color:var(--g500);padding:3px 0;transition:color .2s}.ft-col a:hover{color:var(--bk)}
+.ft-bottom{display:flex;justify-content:space-between;align-items:center;padding:20px 0;flex-wrap:wrap;gap:12px}
+.ft-copy{font-size:11.5px;color:var(--g500)}
+.ft-links{display:flex;gap:20px;flex-wrap:wrap}
+.ft-links a{font-size:12px;color:var(--g500)}.ft-links a:hover{color:var(--bk)}
+
+/* ══════ RESPONSIVE ══════ */
+@media(max-width:1100px){
+  .post-layout{grid-template-columns:1fr;gap:32px}
+  .sidebar{position:static;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+}
+@media(max-width:768px){
+  .c{padding:0 16px}
+  .diag-row{flex-direction:column}
+  .diag-symptom,.diag-cause,.diag-fix{border-right:none;border-bottom:1px solid var(--g100)}
+  .diag-labels{display:none}
+  .ft-grid{grid-template-columns:1fr 1fr;gap:24px}
+  .sidebar{grid-template-columns:1fr}
+  .inline-prod{flex-direction:column;align-items:flex-start}
+  .nav-search{max-width:180px}
+}
+@media(max-width:480px){
+  .ft-grid{grid-template-columns:1fr}
+  .nav-search{display:none}
+  .applies{flex-direction:column;gap:6px}
+}
+</style>
+</head>
+<body>
+
+<!-- ANN + NAV -->
+<div class="ann"><span>Tüm Siparişlerde Ücretsiz Kargo · 50. Yıl Özel Koleksiyonları Satışta</span></div>
+<nav class="nav" id="nav"><div class="c">
+  <div class="nav-top">
+    <a href="/" class="logo">Karaca <em>Dergi</em></a>
+    <div class="nav-search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input type="text" placeholder="Tarif, rehber veya ilham ara...">
+    </div>
+    <div class="nav-acts">
+      <a class="nav-icon" href="/hesap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></a>
+      <a class="nav-icon" href="/sepet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg></a>
+    </div>
+  </div>
+  <div class="pillars"><div class="pillar-row">
+    <a class="p-link" href="#">Ana Sayfa</a>
+    <a class="p-link" href="#">Mutfak & Pişirme</a>
+    <a class="p-link" href="#">Sofra & Sunum</a>
+    <a class="p-link" href="#">Kahve & Çay</a>
+    <a class="p-link" href="#">Küçük Ev Aletleri</a>
+    <a class="p-link" href="#">Ev & Yaşam</a>
+    <a class="p-link active" href="#">Bakım & Destek</a>
+    <a class="p-link" href="#">Karaca Hikâyesi</a>
+    <a class="p-link" href="#">Yaşam Kılavuzları</a>
+  </div></div>
+</div></nav>
+
+<!-- BREADCRUMB -->
+<section><div class="c">
+  <div class="bread">
+    <a href="#">Dergi</a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+    <a href="#">Bakım & Destek</a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+    <a href="#">Kahve Makinesi</a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+    <span style="color:var(--bk);font-weight:600">Hatır Kırmızı Işık</span>
+  </div>
+</div></section>
+
+<!-- POST LAYOUT -->
+<section><div class="c">
+<div class="post-layout">
+
+<!-- ════════ ARTICLE ════════ -->
+<article class="post">
+
+  <!-- Type badge -->
+  <div class="post-type">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+    Sorun Giderme
+  </div>
+
+  <h1>Hatır Kahve Makinesi: Kırmızı Işık Yanıp Sönüyorsa Ne Yapmalı?</h1>
+  <p class="post-excerpt">En sık karşılaşılan 5 Hatır kırmızı ışık nedeni ve adım adım çözümleri. Çoğu durumda servise göndermeden kendiniz çözebilirsiniz.</p>
+
+  <!-- Applies to -->
+  <div class="applies">
+    <span class="applies-label">Geçerli modeller:</span>
+    <span class="applies-chip">Hatır Hüps</span>
+    <span class="applies-chip">Hatır Mod</span>
+    <span class="applies-chip">Hatır Barista</span>
+    <span class="applies-chip">Hatır Plus</span>
+    <span class="applies-chip">Hatır OK001/OK002</span>
+  </div>
+
+  <!-- Author -->
+  <div class="author-bar">
+    <div class="ab-avatar">TD</div>
+    <div class="ab-info">
+      <div class="ab-name">Karaca Teknik Destek</div>
+      <div class="ab-role">Yetkili Servis Mühendisliği Ekibi</div>
+    </div>
+    <div class="ab-date">
+      <strong>26 Şubat 2026</strong>
+      Güncelleme: 26 Şub 2026
+    </div>
+  </div>
+
+  <!-- TL;DR -->
+  <div class="tldr">
+    <div class="tldr-label">Hızlı Cevap</div>
+    <p>Hatır'da kırmızı ışık genellikle kireç birikimi, su haznesi oturma sorunu veya aşırı ısınma korumasından kaynaklanır. İlk adım: cihazı fişten çekin, 10 dakika bekletin, su haznesini çıkarıp tekrar oturtun. Sorun devam ediyorsa aşağıdaki tanı tablosuna bakın.</p>
+  </div>
+
+  <!-- Info alert -->
+  <div class="alert alert-info">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+    <div>Bu rehber Karaca yetkili servis mühendisliği ekibi tarafından hazırlanmıştır. Garanti kapsamındaki cihazlar için müdahale öncesi <a href="#" style="color:var(--blue);text-decoration:underline">garanti koşullarını</a> kontrol edin.</div>
+  </div>
+
+  <div class="post-body">
+    <h2 id="tani">Hızlı Tanı Tablosu</h2>
+    <p>Kırmızı ışığın davranışına göre sorunun kaynağını belirleyin:</p>
+  </div>
+
+  <!-- Diagnostic table -->
+  <div class="diag">
+    <div class="diag-header">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+      <h3>Belirtiye Göre Tanı</h3>
+    </div>
+    <div class="diag-labels">
+      <div class="diag-label">Belirti</div>
+      <div class="diag-label">Olası Neden</div>
+      <div class="diag-label">Çözüm</div>
+    </div>
+    <div class="diag-body">
+      <div class="diag-row">
+        <div class="diag-symptom"><svg viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2"><circle cx="12" cy="12" r="4"/></svg> Sürekli kırmızı yanıyor</div>
+        <div class="diag-cause">Su haznesi düzgün oturmuyor veya boş</div>
+        <div class="diag-fix"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg> Çözüm 1'e git</div>
+      </div>
+      <div class="diag-row">
+        <div class="diag-symptom"><svg viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="2"><circle cx="12" cy="12" r="4"/></svg> Hızlı yanıp sönüyor</div>
+        <div class="diag-cause">Aşırı ısınma koruması devreye girmiş</div>
+        <div class="diag-fix"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg> Çözüm 2'ye git</div>
+      </div>
+      <div class="diag-row">
+        <div class="diag-symptom"><svg viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2"><circle cx="12" cy="12" r="4"/></svg> Yavaş yanıp sönüyor</div>
+        <div class="diag-cause">Kireç birikimi; iç boruları tıkamış</div>
+        <div class="diag-fix"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg> Çözüm 3'e git</div>
+      </div>
+      <div class="diag-row">
+        <div class="diag-symptom"><svg viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2"><circle cx="12" cy="12" r="4"/></svg> Pişirme ortasında kırmızı</div>
+        <div class="diag-cause">Cezve sensörü kirlendi veya arızalı</div>
+        <div class="diag-fix"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg> Çözüm 4'e git</div>
+      </div>
+      <div class="diag-row">
+        <div class="diag-symptom"><svg viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2"><circle cx="12" cy="12" r="4"/></svg> Hiç açılmıyor + kırmızı</div>
+        <div class="diag-cause">Elektrik/sigorta sorunu veya kart arızası</div>
+        <div class="diag-fix"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg> Çözüm 5'e git</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="post-body">
+
+    <!-- SOLUTION 1 -->
+    <h2 id="cozum1">Çözüm 1: Su Haznesi Kontrolü</h2>
+  </div>
+  <div class="solution">
+    <div class="sol-header">
+      <div class="sol-num">1</div>
+      <h3>Su Haznesi Düzgün Oturmuyor</h3>
+      <span class="sol-diff diff-easy">Kolay</span>
+    </div>
+    <div class="sol-body">
+      <p>En sık karşılaşılan neden. Hazne tam oturmadığında güvenlik sensörü cihazın çalışmasını engeller.</p>
+      <ol class="sol-steps">
+        <li>Cihazı kapatın ve fişini çekin.</li>
+        <li>Su haznesini tamamen çıkarın.</li>
+        <li>Hazne oturma bölgesini kuru bir bezle silin. Kireç kalıntısı veya nem olabilir.</li>
+        <li>Hazneye temiz su doldurun (minimum çizgisinin üzerinde).</li>
+        <li>Hazneyi yerine oturtun; "klik" sesi gelene kadar bastırın.</li>
+        <li>Cihazı çalıştırın. Kırmızı ışık sönmüş olmalıdır.</li>
+      </ol>
+      <div class="alert alert-warn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        <div>Hazneyi yerine oturtmadan cihazı asla çalıştırmayın. Isıtma elemanı kuru çalışırsa kalıcı hasar oluşabilir.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="post-body">
+    <h2 id="cozum2">Çözüm 2: Aşırı Isınma Resetleme</h2>
+  </div>
+  <div class="solution">
+    <div class="sol-header">
+      <div class="sol-num">2</div>
+      <h3>Aşırı Isınma Koruması Devrede</h3>
+      <span class="sol-diff diff-easy">Kolay</span>
+    </div>
+    <div class="sol-body">
+      <p>Hatır, arka arkaya çok fazla pişirme yapıldığında veya havalandırma delikleri tıkandığında aşırı ısınma korumasını devreye sokar.</p>
+      <ol class="sol-steps">
+        <li>Cihazı kapatın ve fişini çekin.</li>
+        <li>En az 15 dakika soğumasını bekleyin.</li>
+        <li>Cihazın altındaki ve arkasındaki havalandırma deliklerini kontrol edin. Toz varsa yumuşak fırçayla temizleyin.</li>
+        <li>Cihazı düz ve hava alabilen bir yüzeye yerleştirin. Duvara yakın veya kapalı dolap içi kullanmayın.</li>
+        <li>Fişe takıp tekrar çalıştırın.</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="post-body">
+    <h2 id="cozum3">Çözüm 3: Kireç Temizleme</h2>
+  </div>
+  <div class="solution">
+    <div class="sol-header">
+      <div class="sol-num">3</div>
+      <h3>Kireç Birikimi Temizliği</h3>
+      <span class="sol-diff diff-medium">Orta</span>
+    </div>
+    <div class="sol-body">
+      <p>İstanbul, Ankara ve sert sulu bölgelerde en yaygın ikinci neden. Kireç, iç boruları tıkayarak su akışını engelliyor ve sensörü tetikliyor.</p>
+      <ol class="sol-steps">
+        <li>Su haznesine 1 bardak su + 1 yemek kaşığı beyaz sirke (veya 1 çay kaşığı sitrik asit) karışımı koyun.</li>
+        <li>Cezveyi yerleştirmeden cihazı çalıştırın; sıvının kaynama noktasına gelmesini bekleyin.</li>
+        <li>İşlem bittiğinde karışımı dökün. Saf su ile 2 kez daha aynı işlemi tekrarlayın (durulamak için).</li>
+        <li>Cezve altındaki ısıtma plakasını nemli, yumuşak bezle silin. Metal aletler kullanmayın.</li>
+        <li>Normal şekilde bir deneme pişirmesi yapın.</li>
+      </ol>
+      <div class="alert alert-success">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        <div><strong>Önleme:</strong> Ayda 1 kez kireç temizliği yaparsanız bu sorunla hiç karşılaşmazsınız. Filtrelenmiş su kullanmak da kireç birikimini %70'e kadar azaltır.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="post-body">
+    <h2 id="cozum4">Çözüm 4: Sensör Temizliği</h2>
+  </div>
+  <div class="solution">
+    <div class="sol-header">
+      <div class="sol-num">4</div>
+      <h3>Cezve Sensörünü Temizleme</h3>
+      <span class="sol-diff diff-medium">Orta</span>
+    </div>
+    <div class="sol-body">
+      <p>Cezve ile cihaz arasındaki temas noktalarında kahve kalıntısı veya kireç birikimi sensör okumasını bozar.</p>
+      <ol class="sol-steps">
+        <li>Cihazı kapatın, fişini çekin ve tamamen soğumasını bekleyin.</li>
+        <li>Cezveyi çıkarın. Cezvenin alt kısmındaki metal temas noktalarını nemli bez + az miktar bulaşık deterjanıyla silin.</li>
+        <li>Cihaz içindeki cezve oturma bölgesini ve sensör noktasını (ortadaki küçük metal çıkıntı) pamuklu çubukla temizleyin.</li>
+        <li>Her iki yüzeyi de kuru bezle kurulayın.</li>
+        <li>Cezveyi oturtup test edin.</li>
+      </ol>
+      <div class="alert alert-warn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        <div>Sensör bölgesine asla su dökmeyiz veya cihazın içine sıvı girmesine izin vermeyin. Sadece nemli bez veya pamuklu çubuk kullanın.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="post-body">
+    <h2 id="cozum5">Çözüm 5: Elektrik Kontrolü</h2>
+  </div>
+  <div class="solution">
+    <div class="sol-header">
+      <div class="sol-num">5</div>
+      <h3>Elektrik ve Sigorta Kontrolü</h3>
+      <span class="sol-diff diff-easy">Kolay</span>
+    </div>
+    <div class="sol-body">
+      <p>Cihaz hiç açılmıyor ve sadece kırmızı ışık geliyorsa sorun cihazda değil, elektrik beslemesinde olabilir.</p>
+      <ol class="sol-steps">
+        <li>Fişi çıkarın. Farklı bir prize takın (aynı prizde başka bir cihaz çalışıyor mu kontrol edin).</li>
+        <li>Uzatma kablosu kullanıyorsanız doğrudan duvardaki prize takın.</li>
+        <li>Kabloda gözle görülür hasar (ezilme, yırtılma, karartı) olup olmadığını kontrol edin.</li>
+        <li>Prizler çalışıyor, kablo sağlam ama cihaz yine açılmıyorsa: elektronik kart arızası muhtemeldir. Servis gerekir.</li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- When to call service -->
+  <div class="service-box">
+    <h3>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+      Bu Durumlarda Servise Başvurun
+    </h3>
+    <ul>
+      <li>Yukarıdaki 5 çözümü denedikten sonra sorun devam ediyorsa</li>
+      <li>Cihazdan yanık kokusu geliyorsa</li>
+      <li>Kırmızı ışık + turuncu ışık aynı anda yanıyorsa</li>
+      <li>Kabloda fiziksel hasar varsa</li>
+      <li>Cihaz garanti kapsamındaysa (müdahale garanti kaybına neden olabilir)</li>
+    </ul>
+    <a href="#" class="service-cta">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3"/></svg>
+      Servis Talebi Oluştur →
+    </a>
+  </div>
+
+  <!-- Inline product -->
+  <a href="#" class="inline-prod">
+    <div class="inline-prod-img">
+      <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="80" height="80" rx="8" fill="#f7f3ee"/>
+        <rect x="25" y="18" width="30" height="38" rx="4" fill="#e8e0d4" stroke="#b8956a" stroke-width="1.5"/>
+        <rect x="30" y="12" width="20" height="8" rx="3" fill="#e8e0d4" stroke="#b8956a" stroke-width="1.5"/>
+        <circle cx="40" cy="37" r="6" fill="#b8956a" opacity=".3"/>
+        <circle cx="40" cy="37" r="3" fill="#b8956a" opacity=".5"/>
+        <rect x="22" y="56" width="36" height="6" rx="3" fill="#e8e0d4" stroke="#b8956a" stroke-width="1"/>
+        <text x="40" y="72" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="7" font-weight="600" fill="#b8956a">HATIR HÜPS</text>
+      </svg>
+    </div>
+    <div class="inline-prod-body">
+      <div class="inline-prod-tag">Bu Yazıdaki Ürün</div>
+      <div class="inline-prod-name">Hatır Hüps Sütlü Türk Kahve Makinesi</div>
+      <div class="inline-prod-price">1.399 TL · 6 Taksit × 233 TL</div>
+    </div>
+    <span class="inline-prod-cta">İncele →</span>
+  </a>
+
+  <!-- FAQ -->
+  <div class="faq">
+    <h2>Sıkça Sorulan Sorular</h2>
+    <div class="faq-item open">
+      <button class="faq-q">Hatır'ın kireç temizliği ne sıklıkla yapılmalı?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+      <div class="faq-a"><p>Sert sulu bölgelerde (İstanbul, Ankara, İzmir) ayda 1 kez, yumuşak sulu bölgelerde 2 ayda 1 kez yeterlidir. Filtrelenmiş su kullanıyorsanız 3 ayda 1 kez yapabilirsiniz.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Sirke yerine ne kullanabilirim?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+      <div class="faq-a"><p>Sitrik asit (limon tuzu) en etkili alternatiftir: 1 çay kaşığı sitrik asit + 1 bardak su. Özel kireç çözücü tabletler de kullanılabilir. Asla çamaşır suyu veya güçlü kimyasal temizleyiciler kullanmayın.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Garanti kapsamında mı bu sorun?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+      <div class="faq-a"><p>Kireç birikimi ve kullanım kaynaklı sorunlar garanti kapsamı dışındadır. Ancak elektronik kart arızası ve üretim kaynaklı sensör sorunları 2 yıl garanti kapsamındadır. Şüphe durumunda yetkili servise başvurun.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Su kalitesi gerçekten fark yaratıyor mu?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+      <div class="faq-a"><p>Evet, dramatik fark yaratır. Sert su (İstanbul şebeke suyu ~25°dH) ayda kireç temizliği gerektirir. Filtrelenmiş veya düşük mineralli su kullanmak kireç birikimini %70'e kadar azaltır ve cihaz ömrünü uzatır.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Hatır Hüps ile Hatır Mod aynı sorun giderme adımlarını mı kullanır?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+      <div class="faq-a"><p>Evet, tüm Hatır serisi (Hüps, Mod, Barista, Plus) aynı ısıtma ve sensör altyapısını kullanır. Bu rehberdeki tüm çözümler tüm modellere uygulanabilir.</p></div>
+    </div>
+  </div>
+
+  <!-- Tags -->
+  <div class="post-tags">
+    <a href="#" class="post-tag">Hatır</a>
+    <a href="#" class="post-tag">Sorun Giderme</a>
+    <a href="#" class="post-tag">Kırmızı Işık</a>
+    <a href="#" class="post-tag">Kireç Temizleme</a>
+    <a href="#" class="post-tag">Kahve Makinesi</a>
+    <a href="#" class="post-tag">Bakım</a>
+  </div>
+
+</article>
+
+<!-- ════════ SIDEBAR ════════ -->
+<aside class="sidebar">
+
+  <!-- TOC -->
+  <div>
+    <div class="sb-hd">İçindekiler</div>
+    <div class="toc">
+      <a href="#tani" class="active">Hızlı Tanı Tablosu</a>
+      <a href="#cozum1">1. Su Haznesi Kontrolü</a>
+      <a href="#cozum2">2. Aşırı Isınma Resetleme</a>
+      <a href="#cozum3">3. Kireç Temizleme</a>
+      <a href="#cozum4">4. Sensör Temizliği</a>
+      <a href="#cozum5">5. Elektrik Kontrolü</a>
+      <a href="#">Servise Ne Zaman Başvurulur</a>
+      <a href="#">SSS</a>
+    </div>
+  </div>
+
+  <!-- Product -->
+  <div>
+    <div class="sb-hd">İlgili Ürün</div>
+    <div class="sb-prod">
+      <div class="sb-prod-vis">
+        <svg width="200" height="150" viewBox="0 0 200 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="200" height="150" fill="#ffffff"/>
+          <rect x="65" y="20" width="70" height="80" rx="6" fill="#f7f3ee" stroke="#b8956a" stroke-width="2"/>
+          <rect x="75" y="8" width="50" height="16" rx="5" fill="#f7f3ee" stroke="#b8956a" stroke-width="2"/>
+          <circle cx="100" cy="60" r="14" fill="#b8956a" opacity=".15"/>
+          <circle cx="100" cy="60" r="7" fill="#b8956a" opacity=".3"/>
+          <rect x="55" y="100" width="90" height="12" rx="6" fill="#f7f3ee" stroke="#b8956a" stroke-width="1.5"/>
+          <text x="100" y="132" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="11" font-weight="700" fill="#b8956a">HATIR HÜPS</text>
+          <text x="100" y="144" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="8" fill="#8c8279">Cherry Red</text>
+        </svg>
+      </div>
+      <div class="sb-prod-bd">
+        <div class="sb-prod-tag">Türk Kahve Makinesi</div>
+        <div class="sb-prod-name">Hatır Hüps Sütlü Türk Kahve Makinesi</div>
+        <div class="sb-prod-stars">★★★★☆ <span style="color:var(--g500);font-size:10px">(1.284)</span></div>
+        <div class="sb-prod-price">1.399 TL</div>
+        <div class="sb-prod-inst">6 Taksit × 233 TL</div>
+        <a href="#" class="sb-prod-cta">Ürünü İncele →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Related guides -->
+  <div>
+    <div class="sb-hd">İlgili Rehberler</div>
+    <div class="sb-related">
+      <a href="#">Çaysever Kireç Temizleme Rehberi <span>3 dk</span></a>
+      <a href="#">Hatır ile Türk Kahvesi Rehberi <span>8 dk</span></a>
+      <a href="#">Hamur Yoğurma Arıza Çözümleri <span>5 dk</span></a>
+      <a href="#">Düdüklü Tencere Güvenlik Rehberi <span>6 dk</span></a>
+    </div>
+  </div>
+
+  <!-- Newsletter -->
+  <div>
+    <div class="sb-nl">
+      <h4>Bakım Hatırlatıcısı</h4>
+      <p>Aylık bakım ipuçları ve ürün güncellemeleri.</p>
+      <input placeholder="E-posta adresiniz">
+      <button>Abone Ol</button>
+    </div>
+  </div>
+
+</aside>
+</div>
+</div></section>
+
+<!-- FOOTER -->
+<footer class="ft"><div class="c">
+  <div class="ft-grid">
+    <div><div class="ft-brand">Karaca <em>Dergi</em></div><p class="ft-desc">50 yıllık miras, binlerce tarif, yüzlerce rehber.</p></div>
+    <div class="ft-col"><div class="ft-col-title">İçerikler</div><a href="#">Tarifler</a><a href="#">Rehberler</a><a href="#">Kahve & Çay</a><a href="#">Sofra & Porselen</a><a href="#">Bakım & Destek</a></div>
+    <div class="ft-col"><div class="ft-col-title">Karaca</div><a href="#">Hakkımızda</a><a href="#">Hikâyemiz</a><a href="#">Mağazalar</a><a href="#">Kariyer</a><a href="#">İletişim</a></div>
+    <div class="ft-col"><div class="ft-col-title">Yasal</div><a href="#">KVKK Aydınlatma</a><a href="#">Çerez Politikası</a><a href="#">Kullanım Koşulları</a><a href="#">Mesafeli Satış Sözleşmesi</a></div>
+  </div>
+  <div class="ft-bottom">
+    <span class="ft-copy">© 2026 Karaca. Tüm hakları saklıdır.</span>
+    <div class="ft-links"><a href="#">Instagram</a><a href="#">YouTube</a><a href="#">Pinterest</a><a href="#">karaca.com</a></div>
+  </div>
+</div></footer>
+
+<script>
+(function(){
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var item=btn.parentElement;
+      var wasOpen=item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(function(fi){fi.classList.remove('open')});
+      if(!wasOpen) item.classList.add('open');
+    });
+  });
+  // Nav scroll
+  var nav=document.getElementById('nav');
+  window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>10)},{passive:true});
+  // TOC scroll tracking
+  var tocLinks=document.querySelectorAll('.toc a');
+  var ids=['tani','cozum1','cozum2','cozum3','cozum4','cozum5'];
+  var headings=ids.map(function(id){return document.getElementById(id)}).filter(Boolean);
+  if(headings.length){
+    window.addEventListener('scroll',function(){
+      var y=window.scrollY+120;
+      var active=0;
+      headings.forEach(function(h,i){if(h.offsetTop<=y) active=i});
+      tocLinks.forEach(function(l,i){l.classList.toggle('active',i===active)});
+    },{passive:true});
+  }
+})();
+</script>
+</body>
+</html>

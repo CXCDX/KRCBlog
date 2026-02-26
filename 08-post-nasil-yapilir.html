@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Biogranit Tencere Bakımı: Adım Adım İlk Kullanım ve Temizlik | Karaca Dergi</title>
+<meta name="description" content="Karaca Biogranit tencere ilk kullanım hazırlığı, günlük temizlik, yanık çıkarma ve ömür uzatma rehberi. 6 adımda profesyonel bakım.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bk:#1a1a1a;--warm:#2c2420;--cream:#f7f3ee;--sand:#e8e0d4;
+  --gold:#b8956a;--gold-lt:#d4b896;--gold-dk:#96764d;
+  --g50:#faf9f7;--g100:#f2f0ec;--g200:#e5e2dc;--g300:#ccc8c0;
+  --g500:#8c8279;--g700:#5c554d;--wh:#fff;
+  --green:#2d7a4f;--green-lt:#f0faf4;--green-bd:#c6e9d4;
+  --red:#b83a3a;--red-lt:#fef2f2;--red-bd:#fecaca;
+  --amber:#92700a;--amber-lt:#fefbec;--amber-bd:#f5e6a3;
+  --blue:#2563eb;--blue-lt:#eff6ff;--blue-bd:#bfdbfe;
+  --teal:#0d9488;--teal-lt:#f0fdfa;--teal-bd:#99f6e4;
+  --serif:'Playfair Display',Georgia,serif;
+  --sans:'DM Sans',-apple-system,BlinkMacSystemFont,sans-serif;
+  --mx:1360px;--r:10px;--ease:cubic-bezier(.4,0,.2,1);
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--bk);background:var(--wh);-webkit-font-smoothing:antialiased;overflow-x:hidden;line-height:1.6}
+a{color:inherit;text-decoration:none}button{font-family:inherit;cursor:pointer;border:none;background:none}
+.c{max-width:var(--mx);margin:0 auto;padding:0 40px}
+
+/* NAV */
+.ann{background:var(--warm);padding:9px 16px;text-align:center}
+.ann span{font-size:12px;font-weight:600;color:var(--gold-lt);letter-spacing:.04em}
+.nav{position:sticky;top:0;z-index:100;background:var(--wh);border-bottom:1px solid var(--g200);transition:box-shadow .3s}
+.nav.scrolled{box-shadow:0 2px 20px rgba(0,0,0,.06)}
+.nav-top{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+.logo{font-family:var(--serif);font-size:26px;font-weight:700;letter-spacing:-.5px}
+.logo em{font-weight:400;color:var(--gold);font-size:18px;margin-left:4px;font-style:italic}
+.pillars{border-top:1px solid var(--g200);overflow-x:auto;scrollbar-width:none}
+.pillars::-webkit-scrollbar{display:none}
+.pillar-row{display:flex;min-width:max-content}
+.p-link{padding:11px 18px;font-size:12.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--g500);white-space:nowrap;position:relative;transition:color .2s}
+.p-link:hover{color:var(--bk)}
+.p-link.active{color:var(--gold-dk)}
+.p-link.active::after{content:'';position:absolute;bottom:0;left:18px;right:18px;height:2px;background:var(--gold)}
+
+/* BREAD */
+.bread{padding:16px 0;font-size:12.5px;color:var(--g500);display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.bread a{transition:color .2s}.bread a:hover{color:var(--bk)}
+.bread svg{width:12px;height:12px;color:var(--g300)}
+
+/* LAYOUT */
+.post-layout{display:grid;grid-template-columns:1fr 320px;gap:56px;padding-bottom:56px}
+
+/* POST */
+.post{max-width:100%}
+.post-type{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--wh);background:var(--teal);padding:5px 14px;border-radius:100px;margin-bottom:14px}
+.post-type svg{width:14px;height:14px}
+.post h1{font-family:var(--serif);font-size:clamp(26px,3.5vw,40px);font-weight:700;line-height:1.15;margin-bottom:12px}
+.post-excerpt{font-size:17px;color:var(--g500);line-height:1.6;margin-bottom:20px}
+.author-bar{display:flex;align-items:center;gap:14px;padding:20px 0;border-top:1px solid var(--g200);border-bottom:1px solid var(--g200);margin-bottom:32px}
+.ab-avatar{width:44px;height:44px;border-radius:50%;background:var(--sand);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;color:var(--g500);flex-shrink:0}
+.ab-info{flex:1}.ab-name{font-size:14px;font-weight:700}.ab-role{font-size:12px;color:var(--g500)}
+.ab-date{font-size:12px;color:var(--g500);text-align:right}.ab-date strong{display:block;font-weight:600;color:var(--g700)}
+.tldr{background:var(--warm);color:var(--wh);border-radius:var(--r);padding:20px 24px;margin-bottom:32px}
+.tldr-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--gold-lt);margin-bottom:6px}
+.tldr p{font-size:14px;line-height:1.6;opacity:.85;margin:0}
+.post-body{font-size:16px;line-height:1.8;color:var(--warm)}
+.post-body h2{font-family:var(--serif);font-size:clamp(20px,2.5vw,26px);font-weight:700;color:var(--bk);margin:40px 0 16px}
+.post-body p{margin-bottom:18px}
+.post-body strong{color:var(--bk);font-weight:600}
+
+/* ═══ STEP CARDS ═══ */
+.step{margin:24px 0;border-radius:var(--r);border:1px solid var(--g200);overflow:hidden;transition:border-color .3s}
+.step:hover{border-color:var(--gold)}
+.step-head{display:flex;align-items:center;gap:14px;padding:18px 24px;background:var(--g50);border-bottom:1px solid var(--g200)}
+.step-num{width:40px;height:40px;border-radius:50%;background:var(--warm);color:var(--gold-lt);font-family:var(--serif);font-size:18px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.step-head h3{font-size:17px;font-weight:700;margin:0;flex:1}
+.step-time{font-size:11px;font-weight:700;color:var(--g500);background:var(--wh);padding:4px 12px;border-radius:100px;border:1px solid var(--g200);white-space:nowrap;display:flex;align-items:center;gap:4px}
+.step-time svg{width:12px;height:12px}
+.step-body{padding:20px 24px}
+.step-body p{font-size:14px;color:var(--g700);line-height:1.7;margin-bottom:12px}
+.step-body p:last-child{margin-bottom:0}
+.step-sub{list-style:none;margin:12px 0}
+.step-sub li{padding:6px 0;font-size:14px;color:var(--g700);display:flex;align-items:baseline;gap:8px}
+.step-sub li::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--gold);flex-shrink:0;margin-top:7px}
+
+/* ═══ ALERT BOXES ═══ */
+.alert{border-radius:8px;padding:14px 18px;margin:16px 0;display:flex;align-items:flex-start;gap:10px;font-size:13px;line-height:1.6}
+.alert svg{width:18px;height:18px;flex-shrink:0;margin-top:1px}
+.alert-warn{background:var(--amber-lt);border:1px solid var(--amber-bd);color:var(--amber)}
+.alert-danger{background:var(--red-lt);border:1px solid var(--red-bd);color:var(--red)}
+.alert-tip{background:var(--green-lt);border:1px solid var(--green-bd);color:var(--green)}
+.alert-info{background:var(--blue-lt);border:1px solid var(--blue-bd);color:var(--blue)}
+
+/* ═══ DO / DON'T GRID ═══ */
+.dd-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0}
+.dd-card{border-radius:var(--r);overflow:hidden}
+.dd-do{border:2px solid var(--green-bd)}
+.dd-dont{border:2px solid var(--red-bd)}
+.dd-head{padding:12px 16px;font-size:13px;font-weight:700;display:flex;align-items:center;gap:6px}
+.dd-do .dd-head{background:var(--green-lt);color:var(--green)}
+.dd-dont .dd-head{background:var(--red-lt);color:var(--red)}
+.dd-head svg{width:16px;height:16px}
+.dd-body{padding:12px 16px}
+.dd-list{list-style:none}
+.dd-list li{padding:5px 0;font-size:13px;color:var(--g700);display:flex;align-items:baseline;gap:6px}
+.dd-list li::before{font-weight:700;font-size:12px;flex-shrink:0}
+.dd-do .dd-list li::before{content:'✓';color:var(--green)}
+.dd-dont .dd-list li::before{content:'✗';color:var(--red)}
+
+/* ═══ PRODUCT CARD ═══ */
+.prod-card{border-radius:var(--r);border:1px solid var(--g200);overflow:hidden;margin:28px 0}
+.prod-label{padding:8px 16px;background:var(--g50);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--g500);border-bottom:1px solid var(--g200)}
+.prod-inner{display:flex;gap:20px;padding:20px}
+.prod-img{width:140px;height:140px;background:var(--cream);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.prod-img svg{width:60px;height:60px;color:var(--g300)}
+.prod-info{flex:1;display:flex;flex-direction:column;justify-content:center}
+.prod-info h4{font-size:15px;font-weight:700;margin-bottom:4px}
+.prod-info .prod-sub{font-size:12px;color:var(--g500);margin-bottom:8px}
+.prod-price{font-size:20px;font-weight:800;color:var(--bk);margin-bottom:4px}
+.prod-inst{font-size:11px;color:var(--g500);margin-bottom:12px}
+.prod-cta{display:inline-flex;padding:8px 20px;background:var(--gold);color:var(--wh);border-radius:8px;font-size:12px;font-weight:700;transition:background .2s}
+.prod-cta:hover{background:var(--gold-dk)}
+
+/* FAQ */
+.faq{margin:40px 0;border-top:2px solid var(--bk);padding-top:24px}
+.faq h2{font-family:var(--serif);font-size:22px;font-weight:700;margin-bottom:16px}
+.faq-item{border-bottom:1px solid var(--g200)}
+.faq-q{display:flex;align-items:center;justify-content:space-between;padding:16px 0;font-size:15px;font-weight:600;cursor:pointer;gap:12px;width:100%;text-align:left;color:var(--bk);transition:color .2s}
+.faq-q:hover{color:var(--gold-dk)}
+.faq-q svg{width:18px;height:18px;flex-shrink:0;transition:transform .3s;color:var(--g500)}
+.faq-item.open .faq-q svg{transform:rotate(180deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s var(--ease)}
+.faq-item.open .faq-a{max-height:300px}
+.faq-a p{font-size:14px;color:var(--g700);line-height:1.7;padding:0 0 16px}
+
+/* Tags */
+.post-tags{display:flex;flex-wrap:wrap;gap:8px;margin:32px 0;padding-top:24px;border-top:1px solid var(--g200)}
+.post-tag{padding:6px 14px;border-radius:100px;font-size:12px;font-weight:600;border:1px solid var(--g200);color:var(--g700);transition:all .2s}
+.post-tag:hover{border-color:var(--gold);color:var(--gold-dk)}
+
+/* SIDEBAR */
+.sidebar{position:sticky;top:80px;align-self:start;display:flex;flex-direction:column;gap:24px}
+.sb-hd{font-size:13px;font-weight:800;color:var(--bk);text-transform:uppercase;letter-spacing:.07em;margin-bottom:14px;padding-bottom:10px;border-bottom:2px solid var(--bk)}
+.toc a{display:block;padding:8px 0;font-size:13px;color:var(--g500);border-bottom:1px solid var(--g100);transition:all .2s}
+.toc a:hover,.toc a.active{color:var(--bk);padding-left:6px}
+.toc a.active{color:var(--gold-dk);font-weight:600;border-left:2px solid var(--gold);padding-left:12px}
+.sb-prod{border-radius:var(--r);border:1px solid var(--g200);padding:20px;text-align:center}
+.sb-prod-img{width:100%;aspect-ratio:1;background:var(--cream);border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:12px}
+.sb-prod-img svg{width:60px;height:60px;color:var(--g300)}
+.sb-prod h4{font-size:14px;font-weight:700;margin-bottom:4px}
+.sb-prod .sp-sub{font-size:11px;color:var(--g500);margin-bottom:8px}
+.sb-prod .sp-price{font-size:18px;font-weight:800;margin-bottom:4px}
+.sb-prod .sp-inst{font-size:11px;color:var(--g500);margin-bottom:10px}
+.sb-prod .sp-cta{display:block;padding:10px;background:var(--gold);color:var(--wh);border-radius:8px;font-size:12px;font-weight:700;transition:background .2s}
+.sb-prod .sp-cta:hover{background:var(--gold-dk)}
+.sb-nl{border-radius:var(--r);padding:24px;background:var(--warm);color:var(--wh)}
+.sb-nl h4{font-family:var(--serif);font-size:18px;font-weight:600;margin-bottom:6px}
+.sb-nl p{font-size:12px;color:rgba(255,255,255,.55);margin-bottom:14px;line-height:1.5}
+.sb-nl input{width:100%;padding:10px 12px;border-radius:8px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.06);color:var(--wh);font-family:var(--sans);font-size:13px;outline:none;margin-bottom:8px}
+.sb-nl input::placeholder{color:rgba(255,255,255,.3)}
+.sb-nl input:focus{border-color:var(--gold)}
+.sb-nl button{width:100%;padding:10px;border-radius:8px;background:var(--gold);color:var(--wh);font-size:13px;font-weight:700;transition:background .2s}
+.sb-nl button:hover{background:var(--gold-lt)}
+
+/* FOOTER */
+.ft{background:var(--g50);border-top:1px solid var(--g200);padding:48px 0 0}
+.ft-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;padding-bottom:32px;border-bottom:1px solid var(--g200)}
+.ft-brand{font-family:var(--serif);font-size:22px;font-weight:700;margin-bottom:12px}
+.ft-brand em{color:var(--gold);font-style:italic;font-weight:400;font-size:16px}
+.ft-desc{font-size:13px;color:var(--g500);line-height:1.6;max-width:280px}
+.ft-col-title{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;margin-bottom:12px}
+.ft-col a{display:block;font-size:13px;color:var(--g500);padding:3px 0;transition:color .2s}.ft-col a:hover{color:var(--bk)}
+.ft-bottom{display:flex;justify-content:space-between;align-items:center;padding:20px 0;flex-wrap:wrap;gap:12px}
+.ft-copy{font-size:11.5px;color:var(--g500)}
+.ft-links{display:flex;gap:20px}.ft-links a{font-size:12px;color:var(--g500)}.ft-links a:hover{color:var(--bk)}
+
+@media(max-width:1100px){.post-layout{grid-template-columns:1fr;gap:32px}.sidebar{position:static}}
+@media(max-width:768px){.c{padding:0 16px}.dd-grid{grid-template-columns:1fr}.prod-inner{flex-direction:column;align-items:center;text-align:center}.ft-grid{grid-template-columns:1fr 1fr;gap:24px}}
+@media(max-width:480px){.ft-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<div class="ann"><span>Tüm Siparişlerde Ücretsiz Kargo · 50. Yıl Özel Koleksiyonları Satışta</span></div>
+<nav class="nav" id="nav"><div class="c">
+  <div class="nav-top"><a href="/" class="logo">Karaca <em>Dergi</em></a></div>
+  <div class="pillars"><div class="pillar-row">
+    <a class="p-link" href="#">Ana Sayfa</a>
+    <a class="p-link" href="#">Mutfak & Pişirme</a>
+    <a class="p-link" href="#">Sofra & Sunum</a>
+    <a class="p-link" href="#">Kahve & Çay</a>
+    <a class="p-link" href="#">Küçük Ev Aletleri</a>
+    <a class="p-link" href="#">Ev & Yaşam</a>
+    <a class="p-link active" href="#">Bakım & Destek</a>
+    <a class="p-link" href="#">Karaca Hikâyesi</a>
+    <a class="p-link" href="#">Yaşam Kılavuzları</a>
+  </div></div>
+</div></nav>
+
+<!-- BREADCRUMB -->
+<section><div class="c"><div class="bread">
+  <a href="#">Dergi</a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+  <a href="#">Bakım & Destek</a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+  <a href="#">Tencere & Tava Bakımı</a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+  <span style="color:var(--bk);font-weight:600">Biogranit Bakım Rehberi</span>
+</div></div></section>
+
+<!-- CONTENT -->
+<section><div class="c"><div class="post-layout">
+
+<!-- ARTICLE -->
+<article class="post">
+  <div class="post-type"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg> Nasıl Yapılır</div>
+  <h1>Biogranit Tencere Bakımı: İlk Kullanımdan Günlük Temizliğe 6 Adım</h1>
+  <p class="post-excerpt">Karaca Biogranit tencere ve tavalarınızın ömrünü uzatacak adım adım bakım rehberi. İlk yağlama, doğru temizlik, yanık çıkarma ve saklama yöntemleri.</p>
+  <div class="author-bar">
+    <div class="ab-avatar">KE</div>
+    <div class="ab-info"><div class="ab-name">Karaca Bakım Editörü</div><div class="ab-role">Karaca Test Mutfağı</div></div>
+    <div class="ab-date"><strong>26 Şubat 2026</strong>Güncelleme: 26 Şub 2026</div>
+  </div>
+  <div class="tldr">
+    <div class="tldr-label">Hızlı Cevap</div>
+    <p>İlk kullanımda ılık su + yumuşak süngerle yıkayın, iç yüzeyi sıvı yağla yağlayıp 10 dk orta ateşte ısıtın. Günlük temizlikte elde yıkayın, tel ve sert sünger kullanmayın. Metal kepçe yerine silikon/ahşap tercih edin. Bu kadar basit: doğru bakım = 5-10 yıl performans.</p>
+  </div>
+
+  <div class="post-body">
+    <h2 id="ilk-kullanim">İlk Kullanım Hazırlığı</h2>
+    <p>Kutusundan çıkan Biogranit tencere veya tavanız doğrudan kullanıma hazır değildir. İlk yağlama işlemi, kaplamanın performansını ve ömrünü doğrudan etkiler.</p>
+  </div>
+
+  <!-- STEP 1 -->
+  <div class="step" id="adim1">
+    <div class="step-head">
+      <div class="step-num">1</div>
+      <h3>Ilık Suyla İlk Yıkama</h3>
+      <span class="step-time"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 3 dk</span>
+    </div>
+    <div class="step-body">
+      <p>Tencereyi ılık su altında, aşındırıcı olmayan sıvı bulaşık deterjanı ve yumuşak süngerle yıkayın. Fabrikadan gelen koruyucu tabakayı ve toz kalıntılarını temizleyin.</p>
+      <div class="alert alert-warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> Kesinlikle bulaşık süngerinin sert (yeşil) yüzeyini kullanmayın. İlk yıkamada bile mikro çizikler oluşabilir.</div>
+    </div>
+  </div>
+
+  <!-- STEP 2 -->
+  <div class="step" id="adim2">
+    <div class="step-head">
+      <div class="step-num">2</div>
+      <h3>İç Yüzeyi Yağlama</h3>
+      <span class="step-time"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 2 dk</span>
+    </div>
+    <div class="step-body">
+      <p>Temiz ve kuru tencere/tavanın iç yüzeyine 1 tatlı kaşığı sıvı yağ (ayçiçek veya zeytinyağı) sürün. Kağıt havlu veya yumuşak fırça ile yağı tüm iç yüzeye eşit dağıtın.</p>
+      <div class="alert alert-tip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Yumurta fırçası bu iş için ideal: yumuşak kılları yağı eşit yayar ve yüzeye zarar vermez.</div>
+    </div>
+  </div>
+
+  <!-- STEP 3 -->
+  <div class="step" id="adim3">
+    <div class="step-head">
+      <div class="step-num">3</div>
+      <h3>Orta Ateşte Isıtma</h3>
+      <span class="step-time"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 10 dk</span>
+    </div>
+    <div class="step-body">
+      <p>Yağlanmış tencereyi orta ateşte 10 dakika ısıtın. Yağ hafif dumanlanmaya başladığında ocağı kapatın. Bu işlem Biogranit kaplamanın gözeneklerini doldurarak yapışmazlık performansını artırır.</p>
+      <ul class="step-sub">
+        <li>Yağ akıyorsa tencereyi hafifçe sallayarak dağılımı eşitleyin</li>
+        <li>Tencereyi soğumaya bırakın; soğumadan suya tutmayın</li>
+        <li>Soğuduktan sonra kağıt havlu ile fazla yağı silin</li>
+      </ul>
+      <div class="alert alert-danger"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg> Asla yüksek ateş kullanmayın. Aşırı ısı Biogranit kaplamanın yapısını bozar ve garanti kapsamı dışına çıkabilir.</div>
+    </div>
+  </div>
+
+  <div class="post-body">
+    <h2 id="gunluk-temizlik">Günlük Temizlik</h2>
+    <p>Her kullanımdan sonra doğru temizlik, Biogranit kaplamanın ömrünü doğrudan belirler.</p>
+  </div>
+
+  <!-- STEP 4 -->
+  <div class="step" id="adim4">
+    <div class="step-head">
+      <div class="step-num">4</div>
+      <h3>Soğutma ve Elde Yıkama</h3>
+      <span class="step-time"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 5 dk</span>
+    </div>
+    <div class="step-body">
+      <p>Pişirme sonrası tencereyi ocaktan alın ve oda sıcaklığına soğumasını bekleyin. Soğuyan tencereyi ılık su, birkaç damla bulaşık deterjanı ve yumuşak sünger (veya mikrofiber bez) ile yıkayın. Dairesel hareketlerle nazikçe ovalayın.</p>
+      <div class="alert alert-info"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg> Bulaşık makinesinde yıkama teknik olarak mümkün olsa da elde yıkama her zaman önerilir. Makine deterjanlarındaki tuz granit yüzeyi zamanla aşındırır.</div>
+    </div>
+  </div>
+
+  <!-- STEP 5 -->
+  <div class="step" id="adim5">
+    <div class="step-head">
+      <div class="step-num">5</div>
+      <h3>Yanık Çıkarma (Gerektiğinde)</h3>
+      <span class="step-time"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 15-60 dk</span>
+    </div>
+    <div class="step-body">
+      <p>Dip yandıysa panik yapmayın. Tencereye ılık su doldurun, 1 yemek kaşığı karbonat ekleyin ve 1 saat bekletin. Yumuşayan yanık kalıntılarını süngerle nazikçe çıkarın.</p>
+      <ul class="step-sub">
+        <li>Karbonat + ılık su: 1 saat bekletme, sonra yumuşak sünger</li>
+        <li>İnatçı yanıklarda: karbonat macunu (karbonat + birkaç damla su) direkt yanık yüzeye, 30 dk</li>
+        <li>Mat görünüm kaldıysa: 1 çay kaşığı zeytinyağını bez ile ince tabaka halinde yayın</li>
+      </ul>
+      <div class="alert alert-danger"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg> Tel, çelik yün veya bıçak gibi sert nesnelerle kazımayın. Kaplama geri dönüşü olmayan şekilde zarar görür.</div>
+    </div>
+  </div>
+
+  <!-- STEP 6 -->
+  <div class="step" id="adim6">
+    <div class="step-head">
+      <div class="step-num">6</div>
+      <h3>Doğru Saklama</h3>
+      <span class="step-time"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 1 dk</span>
+    </div>
+    <div class="step-body">
+      <p>Yıkadıktan hemen sonra kuru, yumuşak bezle kurulayın (su lekelerini önler). Tencerelerinizi iç içe koymak zorundaysanız, aralarına kağıt havlu veya keçe koruyucu yerleştirin. Direkt metal temas kaplamanın çizilmesine neden olur.</p>
+      <div class="alert alert-tip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Kapakları ters çevirip tencere üzerine koyarak saklamak hem yer kazandırır hem iç yüzeyi korur.</div>
+    </div>
+  </div>
+
+  <!-- DO / DON'T -->
+  <div class="post-body"><h2 id="yapyin-yapmayin">Yapın / Yapmayın</h2></div>
+  <div class="dd-grid">
+    <div class="dd-card dd-do">
+      <div class="dd-head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Yapın</div>
+      <div class="dd-body"><ul class="dd-list">
+        <li>Silikon, ahşap veya naylon mutfak gereçleri kullanın</li>
+        <li>Düşük-orta ateşte pişirin</li>
+        <li>Her kullanımda az miktar yağ/tereyağı ekleyin</li>
+        <li>Elde, yumuşak süngerle yıkayın</li>
+        <li>Hemen kurulayıp kuru saklayın</li>
+        <li>İç içe koyarken araya kağıt havlu koyun</li>
+      </ul></div>
+    </div>
+    <div class="dd-card dd-dont">
+      <div class="dd-head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg> Yapmayın</div>
+      <div class="dd-body"><ul class="dd-list">
+        <li>Metal kepçe, çatal, bıçak sokmayın</li>
+        <li>Yüksek ateşte boş bırakmayın</li>
+        <li>Sıcakken soğuk suya tutmayın (termal şok)</li>
+        <li>Tel, çelik yün veya sert sünger kullanmayın</li>
+        <li>Bulaşık makinesini rutin yapmayın</li>
+        <li>İçinde yemek saklayıp buzdolabına koymayın</li>
+      </ul></div>
+    </div>
+  </div>
+
+  <!-- PRODUCT -->
+  <div class="prod-card">
+    <div class="prod-label">Bu Rehberde Geçerli Ürün</div>
+    <div class="prod-inner">
+      <div class="prod-img"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="16" rx="9" ry="5"/><path d="M3 16V8c0-2.8 4-5 9-5s9 2.2 9 5v8"/><path d="M3 8c0 2.8 4 5 9 5s9-2.2 9-5"/></svg></div>
+      <div class="prod-info">
+        <h4>Karaca Defne Biogranit V2 7 Parça Tencere Seti</h4>
+        <div class="prod-sub">İsviçre Granit Hammaddesi · İndüksiyon Uyumlu · 7 Parça</div>
+        <div class="prod-price">3.900 TL</div>
+        <div class="prod-inst">Peşin fiyatına 6 taksit × 650 TL</div>
+        <a href="#" class="prod-cta">Ürünü İncele →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="faq">
+    <h2>Sıkça Sorulan Sorular</h2>
+    <div class="faq-item open">
+      <button class="faq-q">Biogranit kaplama çizilirse zararlı mı?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+      <div class="faq-a"><p>Karaca Biogranit, İsviçre granit hammaddesinden üretilir ve PFOA içermez. Yüzeysel çizikler sağlık riski oluşturmaz. Ancak derin çizikler yapışmazlık performansını düşürür; bu durumda tencereyi değiştirmeniz önerilir.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">İndüksiyon ocakta kullanabilir miyim?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+      <div class="faq-a"><p>Evet. Defne Biogranit V2 serisi tam taban indüksiyon uyumludur. Tüm ocak tiplerinde (gaz, elektrik, seramik, indüksiyon) kullanılabilir.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Fırında kullanmak güvenli mi?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+      <div class="faq-a"><p>Standart Biogranit tencereler ateşli ocak kullanımı için tasarlanmıştır. Fırın kullanımı için BioDiamond Pro serisi veya Powersteel serileri önerilir. Ürününüzün kullanım talimatını kontrol edin.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Ne sıklıkla yağlama yapmalıyım?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+      <div class="faq-a"><p>İlk kullanım yağlaması bir kez yeterlidir. Sonrasında her pişirmede az miktar yağ/tereyağı kullanmak kaplamanın performansını korur. Yağsız pişirmek teknik olarak mümkün olsa da az yağ her zaman önerilir.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Biogranit ile BioDiamond arasındaki bakım farkı nedir?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+      <div class="faq-a"><p>Her ikisi de aynı bakım prensiplerine tabidir: yumuşak sünger, elde yıkama, orta ateş. BioDiamond'un elmas kristal kaplaması daha yüksek çizilme direnci sunar, dolayısıyla bakım hataları biraz daha tolere edilir. Biogranit'te ekstra dikkatli olmak ömrü uzatır.</p></div>
+    </div>
+  </div>
+
+  <div class="post-tags">
+    <a href="#" class="post-tag">Biogranit</a>
+    <a href="#" class="post-tag">Tencere Bakımı</a>
+    <a href="#" class="post-tag">Nasıl Yapılır</a>
+    <a href="#" class="post-tag">İlk Kullanım</a>
+    <a href="#" class="post-tag">Temizlik</a>
+    <a href="#" class="post-tag">Bakım & Destek</a>
+  </div>
+</article>
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+  <div><div class="sb-hd">Adımlar</div><div class="toc">
+    <a href="#adim1" class="active">1. Ilık Suyla İlk Yıkama</a>
+    <a href="#adim2">2. İç Yüzeyi Yağlama</a>
+    <a href="#adim3">3. Orta Ateşte Isıtma</a>
+    <a href="#adim4">4. Soğutma ve Elde Yıkama</a>
+    <a href="#adim5">5. Yanık Çıkarma</a>
+    <a href="#adim6">6. Doğru Saklama</a>
+    <a href="#yapyin-yapmayin">Yapın / Yapmayın</a>
+  </div></div>
+  <div class="sb-prod">
+    <div class="sb-prod-img"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="16" rx="9" ry="5"/><path d="M3 16V8c0-2.8 4-5 9-5s9 2.2 9 5v8"/><path d="M3 8c0 2.8 4 5 9 5s9-2.2 9-5"/></svg></div>
+    <h4>Defne Biogranit V2</h4>
+    <div class="sp-sub">7 Parça Tencere Seti</div>
+    <div class="sp-price">3.900 TL</div>
+    <div class="sp-inst">6 taksit × 650 TL</div>
+    <a href="#" class="sp-cta">Ürünü İncele →</a>
+  </div>
+  <div class="sb-nl">
+    <h4>Bakım Hatırlatıcısı</h4>
+    <p>Tencere bakım ipuçları ve ürün güncelleme bildirimleri.</p>
+    <input placeholder="E-posta adresiniz">
+    <button>Abone Ol</button>
+  </div>
+</aside>
+</div></div></section>
+
+<!-- FOOTER -->
+<footer class="ft"><div class="c">
+  <div class="ft-grid">
+    <div><div class="ft-brand">Karaca <em>Dergi</em></div><p class="ft-desc">50 yıllık miras, binlerce tarif, yüzlerce rehber.</p></div>
+    <div class="ft-col"><div class="ft-col-title">İçerikler</div><a href="#">Tarifler</a><a href="#">Rehberler</a><a href="#">Kahve & Çay</a><a href="#">Bakım & Destek</a></div>
+    <div class="ft-col"><div class="ft-col-title">Karaca</div><a href="#">Hakkımızda</a><a href="#">Hikâyemiz</a><a href="#">Mağazalar</a><a href="#">İletişim</a></div>
+    <div class="ft-col"><div class="ft-col-title">Yasal</div><a href="#">KVKK Aydınlatma</a><a href="#">Çerez Politikası</a><a href="#">Kullanım Koşulları</a></div>
+  </div>
+  <div class="ft-bottom">
+    <span class="ft-copy">© 2026 Karaca. Tüm hakları saklıdır.</span>
+    <div class="ft-links"><a href="#">Instagram</a><a href="#">YouTube</a><a href="#">Pinterest</a><a href="#">karaca.com</a></div>
+  </div>
+</div></footer>
+
+<script>
+(function(){
+  document.querySelectorAll('.faq-q').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var item=btn.parentElement;var wasOpen=item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(function(fi){fi.classList.remove('open')});
+      if(!wasOpen) item.classList.add('open');
+    });
+  });
+  var nav=document.getElementById('nav');
+  window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>10)},{passive:true});
+  var tocLinks=document.querySelectorAll('.toc a');
+  var ids=['adim1','adim2','adim3','adim4','adim5','adim6','yapyin-yapmayin'];
+  var headings=ids.map(function(id){return document.getElementById(id)}).filter(Boolean);
+  if(headings.length){
+    window.addEventListener('scroll',function(){
+      var y=window.scrollY+120;var active=0;
+      headings.forEach(function(h,i){if(h.offsetTop<=y) active=i});
+      tocLinks.forEach(function(l,i){l.classList.toggle('active',i===active)});
+    },{passive:true});
+  }
+})();
+</script>
+</body>
+</html>
