@@ -2,578 +2,145 @@
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Karaca Hikâyesi: 1973'ten Bugüne Yarım Asırlık Yolculuk | Karaca Dergi</title>
-<meta name="description" content="Süleymaniye'deki 30 kişilik cam atölyesinden 43 ülkeye uzanan Karaca'nın hikâyesi. Hüseyin Karaca'nın vizyonundan Fine Pearl'e, Biogranit'ten Red Dot'a.">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>1973’ten Bugüne: Süleymaniye’den Dünyaya Açılan Bir Marka | Karaca Dergi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400&display=swap" rel="stylesheet">
 <style>
-:root{
-  --bk:#1a1a1a;--warm:#2c2420;--cream:#f7f3ee;--sand:#e8e0d4;
-  --gold:#b8956a;--gold-lt:#d4b896;--gold-dk:#96764d;
-  --g50:#faf9f7;--g100:#f2f0ec;--g200:#e5e2dc;--g300:#ccc8c0;
-  --g500:#8c8279;--g700:#5c554d;--wh:#fff;
-  --serif:'Playfair Display',Georgia,serif;
-  --sans:'DM Sans',-apple-system,BlinkMacSystemFont,sans-serif;
-  --mx:1360px;--r:10px;
-  --ease:cubic-bezier(.4,0,.2,1);
-}
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:var(--sans);color:var(--bk);background:var(--wh);-webkit-font-smoothing:antialiased;overflow-x:hidden;line-height:1.6}
-a{color:inherit;text-decoration:none}button{font-family:inherit;cursor:pointer;border:none;background:none}
-.c{max-width:var(--mx);margin:0 auto;padding:0 40px}
-
-/* ══════ NAV (compact) ══════ */
-.ann{background:var(--warm);padding:9px 16px;text-align:center}
-.ann span{font-size:12px;font-weight:600;color:var(--gold-lt);letter-spacing:.04em}
-.nav{position:sticky;top:0;z-index:100;background:var(--wh);border-bottom:1px solid var(--g200);transition:box-shadow .3s}
-.nav.scrolled{box-shadow:0 2px 20px rgba(0,0,0,.06)}
-.nav-top{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
-.logo{font-family:var(--serif);font-size:26px;font-weight:700;letter-spacing:-.5px}
-.logo em{font-weight:400;color:var(--gold);font-size:18px;margin-left:4px;font-style:italic}
-.nav-acts{display:flex;gap:4px}
-.nav-icon{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;transition:background .2s}
-.nav-icon:hover{background:var(--g100)}
-.nav-icon svg{width:18px;height:18px;color:var(--g700)}
-.pillars{border-top:1px solid var(--g200);overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
-.pillars::-webkit-scrollbar{display:none}
-.pillar-row{display:flex;min-width:max-content}
-.p-link{padding:11px 18px;font-size:12.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--g500);white-space:nowrap;position:relative;transition:color .2s}
-.p-link:hover{color:var(--bk)}
-.p-link.active{color:var(--gold-dk)}
-.p-link.active::after{content:'';position:absolute;bottom:0;left:18px;right:18px;height:2px;background:var(--gold)}
-
-/* ══════ HERO ══════ */
-.hero{background:var(--warm);position:relative;overflow:hidden}
-.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 50%,rgba(184,149,106,.12) 0%,transparent 70%)}
-.hero-inner{padding:80px 0 72px;max-width:700px;position:relative;z-index:1}
-.hero-bread{font-size:12px;color:rgba(255,255,255,.4);margin-bottom:24px;display:flex;align-items:center;gap:6px}
-.hero-bread a{transition:color .2s}.hero-bread a:hover{color:var(--gold-lt)}
-.hero-bread svg{width:10px;height:10px}
-.hero-type{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--warm);background:var(--gold-lt);padding:5px 14px;border-radius:100px;margin-bottom:16px}
-.hero h1{font-family:var(--serif);font-size:clamp(32px,4.5vw,52px);font-weight:700;color:var(--wh);line-height:1.1;margin-bottom:16px}
-.hero h1 em{font-style:italic;color:var(--gold-lt);font-weight:400}
-.hero-sub{font-size:18px;color:rgba(255,255,255,.6);line-height:1.6;max-width:560px;margin-bottom:28px}
-.hero-stats{display:flex;gap:32px;flex-wrap:wrap}
-.hero-stat{text-align:left}
-.hero-stat strong{display:block;font-family:var(--serif);font-size:28px;font-weight:700;color:var(--gold-lt)}
-.hero-stat span{font-size:12px;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.04em}
-/* decorative year */
-.hero-year{position:absolute;right:-20px;bottom:-40px;font-family:var(--serif);font-size:260px;font-weight:700;color:rgba(255,255,255,.03);line-height:1;pointer-events:none;user-select:none}
-
-/* ══════ ERA INTRO ══════ */
-.era{padding:64px 0 0;border-bottom:1px solid var(--g200)}
-.era:last-of-type{border-bottom:none}
-.era-header{display:flex;align-items:center;gap:16px;margin-bottom:32px}
-.era-decade{font-family:var(--serif);font-size:48px;font-weight:700;color:var(--gold);line-height:1;flex-shrink:0}
-.era-title{font-family:var(--serif);font-size:22px;font-weight:600;color:var(--bk);line-height:1.25}
-.era-desc{font-size:13px;color:var(--g500);line-height:1.6;margin-top:4px}
-
-/* ══════ TIMELINE ══════ */
-.timeline{position:relative;padding:0 0 64px 0}
-.timeline::before{content:'';position:absolute;left:120px;top:0;bottom:0;width:2px;background:var(--g200)}
-
-.tl-item{display:flex;gap:24px;padding:24px 0;position:relative;align-items:flex-start}
-
-.tl-year{width:96px;text-align:right;flex-shrink:0}
-.tl-year span{font-family:var(--serif);font-size:18px;font-weight:700;color:var(--gold-dk)}
-
-.tl-dot{position:relative;flex-shrink:0;width:24px;display:flex;justify-content:center;padding-top:4px}
-.tl-dot::before{content:'';width:12px;height:12px;border-radius:50%;background:var(--wh);border:3px solid var(--gold);display:block;position:relative;z-index:1}
-.tl-item.major .tl-dot::before{width:16px;height:16px;background:var(--gold);border-color:var(--gold)}
-.tl-item.major .tl-dot::after{content:'';position:absolute;top:2px;left:50%;transform:translateX(-50%);width:28px;height:28px;border-radius:50%;background:rgba(184,149,106,.15);z-index:0}
-
-.tl-content{flex:1;min-width:0}
-.tl-content h3{font-family:var(--serif);font-size:18px;font-weight:700;color:var(--bk);line-height:1.3;margin-bottom:6px}
-.tl-content p{font-size:14px;color:var(--g700);line-height:1.7}
-.tl-content .tl-tag{display:inline-block;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;padding:3px 10px;border-radius:100px;margin-top:8px}
-.tag-inovasyon{background:#f0faf4;color:#2d7a4f;border:1px solid #c6e9d4}
-.tag-buyume{background:#eff6ff;color:#2563eb;border:1px solid #bfdbfe}
-.tag-tasarim{background:#fdf2f8;color:#be185d;border:1px solid #fbcfe8}
-.tag-global{background:#fef3c7;color:#92400e;border:1px solid #fde68a}
-.tag-miras{background:var(--cream);color:var(--gold-dk);border:1px solid var(--sand)}
-
-/* Innovation callout */
-.innov{background:var(--cream);border:1px solid var(--sand);border-radius:var(--r);padding:24px;margin:8px 0 0;display:flex;gap:16px;align-items:center}
-.innov-icon{width:48px;height:48px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.innov-icon svg{width:22px;height:22px;color:var(--wh)}
-.innov-body{flex:1}
-.innov-body strong{display:block;font-size:14px;font-weight:700;color:var(--bk);margin-bottom:2px}
-.innov-body span{font-size:12px;color:var(--g500);line-height:1.5}
-
-/* ══════ LEGACY NUMBERS ══════ */
-.legacy{background:var(--warm);padding:64px 0}
-.legacy-title{font-family:var(--serif);font-size:clamp(24px,3vw,36px);font-weight:700;color:var(--wh);text-align:center;margin-bottom:8px}
-.legacy-sub{text-align:center;font-size:14px;color:rgba(255,255,255,.45);margin-bottom:40px}
-.legacy-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:32px}
-.legacy-card{text-align:center;padding:28px 16px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);border-radius:var(--r);transition:all .3s var(--ease)}
-.legacy-card:hover{background:rgba(255,255,255,.07);border-color:rgba(184,149,106,.2)}
-.legacy-card strong{display:block;font-family:var(--serif);font-size:36px;font-weight:700;color:var(--gold-lt);margin-bottom:4px}
-.legacy-card span{font-size:12px;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.04em}
-
-/* ══════ VALUES ══════ */
-.values{padding:64px 0}
-.values-title{font-family:var(--serif);font-size:clamp(22px,3vw,32px);font-weight:700;text-align:center;margin-bottom:8px}
-.values-sub{text-align:center;font-size:14px;color:var(--g500);margin-bottom:40px}
-.values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.val-card{padding:32px 24px;border-radius:var(--r);border:1px solid var(--g200);transition:all .3s var(--ease)}
-.val-card:hover{border-color:var(--gold);box-shadow:0 4px 24px rgba(184,149,106,.1)}
-.val-icon{width:44px;height:44px;border-radius:50%;background:var(--cream);display:flex;align-items:center;justify-content:center;margin-bottom:16px}
-.val-icon svg{width:20px;height:20px;color:var(--gold)}
-.val-card h3{font-family:var(--serif);font-size:17px;font-weight:700;margin-bottom:8px}
-.val-card p{font-size:13px;color:var(--g500);line-height:1.6}
-
-/* ══════ QUOTE ══════ */
-.quote-section{padding:56px 0;background:var(--g50);border-top:1px solid var(--g200);border-bottom:1px solid var(--g200)}
-.quote-inner{max-width:700px;margin:0 auto;text-align:center}
-.quote-mark{font-family:var(--serif);font-size:64px;color:var(--gold);line-height:1;margin-bottom:-12px}
-.quote-text{font-family:var(--serif);font-size:clamp(18px,2.5vw,24px);font-weight:400;font-style:italic;color:var(--warm);line-height:1.5;margin-bottom:16px}
-.quote-attr{font-size:13px;color:var(--g500);font-weight:600}
-
-/* ══════ CTA BANNER ══════ */
-.cta-banner{padding:48px 0}
-.cta-inner{background:var(--cream);border:1px solid var(--sand);border-radius:var(--r);padding:40px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
-.cta-text h3{font-family:var(--serif);font-size:22px;font-weight:700;margin-bottom:6px}
-.cta-text p{font-size:14px;color:var(--g500)}
-.cta-btn{display:inline-flex;align-items:center;gap:8px;padding:12px 28px;border-radius:8px;background:var(--warm);color:var(--wh);font-size:14px;font-weight:700;transition:all .2s var(--ease)}
-.cta-btn:hover{background:var(--gold)}
-
-/* ══════ RELATED ══════ */
-.related{padding:48px 0 64px;border-top:1px solid var(--g200)}
-.related-title{font-family:var(--serif);font-size:22px;font-weight:700;margin-bottom:24px}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{font-family:var(--sans);color:var(--bk);background:var(--white);line-height:1.7;overflow-x:hidden}
+a{text-decoration:none;color:inherit;transition:color .2s}
+img{display:block;max-width:100%;height:auto}
+:root{
+  --bk:#111;--g900:#1a1a1a;--g700:#333;--g500:#666;--g400:#888;--g300:#aaa;--g200:#ccc;--g100:#e5e5e5;--g50:#f5f5f5;
+  --white:#fff;--accent:#e63946;--accent-soft:#fef1f2;
+  --serif:'Fraunces',Georgia,serif;--sans:'Plus Jakarta Sans',-apple-system,sans-serif;
+  --ease:cubic-bezier(.22,1,.36,1);--max:1440px;--content:780px;--pad:clamp(20px,4vw,80px)
+}
+.topbar{background:var(--bk);color:var(--white);text-align:center;padding:10px var(--pad);font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase}
+.topbar a{color:var(--white);text-decoration:underline;text-underline-offset:2px}
+.nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--g100)}
+.nav-inner{max-width:var(--max);margin:0 auto;padding:0 var(--pad);display:flex;align-items:center;justify-content:space-between;height:64px}
+.nav-logo{font-family:var(--serif);font-size:22px;font-weight:600;letter-spacing:-.02em}
+.nav-logo span{font-weight:300;color:var(--g400);margin-left:6px;font-size:16px}
+.nav-links{display:flex;align-items:center;gap:32px}
+.nav-links a{font-size:13px;font-weight:500;color:var(--g500);letter-spacing:.02em}
+.nav-links a:hover{color:var(--bk)}
+.nav-icons{display:flex;gap:16px;align-items:center}
+.nav-icons a{color:var(--g500)}.nav-icons a:hover{color:var(--bk)}
+.nav-icons svg{width:20px;height:20px}
+.footer{background:var(--bk);color:var(--white);padding:64px 0 32px}
+.ft-inner{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+.ft-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px}
+.ft-brand{font-family:var(--serif);font-size:24px;font-weight:600;margin-bottom:16px}
+.ft-brand span{font-weight:300;color:var(--g400);font-size:16px;margin-left:4px}
+.ft-desc{font-size:13px;color:var(--g400);line-height:1.6;max-width:300px}
+.ft-col h4{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--g400);margin-bottom:16px}
+.ft-col a{display:block;font-size:13px;color:var(--g300);margin-bottom:10px;transition:color .2s}
+.ft-col a:hover{color:var(--white)}
+.ft-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:24px;display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--g500)}
+.ft-socials{display:flex;gap:16px}.ft-socials a{color:var(--g400)}.ft-socials a:hover{color:var(--white)}
+@media(max-width:1024px){.ft-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.nav-links{display:none}.ft-grid{grid-template-columns:1fr}}
+.bc{max-width:var(--max);margin:0 auto;padding:24px var(--pad) 0;font-size:12px;color:var(--g400)}
+.bc a{color:var(--g400)}.bc a:hover{color:var(--bk)}.bc svg{width:12px;height:12px;vertical-align:middle;margin:0 4px}.article-hero{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+.article-hero img{width:100%;border-radius:16px;aspect-ratio:21/9;object-fit:cover;margin-top:24px}
+.article-header{max-width:var(--content);margin:0 auto;padding:40px var(--pad) 0}
+.article-header .tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+.article-header h1{font-family:var(--serif);font-size:clamp(32px,4vw,52px);font-weight:500;line-height:1.15;letter-spacing:-.02em;margin-bottom:16px}
+.article-header .subtitle{font-size:18px;color:var(--g500);line-height:1.5;margin-bottom:24px}
+.article-meta{display:flex;align-items:center;gap:16px;font-size:13px;color:var(--g400);padding-bottom:32px;border-bottom:1px solid var(--g100)}
+.article-meta .avatar{width:40px;height:40px;border-radius:50%;background:var(--g100);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;color:var(--g500)}
+.article-body{max-width:var(--content);margin:0 auto;padding:40px var(--pad) 64px}
+.article-body h2{font-family:var(--serif);font-size:clamp(24px,2.5vw,32px);font-weight:500;margin:48px 0 16px;letter-spacing:-.02em}
+.article-body h3{font-family:var(--serif);font-size:clamp(20px,2vw,24px);font-weight:500;margin:32px 0 12px}
+.article-body p{font-size:17px;line-height:1.8;color:var(--g700);margin-bottom:20px}
+.article-body ul,.article-body ol{margin:0 0 20px 24px;font-size:17px;color:var(--g700);line-height:1.8}
+.article-body li{margin-bottom:8px}
+.article-body .img-block{margin:32px 0;border-radius:12px;overflow:hidden}
+.article-body .img-block img{width:100%;aspect-ratio:16/9;object-fit:cover}
+.article-body .img-caption{font-size:12px;color:var(--g400);text-align:center;padding-top:8px}
+.article-body .callout{background:var(--g50);border-left:4px solid var(--accent);padding:20px 24px;border-radius:0 8px 8px 0;margin:24px 0;font-size:15px;color:var(--g700)}
+.article-body .callout strong{color:var(--bk)}
+.article-body .product-card{display:grid;grid-template-columns:120px 1fr;gap:20px;background:var(--g50);border-radius:12px;padding:20px;margin:24px 0}
+.article-body .product-card img{width:100%;border-radius:8px;aspect-ratio:1;object-fit:cover}
+.article-body .product-card h4{font-size:16px;font-weight:700;margin-bottom:4px}
+.article-body .product-card .price{font-size:18px;font-weight:700;color:var(--accent);margin-bottom:8px}
+.article-body .product-card .pc-link{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--bk);border:2px solid var(--bk);padding:8px 20px;border-radius:100px;transition:all .2s}
+.article-body .product-card .pc-link:hover{background:var(--bk);color:var(--white)}
+.related{max-width:var(--max);margin:0 auto;padding:0 var(--pad) 64px}
+.related h2{font-family:var(--serif);font-size:28px;font-weight:500;margin-bottom:24px}
 .related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.rel-card{border-radius:var(--r);border:1px solid var(--g200);overflow:hidden;transition:all .3s var(--ease)}
-.rel-card:hover{border-color:var(--gold);box-shadow:0 4px 20px rgba(184,149,106,.1)}
-.rel-img{aspect-ratio:16/9;background:var(--g100);display:flex;align-items:center;justify-content:center}
-.rel-img svg{width:40px;height:40px;color:var(--g300)}
-.rel-body{padding:16px}
-.rel-cat{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--gold-dk);margin-bottom:4px}
-.rel-body h4{font-size:15px;font-weight:700;line-height:1.3;margin-bottom:6px}
-.rel-body p{font-size:12px;color:var(--g500)}
-
-/* ══════ FOOTER ══════ */
-.ft{background:var(--g50);border-top:1px solid var(--g200);padding:48px 0 0}
-.ft-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;padding-bottom:32px;border-bottom:1px solid var(--g200)}
-.ft-brand{font-family:var(--serif);font-size:22px;font-weight:700;margin-bottom:12px}
-.ft-brand em{color:var(--gold);font-style:italic;font-weight:400;font-size:16px}
-.ft-desc{font-size:13px;color:var(--g500);line-height:1.6;max-width:280px}
-.ft-col-title{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;margin-bottom:12px}
-.ft-col a{display:block;font-size:13px;color:var(--g500);padding:3px 0;transition:color .2s}.ft-col a:hover{color:var(--bk)}
-.ft-bottom{display:flex;justify-content:space-between;align-items:center;padding:20px 0;flex-wrap:wrap;gap:12px}
-.ft-copy{font-size:11.5px;color:var(--g500)}
-.ft-links{display:flex;gap:20px}.ft-links a{font-size:12px;color:var(--g500)}.ft-links a:hover{color:var(--bk)}
-
-/* ══════ RESPONSIVE ══════ */
-@media(max-width:1100px){
-  .legacy-grid{grid-template-columns:repeat(2,1fr)}
-  .values-grid{grid-template-columns:repeat(2,1fr)}
-}
-@media(max-width:768px){
-  .c{padding:0 16px}
-  .hero-inner{padding:48px 0 40px}
-  .hero-year{display:none}
-  .hero-stats{gap:20px}
-  .timeline::before{left:16px}
-  .tl-year{width:0;display:none}
-  .tl-dot{margin-left:-4px}
-  .tl-item{padding-left:40px;gap:16px}
-  .legacy-grid{grid-template-columns:1fr 1fr}
-  .values-grid{grid-template-columns:1fr}
-  .related-grid{grid-template-columns:1fr}
-  .ft-grid{grid-template-columns:1fr 1fr;gap:24px}
-  .cta-inner{flex-direction:column;text-align:center}
-  .era-decade{font-size:36px}
-  .innov{flex-direction:column;text-align:center}
-}
-@media(max-width:480px){
-  .ft-grid{grid-template-columns:1fr}
-  .legacy-grid{grid-template-columns:1fr}
-}
+.rel-card{border-radius:10px;overflow:hidden;cursor:pointer;display:block}
+.rel-card .ri{aspect-ratio:4/3;overflow:hidden}.rel-card .ri img{width:100%;height:100%;object-fit:cover;transition:transform .4s var(--ease)}
+.rel-card:hover .ri img{transform:scale(1.05)}
+.rel-card .rb{padding:16px 0}
+.rel-card .rb .cat{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:4px}
+.rel-card .rb h3{font-family:var(--serif);font-size:18px;font-weight:500;line-height:1.3}
+@media(max-width:768px){.related-grid{grid-template-columns:1fr}.article-body .product-card{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
+<div class="topbar">2.500 TL üzeri alışverişlerde ücretsiz kargo &middot; <a href="https://www.karaca.com">karaca.com</a></div>
+<nav class="nav"><div class="nav-inner">
+<a href="01-anasayfa.html" class="nav-logo">Karaca <span>Dergi</span></a>
+<div class="nav-links">
+<a href="02-pillar-mutfak-pisirme.html">Mutfak &amp; Pişirme</a>
+<a href="08-post-nasil-yapilir.html">Sofra &amp; Sunum</a>
+<a href="04-post-sorun-giderme.html">Kahve &amp; Çay</a>
+<a href="07-post-rehber-airfryer.html">Küçük Ev Aletleri</a>
+<a href="08-post-nasil-yapilir.html">Bakım &amp; Destek</a>
+<a href="05-post-marka-hikayesi.html">Hikayemiz</a>
+</div>
+<div class="nav-icons">
+<a href="10-arama-sonuclari.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></a>
+<a href="https://www.karaca.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4zM3 6h18M16 10a4 4 0 01-8 0"/></svg></a>
+</div></div></nav>
+<div class="bc"><a href="01-anasayfa.html">Dergi</a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:12px;height:12px;vertical-align:middle;margin:0 4px"><path d="M9 18l6-6-6-6"/></svg><a href="01-anasayfa.html">Karaca</a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:12px;height:12px;vertical-align:middle;margin:0 4px"><path d="M9 18l6-6-6-6"/></svg><span>1973’ten Bugüne: Süleymaniye’den Dünyaya Açılan Bir Marka...</span></div>
+<div class="article-hero"><img src="https://images.unsplash.com/photo-1556909114-44e3e70034e2?w=1200&q=85" alt="1973’ten Bugüne: Süleymaniye’den Dünyaya Açılan Bir Marka"></div>
+<div class="article-header">
+<div class="tag">Marka Hikayesi</div>
+<h1>1973’ten Bugüne: Süleymaniye’den Dünyaya Açılan Bir Marka</h1>
+<p class="subtitle">Cam atölyesinden 43 ülkeye, Fine Pearl’den Wolfgang Puck iş birliğine uzanan yolculuk.</p>
+<div class="article-meta">
+<div class="avatar">KD</div>
+<div><strong>İçerik Ekibi</strong><br><span>Şubat 2026 &middot; 7 dk okuma</span></div>
+</div>
+</div>
+<div class="article-body">
+<h2>Başlangıç: Süleymaniye, 1973</h2>
+<p>Hikaye, İstanbul Süleymaniye’de küçük bir cam atölyesinde başladı. “Karaca Züccaciye” adıyla kurulan işletme, başlangıçta cam ürünlerin üretim ve ticaretine odaklandı. Kurucunun oğlu Arif Karaca’nın vizyonu, şirketi dönüştürecek gücü taşıyordu.</p>
 
-<!-- NAV -->
-<div class="ann"><span>Tüm Siparişlerde Ücretsiz Kargo · 50. Yıl Özel Koleksiyonları Satışta</span></div>
-<nav class="nav" id="nav"><div class="c">
-  <div class="nav-top">
-    <a href="01-anasayfa.html" class="logo">Karaca <em>Dergi</em></a>
-    <div class="nav-acts">
-      <a class="nav-icon" href="10-arama-sonuclari.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></a>
-      <a class="nav-icon" href="https://www.karaca.com/hesap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></a>
-    </div>
-  </div>
-  <div class="pillars"><div class="pillar-row">
-    <a class="p-link" href="01-anasayfa.html">Ana Sayfa</a>
-    <a class="p-link" href="02-pillar-mutfak-pisirme.html">Mutfak & Pişirme</a>
-    <a class="p-link" href="08-post-nasil-yapilir.html">Sofra & Sunum</a>
-    <a class="p-link" href="04-post-sorun-giderme.html">Kahve & Çay</a>
-    <a class="p-link" href="07-post-rehber-airfryer.html">Küçük Ev Aletleri</a>
-    <a class="p-link" href="06-post-karsilastirma.html">Ev & Yaşam</a>
-    <a class="p-link" href="08-post-nasil-yapilir.html">Bakım & Destek</a>
-    <a class="p-link active" href="05-post-marka-hikayesi.html">Karaca Hikâyesi</a>
-    <a class="p-link" href="09-post-ramazan-2026.html">Yaşam Kılavuzları</a>
-  </div></div>
-</div></nav>
+<div class="img-block"><img src="https://images.unsplash.com/photo-1556909114-44e3e70034e2?w=900&q=80" alt="Karaca üretim"><div class="img-caption">Karaca üretim tesisleri</div></div>
 
-<!-- HERO -->
-<section class="hero"><div class="c">
-  <div class="hero-inner">
-    <div class="hero-bread">
-      <a href="01-anasayfa.html">Dergi</a>
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
-      <a href="05-post-marka-hikayesi.html">Karaca Hikâyesi</a>
-    </div>
-    <div class="hero-type">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-      Marka Hikâyesi
-    </div>
-    <h1>Süleymaniye'den <em>Dünyaya:</em> Yarım Asırlık Karaca</h1>
-    <p class="hero-sub">1973'te 30 kişilik bir cam atölyesinde başlayan serüven; inovasyon, cesaret ve aile bağlarıyla 43 ülkeye ulaştı.</p>
-    <div class="hero-stats">
-      <div class="hero-stat"><strong>1973</strong><span>Kuruluş</span></div>
-      <div class="hero-stat"><strong>50+</strong><span>Yıl</span></div>
-      <div class="hero-stat"><strong>43</strong><span>Ülke</span></div>
-      <div class="hero-stat"><strong>500+</strong><span>Mağaza</span></div>
-    </div>
-  </div>
-  <div class="hero-year">1973</div>
-</div></section>
+<h2>Büyüme ve Dönüşüm: 1980-2010</h2>
+<p>1980’lerde züccaciyeden sofra ürünlerine geçiş başladı. Porselen yemek takımları, çatal-bıçak setleri ve bardak koleksiyonları Karaca’yı Türkiye’nin en bilinen sofra markalarından biri haline getirdi. 2000’lerde küçük ev aletlerine giriş, markanın ikinci büyük dönüşümü oldu.</p>
 
-<!-- QUOTE -->
-<section class="quote-section">
-  <div class="quote-inner">
-    <div class="quote-mark">"</div>
-    <p class="quote-text">Hiçbir zaman fiyata dayalı rekabete girmedik. Kaliteli mal satmaya odaklandık.</p>
-    <div class="quote-attr">Arif Karaca, Yönetim Kurulu Başkanı</div>
-  </div>
-</section>
+<h2>Fine Pearl: Dünya İlki (2016)</h2>
+<p>4.5 yıllık AR-GE süreci sonucunda geliştirilen Fine Pearl porselen teknolojisi, dünyada bir ilk oldu. Geleneksel bone china’dan daha dayanıklı, daha hafif ve daha parlak olan Fine Pearl, Karaca’nın inovasyon DNA’sını gösteren en önemli dönüm noktalarından biri.</p>
 
-<!-- ══════ ERA 1: 1973–1990 ══════ -->
-<section class="era"><div class="c">
-  <div class="era-header">
-    <div class="era-decade">70s</div>
-    <div>
-      <div class="era-title">Başlangıç: Cam, Cesaret ve Aile</div>
-      <div class="era-desc">Süleymaniye'nin dar sokaklarından yükselen bir usta hikâyesi</div>
-    </div>
-  </div>
-  <div class="timeline">
-    <div class="tl-item major">
-      <div class="tl-year"><span>1973</span></div>
-      <div class="tl-dot"></div>
-      <div class="tl-content">
-        <h3>Süleymaniye'de İlk Atölye</h3>
-        <p>Hüseyin Karaca, İstanbul Süleymaniye'de 30 kişilik bir ekiple cam ürünlere desen işlemeye başlıyor. Atölye başlangıçta "Oran" adıyla açılıyor; ancak 17 yaşındaki oğlu Arif, babasının Malatya'ya gittiği bir günde Mercan vergi dairesine gidip ismi "Karaca Züccaciye" olarak değiştiriyor.</p>
-        <span class="tl-tag tag-miras">Kuruluş</span>
-      </div>
-    </div>
-    <div class="tl-item">
-      <div class="tl-year"><span>1978</span></div>
-      <div class="tl-dot"></div>
-      <div class="tl-content">
-        <h3>İSTOÇ'un Temelleri Atılıyor</h3>
-        <p>Tahtakale'ye sığamayan züccaciye tüccarları, Arif Karaca liderliğinde yeni bir ticaret merkezi fikri geliştiriyor. Özal döneminde arazi tahsisi yapılacak, İSTOÇ sektörün merkezi haline gelecek.</p>
-        <span class="tl-tag tag-buyume">Büyüme</span>
-      </div>
-    </div>
-    <div class="tl-item">
-      <div class="tl-year"><span>1980s</span></div>
-      <div class="tl-dot"></div>
-      <div class="tl-content">
-        <h3>Özal Dönemi: İthalatla Açılan Ufuk</h3>
-        <p>Turgut Özal'ın ithalat serbestîsi, züccaciye sektörünü kökten değiştiriyor. 30 m2'lik dükkânlar büyümeye başlıyor; Karaca, dünyanın en kaliteli üreticileriyle çalışmaya başlayarak Türk tüketicisine uluslararası standartlarda ürünler getiriyor.</p>
-      </div>
-    </div>
-  </div>
-</div></section>
+<div class="callout"><strong>Bilgi:</strong> Fine Pearl porselen, klasik bone china porselene göre %30 daha hafif ve %40 daha dayanıklıdır.</div>
 
-<!-- ══════ ERA 2: 1990–2000 ══════ -->
-<section class="era"><div class="c">
-  <div class="era-header">
-    <div class="era-decade">90s</div>
-    <div>
-      <div class="era-title">Üretimin Başlangıcı: Porselenden Çeliğe</div>
-      <div class="era-desc">Satıcılıktan üreticiliğe dönüşüm</div>
-    </div>
-  </div>
-  <div class="timeline">
-    <div class="tl-item major">
-      <div class="tl-year"><span>1990s</span></div>
-      <div class="tl-dot"></div>
-      <div class="tl-content">
-        <h3>Limoges Porseleni</h3>
-        <p>Fransa'nın Limoges bölgesinden temin edilen kaolen ile yurt dışında porselen üretimine başlanıyor. Karaca, dünyanın en kaliteli porselen hammaddesiyle kendi markası altında üretim yapan ilk Türk şirketlerinden biri oluyor.</p>
-        <span class="tl-tag tag-inovasyon">İnovasyon</span>
-      </div>
-    </div>
-    <div class="tl-item major">
-      <div class="tl-year"><span>1994</span></div>
-      <div class="tl-dot"></div>
-      <div class="tl-content">
-        <h3>Çelik Üretimine Giriş</h3>
-        <p>İstanbul'da paslanmaz çelikten tencere ve çatal bıçak takımı üretimine başlanıyor. Aynı yıllarda dünyanın önde gelen üretici firmaları da Karaca markası altında üretime başlıyor. Distribütörlükten markalaşmaya geçiş tamamlanıyor.</p>
-        <span class="tl-tag tag-buyume">Dönüm Noktası</span>
-      </div>
-    </div>
-  </div>
-</div></section>
+<h2>Teknoloji ve İnovasyon: BioDiamond &amp; Powersteel</h2>
+<p>Mutfak eşyalarında da inovasyon durmuyor. BioDiamond serisi gerçek elmas kristallerinden üretilen kaplamayla Türkiye’de bir ilk olurken, 5Ply Powersteel serisi cerrahi çeliğin (316+ grade, 18Cr/12Ni/2Mo) mutfağa taşınmasıyla profesyonel şeflerin gözdesi haline geldi.</p>
 
-<!-- ══════ ERA 3: 2000–2010 ══════ -->
-<section class="era"><div class="c">
-  <div class="era-header">
-    <div class="era-decade">00s</div>
-    <div>
-      <div class="era-title">Perakende Devrimi</div>
-      <div class="era-desc">Tüketiciyle doğrudan buluşma</div>
-    </div>
-  </div>
-  <div class="timeline">
-    <div class="tl-item major">
-      <div class="tl-year"><span>2001</span></div>
-      <div class="tl-dot"></div>
-      <div class="tl-content">
-        <h3>İlk Mağaza: Akmerkez</h3>
-        <p>Etiler Akmerkez AVM'de açılan ilk perakende mağaza, "Karacaseverler"in buluşma noktası oluyor. Toptan satıştan perakendeye geçiş, markanın tüketiciyle ilk doğrudan temasını kuruyor.</p>
-        <span class="tl-tag tag-buyume">Perakende</span>
-      </div>
-    </div>
-    <div class="tl-item major">
-      <div class="tl-year"><span>2007</span></div>
-      <div class="tl-dot"></div>
-      <div class="tl-content">
-        <h3>Fine Bone Serisi</h3>
-        <p>Porselen yemek takımlarında olağanüstü şeffaflık sağlayan Fine Bone serisi tanıtılıyor. Tüketicilerin ince porselen kavramıyla tanışmasını sağlayan bu seri, Karaca'yı sofra porseleninde referans marka haline getiriyor.</p>
-        <div class="innov">
-          <div class="innov-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg></div>
-          <div class="innov-body"><strong>Materyal İnovasyonu</strong><span>Bone china teknolojisiyle üretilen Fine Bone, geleneksel porselenden %30 daha hafif ve %50 daha şeffaf.</span></div>
-        </div>
-        <span class="tl-tag tag-inovasyon">İnovasyon</span>
-      </div>
-    </div>
-  </div>
-</div></section>
+<div class="img-block"><img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=900&q=80" alt="Karaca ürünler"><div class="img-caption">Karaca’nın modern mutfak ürün ailesi</div></div>
 
-<!-- ══════ ERA 4: 2010–2020 ══════ -->
-<section class="era"><div class="c">
-  <div class="era-header">
-    <div class="era-decade">10s</div>
-    <div>
-      <div class="era-title">İnovasyon Çağı: Kategori Yaratan Ürünler</div>
-      <div class="era-desc">Biogranit, Fine Pearl, Biodiamond; sektörün kurallarını yeniden yazan on yıl</div>
-    </div>
-  </div>
-  <div class="timeline">
-    <div class="tl-item">
-      <div class="tl-year"><span>2012</span></div>
-      <div class="tl-dot"></div>
-      <div class="tl-content">
-        <h3>Karaca Home Markası Kuruluyor</h3>
-        <p>Ev tekstili ve yaşam ürünlerine odaklanan Karaca Home markası hayata geçiyor. McKinsey ile yapılan kurumsal dönüşüm çalışması, Tedarik Zinciri Departmanı'nın kurulmasıyla sonuçlanıyor.</p>
-        <span class="tl-tag tag-buyume">Yeni Marka</span>
-      </div>
-    </div>
-    <div class="tl-item major">
-      <div class="tl-year"><span>2014</span></div>
-      <div class="tl-dot"></div>
-      <div class="tl-content">
-        <h3>Biogranit: Kategori Yaratan İnovasyon</h3>
-        <p>İsviçre'de üretilen granit hammaddesiyle geliştirilen Biogranit, pişirme alışkanlıklarını kökten değiştiriyor. Yanmaz, yapışmaz, sağlıklı. O kadar etkili bir inovasyon ki "ürün grubuyken kategori haline geldi"; tüm sektör bu standardı benimsemek zorunda kaldı.</p>
-        <div class="innov">
-          <div class="innov-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div>
-          <div class="innov-body"><strong>Sektör Dönüştürücü</strong><span>Biogranit, Türkiye'de "granit tencere" kategorisini başlatan ürün oldu. Karaca'nın ismi bu kategoriyle özdeşleşti.</span></div>
-        </div>
-        <span class="tl-tag tag-inovasyon">Oyun Değiştirici</span>
-      </div>
-    </div>
-    <div class="tl-item">
-      <div class="tl-year"><span>2014</span></div>
-      <div class="tl-dot"></div>
-      <div class="tl-content">
-        <h3>Jumbo Satın Alımı</h3>
-        <p>Adem Atmaca ortaklığıyla Jumbo markası bünyeye katılıyor. Grup büyümesi stratejik satın almalarla ivme kazanıyor.</p>
-        <span class="tl-tag tag-buyume">Satın Alma</span>
-      </div>
-    </div>
-    <div class="tl-item major">
-      <div class="tl-year"><span>2016</span></div>
-      <div class="tl-dot"></div>
-      <div class="tl-content">
-        <h3>Fine Pearl: 250 Yıl Sonra İlk</h3>
-        <p>4,5 yıl süren AR-GE'nin ardından dünyanın ilk ve tek gerçek inciden üretilen yemek takımı tanıtılıyor. Fine Pearl, yaklaşık 250 yıl sonra yemek takımı materyalini değiştiren devrim niteliğinde bir yenilik.</p>
-        <div class="innov">
-          <div class="innov-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v2m0 18v2m-9-11h2m18 0h2m-4.22-6.78l1.42-1.42M4.22 19.78l1.42-1.42m0-12.72L4.22 4.22M19.78 19.78l-1.42-1.42"/></svg></div>
-          <div class="innov-body"><strong>Dünya İlki</strong><span>Gerçek inci tozu kullanılarak üretilen Fine Pearl, porselen tarihinde 250 yıl sonra materyali değiştiren ilk inovasyon.</span></div>
-        </div>
-        <span class="tl-tag tag-inovasyon">Dünya İlki</span>
-      </div>
-    </div>
-    <div class="tl-item">
-      <div class="tl-year"><span>2018</span></div>
-      <div class="tl-dot"></div>
-      <div class="tl-content">
-        <h3>Biodiamond Serisi</h3>
-        <p>Elmas ve kristallerden oluşan Türkiye'nin ilk yanmaz ve yapışmaz kaplama teknolojisi. Biogranit'in ardından pişirme ekosistemindeki ikinci büyük inovasyon.</p>
-        <span class="tl-tag tag-inovasyon">İnovasyon</span>
-      </div>
-    </div>
-    <div class="tl-item">
-      <div class="tl-year"><span>2019</span></div>
-      <div class="tl-dot"></div>
-      <div class="tl-content">
-        <h3>Powersteel: 316 Derece Çelik</h3>
-        <p>%18 krom, %12 nikel, %2 molibdenum bileşimine sahip 316 dereceli medikal çelik teknolojisi ile üretilen yeni nesil pişirme ürünleri. Rakiplerden çok daha dayanıklı ve esnek.</p>
-        <span class="tl-tag tag-inovasyon">İnovasyon</span>
-      </div>
-    </div>
-  </div>
-</div></section>
+<h2>Wolfgang Puck İş Birliği (2024)</h2>
+<p>Dünyaca ünlü şef Wolfgang Puck ile “Red Carpet” iş birliği, Karaca’nın global vizyonunun somut bir yansıması. Bu koleksiyon, profesyonel mutfak standartlarını ev kullanıcılarına taşımayı hedefliyor.</p>
 
-<!-- ══════ ERA 5: 2020s ══════ -->
-<section class="era"><div class="c">
-  <div class="era-header">
-    <div class="era-decade">20s</div>
-    <div>
-      <div class="era-title">Küresel Marka, Kültürel Miras</div>
-      <div class="era-desc">Hollywood'dan Red Dot'a; 50 yılın taçlanması</div>
-    </div>
-  </div>
-  <div class="timeline">
-    <div class="tl-item major">
-      <div class="tl-year"><span>2023</span></div>
-      <div class="tl-dot"></div>
-      <div class="tl-content">
-        <h3>50. Yıl ve Cumhuriyet Yüzyılı Koleksiyonu</h3>
-        <p>Karaca 50. yılını kutluyor. Cumhuriyetin 100. yılı şerefine, Atatürk'ün eşyalarından ilham alan özel koleksiyon tanıtılıyor. 2 yıl süren araştırmada keşfedilen GMK (Gazi Mustafa Kemal) logosu, koleksiyonun her parçasına 100 yıl önceki haliyle işleniyor.</p>
-        <span class="tl-tag tag-miras">Miras</span>
-      </div>
-    </div>
-    <div class="tl-item">
-      <div class="tl-year"><span>2024</span></div>
-      <div class="tl-dot"></div>
-      <div class="tl-content">
-        <h3>Hollywood ve Cannes'da Karaca</h3>
-        <p>Dünyaca ünlü şef Wolfgang Puck ile geliştirilen Red Carpet Collection, önce Hollywood ödül töreninde, ardından Cannes Film Festivali'nde boy gösteriyor. Karaca logosu taşıyan porselenler, dünyanın en ünlü kırmızı halı etkinliklerinde sunuluyor.</p>
-        <span class="tl-tag tag-global">Global</span>
-      </div>
-    </div>
-    <div class="tl-item major">
-      <div class="tl-year"><span>2024</span></div>
-      <div class="tl-dot"></div>
-      <div class="tl-content">
-        <h3>Red Dot Design Award</h3>
-        <p>Cappadocia çatal bıçak takımı ve Orbit kahvaltı takımı, dünyanın en prestijli tasarım ödüllerinden Red Dot'u kazanıyor. Hüseyin Çağlayan, Arzu Kaprol, Aziz Sarıyer gibi isimlerle başlayan tasarım iş birlikleri meyvelerini veriyor.</p>
-        <span class="tl-tag tag-tasarim">Tasarım Ödülü</span>
-      </div>
-    </div>
-    <div class="tl-item">
-      <div class="tl-year"><span>2025</span></div>
-      <div class="tl-dot"></div>
-      <div class="tl-content">
-        <h3>43 Ülke, 500+ Mağaza</h3>
-        <p>Karaca, küresel perakende ağını 43 ülke ve 500'ün üzerinde mağazaya genişletiyor. Konsept mağaza, franchise, toptan ve e-ticaret kanallarıyla çoklu dokunuş noktası stratejisini sürdürüyor.</p>
-        <span class="tl-tag tag-global">Küresel Genişleme</span>
-      </div>
-    </div>
-  </div>
-</div></section>
-
-<!-- LEGACY NUMBERS -->
-<section class="legacy"><div class="c">
-  <div class="legacy-title">Yarım Asırın Rakamları</div>
-  <p class="legacy-sub">1973'ten bugüne Karaca'nın yolculuğu</p>
-  <div class="legacy-grid">
-    <div class="legacy-card"><strong>50+</strong><span>Yıllık Deneyim</span></div>
-    <div class="legacy-card"><strong>43</strong><span>Ülkede Faaliyet</span></div>
-    <div class="legacy-card"><strong>500+</strong><span>Mağaza</span></div>
-    <div class="legacy-card"><strong>28.000+</strong><span>Ürün Çeşidi</span></div>
-  </div>
-</div></section>
-
-<!-- VALUES -->
-<section class="values"><div class="c">
-  <div class="values-title">Karaca'yı Karaca Yapan Değerler</div>
-  <p class="values-sub">Yarım asırdır değişmeyen ilkeler</p>
-  <div class="values-grid">
-    <div class="val-card">
-      <div class="val-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg></div>
-      <h3>İnovasyon DNA'sı</h3>
-      <p>Biogranit'ten Fine Pearl'e, her on yılda sektörün kurallarını yeniden yazan ürünler. "Kimsenin hayal edemediğini tasarlamak" Karaca'nın kuruluşundan beri doğasında var.</p>
-    </div>
-    <div class="val-card">
-      <div class="val-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-      <h3>Kaliteye Sadakat</h3>
-      <p>"Hiçbir zaman fiyata dayalı rekabete girmedik." Limoges porseleni, İsviçre graniti, 316 derece çelik; her materyalde dünyanın en iyisi hedefleniyor.</p>
-    </div>
-    <div class="val-card">
-      <div class="val-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"/></svg></div>
-      <h3>Aile Mirası</h3>
-      <p>Hüseyin Karaca'nın 4 oğluyla başlayan yolculuk. "Bir aileden başka ailelere yayılan" paylaşma hikâyesi, bugün milyonlarca eve ulaşıyor.</p>
-    </div>
-  </div>
-</div></section>
-
-<!-- CTA BANNER -->
-<section class="cta-banner"><div class="c">
-  <div class="cta-inner">
-    <div class="cta-text">
-      <h3>Karaca Koleksiyonlarını Keşfedin</h3>
-      <p>50 yıllık ustalığın en yeni yansımalarını inceleyin.</p>
-    </div>
-    <a href="https://www.karaca.com" class="cta-btn">Mağazaya Git →</a>
-  </div>
-</div></section>
-
-<!-- RELATED -->
-<section class="related"><div class="c">
-  <div class="related-title">Hikâyemizden Daha Fazlası</div>
-  <div class="related-grid">
-    <a href="06-post-karsilastirma.html" class="rel-card">
-      <div class="rel-img"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div>
-      <div class="rel-body">
-        <div class="rel-cat">Marka Hikâyesi</div>
-        <h4>Biogranit Nasıl Doğdu? AR-GE'nin Perde Arkası</h4>
-        <p>12 dk okuma · İnovasyon</p>
-      </div>
-    </a>
-    <a href="06-post-karsilastirma.html" class="rel-card">
-      <div class="rel-img"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div>
-      <div class="rel-body">
-        <div class="rel-cat">Marka Hikâyesi</div>
-        <h4>Fine Pearl: 250 Yıllık Geleneği Bozan İnci</h4>
-        <p>9 dk okuma · İnovasyon</p>
-      </div>
-    </a>
-    <a href="06-post-karsilastirma.html" class="rel-card">
-      <div class="rel-img"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div>
-      <div class="rel-body">
-        <div class="rel-cat">Marka Hikâyesi</div>
-        <h4>Hollywood'dan Cannes'a: Red Carpet Collection</h4>
-        <p>7 dk okuma · Global</p>
-      </div>
-    </a>
-  </div>
-</div></section>
-
-<!-- FOOTER -->
-<footer class="ft"><div class="c">
-  <div class="ft-grid">
-    <div><div class="ft-brand">Karaca <em>Dergi</em></div><p class="ft-desc">50 yıllık miras, binlerce tarif, yüzlerce rehber.</p></div>
-    <div class="ft-col"><div class="ft-col-title">İçerikler</div><a href="03-post-tarif.html">Tarifler</a><a href="07-post-rehber-airfryer.html">Rehberler</a><a href="04-post-sorun-giderme.html">Kahve & Çay</a><a href="08-post-nasil-yapilir.html">Sofra & Porselen</a><a href="08-post-nasil-yapilir.html">Bakım & Destek</a></div>
-    <div class="ft-col"><div class="ft-col-title">Karaca</div><a href="05-post-marka-hikayesi.html">Hakkımızda</a><a href="05-post-marka-hikayesi.html">Hikâyemiz</a><a href="https://www.karaca.com/magazalar">Mağazalar</a><a href="https://www.karaca.com/kariyer">Kariyer</a><a href="https://www.karaca.com/iletisim">İletişim</a></div>
-    <div class="ft-col"><div class="ft-col-title">Yasal</div><a href="https://www.karaca.com/kvkk">KVKK Aydınlatma</a><a href="https://www.karaca.com/cerez-politikasi">Çerez Politikası</a><a href="https://www.karaca.com/kullanim-kosullari">Kullanım Koşulları</a><a href="https://www.karaca.com/mesafeli-satis-sozlesmesi">Mesafeli Satış Sözleşmesi</a></div>
-  </div>
-  <div class="ft-bottom">
-    <span class="ft-copy">© 2026 Karaca. Tüm hakları saklıdır.</span>
-    <div class="ft-links"><a href="https://www.instagram.com/karaborsa/">Instagram</a><a href="https://www.youtube.com/karaca">YouTube</a><a href="https://www.pinterest.com/karaca/">Pinterest</a><a href="https://www.karaca.com">karaca.com</a></div>
-  </div>
+<h2>Bugün: 43 Ülke, 500+ Mağaza</h2>
+<p>Karaca Grup, 3.500’e yakın çalışanı, 11 markası (Karaca, Karaca Home, Emsan, Jumbo, Cook Plus, Kaşmir Halı, Homend, Nautica Home, Weimar Porzellan, Pera Bulvarı, Cooklife) ve 43 ülkedeki 500’den fazla mağazasıyla züccaciye, küçük ev aletleri ve tekstil sektörlerine yön veriyor.</p>
+</div>
+<div class="related"><h2>İlgili Yazılar</h2><div class="related-grid"><a href="06-post-karsilastirma.html" class="rel-card"><div class="ri"><img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&q=80" alt="BioDiamond vs Powersteel"></div><div class="rb"><div class="cat">Karşılaştırma</div><h3>BioDiamond vs Powersteel</h3></div></a><a href="03-post-tarif.html" class="rel-card"><div class="ri"><img src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=400&q=80" alt="Çıtır Tavuk Tarifi"></div><div class="rb"><div class="cat">Tarif</div><h3>Çıtır Tavuk Tarifi</h3></div></a><a href="09-post-ramazan-2026.html" class="rel-card"><div class="ri"><img src="https://images.unsplash.com/photo-1567529692333-de9fd6772897?w=400&q=80" alt="Ramazan 2026 Rehberi"></div><div class="rb"><div class="cat">Mevsimsel</div><h3>Ramazan 2026 Rehberi</h3></div></a></div></div>
+<footer class="footer"><div class="ft-inner">
+<div class="ft-grid">
+<div><div class="ft-brand">Karaca <span>Dergi</span></div><p class="ft-desc">Mutfak, sofra ve yaşama dair ilham veren içerikler. 1973’ten bu yana paylaşacak çok şeyimiz var.</p></div>
+<div class="ft-col"><h4>İçerikler</h4><a href="03-post-tarif.html">Tarifler</a><a href="07-post-rehber-airfryer.html">Rehberler</a><a href="06-post-karsilastirma.html">Karşılaştırmalar</a><a href="08-post-nasil-yapilir.html">Bakım İpuçları</a><a href="09-post-ramazan-2026.html">Mevsimsel</a></div>
+<div class="ft-col"><h4>Karaca</h4><a href="05-post-marka-hikayesi.html">Hikayemiz</a><a href="https://www.karaca.com/magazalar">Mağazalar</a><a href="https://www.karaca.com/kariyer">Kariyer</a><a href="https://www.karaca.com/iletisim">İletişim</a></div>
+<div class="ft-col"><h4>Yasal</h4><a href="https://www.karaca.com/kvkk">KVKK Aydınlatma</a><a href="https://www.karaca.com/cerez-politikasi">Çerez Politikası</a><a href="https://www.karaca.com/kullanim-kosullari">Kullanım Koşulları</a></div>
+</div>
+<div class="ft-bottom"><span>&copy; 2026 Karaca Züccaciye A.Ş.</span><div class="ft-socials"><a href="https://www.instagram.com/karaca/">Instagram</a><a href="https://www.youtube.com/karaca">YouTube</a><a href="https://www.pinterest.com/karaca/">Pinterest</a><a href="https://www.karaca.com">karaca.com</a></div></div>
 </div></footer>
-
-<script>
-(function(){
-  var nav=document.getElementById('nav');
-  window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>10)},{passive:true});
-})();
-</script>
 </body>
 </html>

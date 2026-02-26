@@ -2,512 +2,120 @@
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Mutfak & Pişirme | Karaca Dergi</title>
-<meta name="description" content="Biogranit'ten döküm tavaya, airfryer tariflerinden pişirme tekniklerine: Karaca mutfağından ilham veren tarifler ve rehberler.">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400&display=swap" rel="stylesheet">
 <style>
-:root {
-  --bk:#1a1a1a;--warm:#2c2420;--cream:#f7f3ee;--sand:#e8e0d4;
-  --gold:#b8956a;--gold-lt:#d4b896;--gold-dk:#96764d;
-  --g50:#faf9f7;--g100:#f2f0ec;--g200:#e5e2dc;--g300:#ccc8c0;
-  --g500:#8c8279;--g700:#5c554d;--wh:#fff;
-  --serif:'Playfair Display',Georgia,'Times New Roman',serif;
-  --sans:'DM Sans',-apple-system,BlinkMacSystemFont,sans-serif;
-  --mx:1360px;--r:10px;
-  --ease:cubic-bezier(.4,0,.2,1);
-}
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:var(--sans);color:var(--bk);background:var(--wh);-webkit-font-smoothing:antialiased;overflow-x:hidden;line-height:1.6}
-a{color:inherit;text-decoration:none}button{font-family:inherit;cursor:pointer;border:none;background:none}img{max-width:100%;display:block;background:var(--g100)}
-.c{max-width:var(--mx);margin:0 auto;padding:0 40px}
-
-/* ══════ ANNOUNCEMENT ══════ */
-.ann{background:var(--warm);padding:9px 16px;text-align:center}
-.ann span{font-size:12px;font-weight:600;color:var(--gold-lt);letter-spacing:.04em}
-
-/* ══════ NAVBAR ══════ */
-.nav{position:sticky;top:0;z-index:100;background:var(--wh);border-bottom:1px solid var(--g200);transition:box-shadow .3s}
-.nav.scrolled{box-shadow:0 2px 20px rgba(0,0,0,.06)}
-.nav-top{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:16px}
-.logo{font-family:var(--serif);font-size:26px;font-weight:700;color:var(--bk);letter-spacing:-.5px;white-space:nowrap;flex-shrink:0}
-.logo em{font-weight:400;color:var(--gold);font-size:18px;margin-left:4px;font-style:italic}
-.nav-search{display:flex;align-items:center;gap:8px;background:var(--g50);border:1px solid var(--g200);border-radius:100px;padding:8px 16px;width:100%;max-width:280px;transition:all .3s var(--ease)}
-.nav-search:focus-within{border-color:var(--gold);background:var(--wh)}
-.nav-search input{border:none;background:none;font-family:var(--sans);font-size:13px;color:var(--bk);width:100%;outline:none}
-.nav-search input::placeholder{color:var(--g500)}
-.nav-search svg{flex-shrink:0;width:16px;height:16px;color:var(--g500)}
-.nav-acts{display:flex;align-items:center;gap:4px;flex-shrink:0}
-.nav-icon{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;transition:background .2s}
-.nav-icon:hover{background:var(--g100)}
-.nav-icon svg{width:18px;height:18px;color:var(--g700)}
-.pillars{border-top:1px solid var(--g200);overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
-.pillars::-webkit-scrollbar{display:none}
-.pillar-row{display:flex;gap:0;min-width:max-content}
-.p-link{padding:11px 18px;font-size:12.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--g500);white-space:nowrap;position:relative;transition:color .2s}
-.p-link:hover{color:var(--bk)}
-.p-link.active{color:var(--gold-dk)}
-.p-link.active::after{content:'';position:absolute;bottom:0;left:18px;right:18px;height:2px;background:var(--gold)}
-
-/* ══════ BREADCRUMB ══════ */
-.bread{padding:16px 0;font-size:12.5px;color:var(--g500);display:flex;align-items:center;gap:6px}
-.bread a{transition:color .2s}
-.bread a:hover{color:var(--bk)}
-.bread svg{width:12px;height:12px;color:var(--g300);flex-shrink:0}
-
-/* ══════ PILLAR HERO ══════ */
-.ph{position:relative;border-radius:var(--r);overflow:hidden;min-height:320px;margin-bottom:32px}
-.ph img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
-.ph-ov{position:absolute;inset:0;background:linear-gradient(135deg,rgba(44,36,32,.92) 0%,rgba(44,36,32,.6) 60%,transparent 100%);z-index:1}
-.ph-content{position:relative;z-index:2;padding:clamp(32px,5vw,56px);color:var(--wh);max-width:600px}
-.ph-label{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-lt);margin-bottom:12px;display:flex;align-items:center;gap:8px}
-.ph-label::before{content:'';width:24px;height:1.5px;background:var(--gold-lt)}
-.ph h1{font-family:var(--serif);font-size:clamp(28px,4vw,44px);font-weight:700;line-height:1.15;margin-bottom:12px}
-.ph h1 em{font-style:italic;font-weight:400;color:var(--gold-lt)}
-.ph p{font-size:15px;color:rgba(255,255,255,.7);line-height:1.6;margin-bottom:20px}
-.ph-stats{display:flex;gap:24px}
-.ph-stat{text-align:center}
-.ph-stat strong{display:block;font-family:var(--serif);font-size:24px;font-weight:700;color:var(--gold-lt)}
-.ph-stat span{font-size:10.5px;text-transform:uppercase;letter-spacing:.08em;opacity:.5}
-
-/* ══════ SUB-CATEGORY PILLS ══════ */
-.sub-cats{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;margin-bottom:28px;padding-bottom:2px}
-.sub-cats::-webkit-scrollbar{display:none}
-.sc-pill{padding:8px 18px;border-radius:100px;font-size:12.5px;font-weight:600;white-space:nowrap;border:1.5px solid var(--g200);color:var(--g700);background:var(--wh);transition:all .2s var(--ease);cursor:pointer;flex-shrink:0}
-.sc-pill:hover{border-color:var(--g300);color:var(--bk)}
-.sc-pill.active{background:var(--warm);color:var(--wh);border-color:var(--warm)}
-
-/* ══════ FEATURED ARTICLE (wide) ══════ */
-.feat{display:grid;grid-template-columns:1.3fr 1fr;gap:0;border-radius:var(--r);overflow:hidden;background:var(--g50);border:1px solid var(--g200);margin-bottom:32px;cursor:pointer;transition:all .25s var(--ease)}
-.feat:hover{box-shadow:0 8px 32px rgba(44,36,32,.07);border-color:var(--g300)}
-.feat-img{position:relative;min-height:300px;overflow:hidden}
-.feat-img img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;transition:transform .6s var(--ease)}
-.feat:hover .feat-img img{transform:scale(1.03)}
-.feat-prod{position:absolute;bottom:14px;left:14px;display:inline-flex;align-items:center;gap:6px;padding:6px 12px 6px 8px;border-radius:8px;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);font-size:11px;font-weight:600;color:var(--bk);border:1px solid rgba(0,0,0,.05);z-index:2}
-.feat-prod-dot{width:6px;height:6px;border-radius:50%;background:var(--gold);flex-shrink:0}
-.feat-body{padding:clamp(24px,3vw,40px);display:flex;flex-direction:column;justify-content:center}
-.feat-cat{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--gold-dk);margin-bottom:10px}
-.feat-body h2{font-family:var(--serif);font-size:clamp(20px,2.2vw,28px);font-weight:700;line-height:1.25;margin-bottom:10px;color:var(--bk)}
-.feat-body p{font-size:14px;color:var(--g500);line-height:1.6;margin-bottom:16px}
-.feat-meta{display:flex;align-items:center;gap:10px;font-size:12px;color:var(--g500)}
-.feat-avatar{width:28px;height:28px;border-radius:50%;background:var(--sand);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:var(--g500)}
-.feat-read{margin-left:auto;font-size:12px;font-weight:600;color:var(--gold-dk);display:flex;align-items:center;gap:4px;transition:gap .2s}
-.feat:hover .feat-read{gap:8px}
-
-/* ══════ MAIN + SIDEBAR ══════ */
-.blog-layout{display:grid;grid-template-columns:1fr 320px;gap:48px;padding-bottom:56px}
-
-/* ══════ ARTICLE GRID ══════ */
-.art-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
-.art{border-radius:var(--r);overflow:hidden;background:var(--wh);border:1px solid var(--g200);transition:all .25s var(--ease);cursor:pointer}
-.art:hover{border-color:var(--g300);box-shadow:0 8px 28px rgba(44,36,32,.07)}
-.art-img{position:relative;aspect-ratio:16/10;overflow:hidden;background:var(--sand)}
-.art-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s var(--ease)}
-.art:hover .art-img img{transform:scale(1.04)}
-.art-prod{position:absolute;bottom:10px;right:10px;display:inline-flex;align-items:center;gap:6px;padding:5px 10px 5px 6px;border-radius:8px;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);font-size:11px;font-weight:600;color:var(--bk);border:1px solid rgba(0,0,0,.05);z-index:2}
-.art-prod-dot{width:6px;height:6px;border-radius:50%;background:var(--gold);flex-shrink:0}
-.art-body{padding:18px 18px 12px}
-.art-tags{display:flex;align-items:center;gap:6px;margin-bottom:8px}
-.art-cat{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--gold-dk)}
-.art-time{font-size:11px;color:var(--g500);font-weight:500}
-.art-body h3{font-size:16px;font-weight:700;line-height:1.35;letter-spacing:-.01em;margin-bottom:6px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;color:var(--bk)}
-.art-body p{font-size:13px;color:var(--g500);line-height:1.55;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-.art-foot{padding:0 18px 16px;display:flex;align-items:center;gap:8px}
-.art-avatar{width:24px;height:24px;border-radius:50%;background:var(--sand);display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;color:var(--g500);flex-shrink:0}
-.art-author{font-size:11.5px;color:var(--g500)}
-
-.load-wrap{text-align:center;padding:32px 0}
-.load-btn{padding:12px 44px;border-radius:100px;border:2px solid var(--bk);font-size:13px;font-weight:700;color:var(--bk);background:transparent;transition:all .2s var(--ease)}
-.load-btn:hover{background:var(--bk);color:var(--wh)}
-
-/* ══════ SIDEBAR ══════ */
-.sidebar{position:sticky;top:80px;align-self:start;display:flex;flex-direction:column;gap:24px}
-.sb-hd{font-size:13px;font-weight:800;color:var(--bk);text-transform:uppercase;letter-spacing:.07em;margin-bottom:14px;padding-bottom:10px;border-bottom:2px solid var(--bk)}
-
-/* Sidebar sub-nav */
-.sb-nav a{display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--g100);font-size:13.5px;font-weight:500;color:var(--g700);transition:all .2s}
-.sb-nav a:hover{color:var(--bk);padding-left:4px}
-.sb-nav a .count{font-size:11px;color:var(--g500);background:var(--g100);padding:2px 8px;border-radius:100px;font-weight:600}
-.sb-nav a.active{color:var(--gold-dk);font-weight:700}
-
-/* Sidebar product widget */
-.sb-prod{border-radius:var(--r);border:1px solid var(--g200);overflow:hidden;background:var(--g50);transition:all .25s var(--ease)}
-.sb-prod:hover{border-color:var(--gold);box-shadow:0 4px 20px rgba(184,149,106,.12)}
-.sb-prod-vis{aspect-ratio:4/3;background:var(--wh);display:flex;align-items:center;justify-content:center;padding:20px;overflow:hidden}
-.sb-prod-vis img{max-height:100%;max-width:100%;object-fit:contain}
-.sb-prod-bd{padding:16px}
-.sb-prod-tag{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--gold-dk);margin-bottom:4px}
-.sb-prod-name{font-size:14.5px;font-weight:700;line-height:1.3;margin-bottom:6px}
-.sb-prod-stars{font-size:12px;color:#d4a017;margin-bottom:6px}
-.sb-prod-price{font-size:17px;font-weight:800;color:var(--bk);margin-bottom:3px}
-.sb-prod-inst{font-size:11px;color:var(--g500);margin-bottom:12px}
-.sb-prod-cta{display:block;text-align:center;padding:10px;border-radius:8px;background:var(--warm);color:var(--wh);font-size:13px;font-weight:700;transition:all .2s var(--ease)}
-.sb-prod-cta:hover{background:var(--gold)}
-
-/* Sidebar newsletter */
-.sb-nl{border-radius:var(--r);padding:24px;background:var(--warm);color:var(--wh)}
-.sb-nl h4{font-family:var(--serif);font-size:18px;font-weight:600;margin-bottom:6px}
-.sb-nl p{font-size:12px;color:rgba(255,255,255,.55);margin-bottom:14px;line-height:1.5}
-.sb-nl input{width:100%;padding:10px 12px;border-radius:8px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.06);color:var(--wh);font-family:var(--sans);font-size:13px;outline:none;margin-bottom:8px;transition:border-color .2s}
-.sb-nl input::placeholder{color:rgba(255,255,255,.3)}
-.sb-nl input:focus{border-color:var(--gold)}
-.sb-nl button{width:100%;padding:10px;border-radius:8px;background:var(--gold);color:var(--wh);font-size:13px;font-weight:700;transition:background .2s}
-.sb-nl button:hover{background:var(--gold-lt)}
-
-/* ══════ RELATED PILLARS ══════ */
-.related{padding:0 0 56px}
-.rel-hd{font-family:var(--serif);font-size:clamp(22px,2.5vw,28px);font-weight:600;margin-bottom:20px}
-.rel-hd em{color:var(--gold);font-style:italic;font-weight:400}
-.rel-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.rel-card{position:relative;border-radius:var(--r);overflow:hidden;aspect-ratio:3/2;cursor:pointer}
-.rel-card img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;transition:transform .5s var(--ease)}
-.rel-card:hover img{transform:scale(1.04)}
-.rel-card-ov{position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.75) 0%,transparent 55%);z-index:1}
-.rel-card-meta{position:absolute;bottom:14px;left:14px;right:14px;color:var(--wh);z-index:2}
-.rel-card-meta span{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--gold-lt)}
-.rel-card-meta h3{font-size:14px;font-weight:700;line-height:1.3;margin-top:4px}
-
-/* ══════ FOOTER ══════ */
-.ft{background:var(--g50);border-top:1px solid var(--g200);padding:48px 0 0}
-.ft-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;padding-bottom:32px;border-bottom:1px solid var(--g200)}
-.ft-brand{font-family:var(--serif);font-size:22px;font-weight:700;margin-bottom:12px}
-.ft-brand em{color:var(--gold);font-style:italic;font-weight:400;font-size:16px}
-.ft-desc{font-size:13px;color:var(--g500);line-height:1.6;max-width:280px}
-.ft-col-title{font-size:12px;font-weight:800;color:var(--bk);text-transform:uppercase;letter-spacing:.06em;margin-bottom:12px}
-.ft-col a{display:block;font-size:13px;color:var(--g500);padding:3px 0;transition:color .2s}
-.ft-col a:hover{color:var(--bk)}
-.ft-bottom{display:flex;justify-content:space-between;align-items:center;padding:20px 0;flex-wrap:wrap;gap:12px}
-.ft-copy{font-size:11.5px;color:var(--g500)}
-.ft-links{display:flex;gap:20px;flex-wrap:wrap}
-.ft-links a{font-size:12px;color:var(--g500);transition:color .2s}
-.ft-links a:hover{color:var(--bk)}
-
-/* ══════ RESPONSIVE ══════ */
-@media(max-width:1100px){
-  .blog-layout{grid-template-columns:1fr;gap:32px}
-  .sidebar{position:static;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-  .rel-grid{grid-template-columns:repeat(2,1fr)}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{font-family:var(--sans);color:var(--bk);background:var(--white);line-height:1.7;overflow-x:hidden}
+a{text-decoration:none;color:inherit;transition:color .2s}
+img{display:block;max-width:100%;height:auto}
+:root{
+  --bk:#111;--g900:#1a1a1a;--g700:#333;--g500:#666;--g400:#888;--g300:#aaa;--g200:#ccc;--g100:#e5e5e5;--g50:#f5f5f5;
+  --white:#fff;--accent:#e63946;--accent-soft:#fef1f2;
+  --serif:'Fraunces',Georgia,serif;--sans:'Plus Jakarta Sans',-apple-system,sans-serif;
+  --ease:cubic-bezier(.22,1,.36,1);--max:1440px;--content:780px;--pad:clamp(20px,4vw,80px)
 }
-@media(max-width:768px){
-  .c{padding:0 16px}
-  .feat{grid-template-columns:1fr}
-  .feat-img{min-height:220px}
-  .art-grid{grid-template-columns:1fr}
-  .ft-grid{grid-template-columns:1fr 1fr;gap:24px}
-  .sidebar{grid-template-columns:1fr}
-  .ph{min-height:260px}
-  .ph-stats{gap:16px}
-  .nav-search{max-width:180px}
-}
-@media(max-width:480px){
-  .ft-grid{grid-template-columns:1fr}
-  .nav-search{display:none}
-  .ph{min-height:220px}
-  .rel-grid{grid-template-columns:1fr}
-}
+.topbar{background:var(--bk);color:var(--white);text-align:center;padding:10px var(--pad);font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase}
+.topbar a{color:var(--white);text-decoration:underline;text-underline-offset:2px}
+.nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--g100)}
+.nav-inner{max-width:var(--max);margin:0 auto;padding:0 var(--pad);display:flex;align-items:center;justify-content:space-between;height:64px}
+.nav-logo{font-family:var(--serif);font-size:22px;font-weight:600;letter-spacing:-.02em}
+.nav-logo span{font-weight:300;color:var(--g400);margin-left:6px;font-size:16px}
+.nav-links{display:flex;align-items:center;gap:32px}
+.nav-links a{font-size:13px;font-weight:500;color:var(--g500);letter-spacing:.02em}
+.nav-links a:hover{color:var(--bk)}
+.nav-icons{display:flex;gap:16px;align-items:center}
+.nav-icons a{color:var(--g500)}.nav-icons a:hover{color:var(--bk)}
+.nav-icons svg{width:20px;height:20px}
+.footer{background:var(--bk);color:var(--white);padding:64px 0 32px}
+.ft-inner{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+.ft-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px}
+.ft-brand{font-family:var(--serif);font-size:24px;font-weight:600;margin-bottom:16px}
+.ft-brand span{font-weight:300;color:var(--g400);font-size:16px;margin-left:4px}
+.ft-desc{font-size:13px;color:var(--g400);line-height:1.6;max-width:300px}
+.ft-col h4{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--g400);margin-bottom:16px}
+.ft-col a{display:block;font-size:13px;color:var(--g300);margin-bottom:10px;transition:color .2s}
+.ft-col a:hover{color:var(--white)}
+.ft-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:24px;display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--g500)}
+.ft-socials{display:flex;gap:16px}.ft-socials a{color:var(--g400)}.ft-socials a:hover{color:var(--white)}
+@media(max-width:1024px){.ft-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.nav-links{display:none}.ft-grid{grid-template-columns:1fr}}
+.bc{max-width:var(--max);margin:0 auto;padding:24px var(--pad) 0;font-size:12px;color:var(--g400)}
+.bc a{color:var(--g400)}.bc a:hover{color:var(--bk)}.bc svg{width:12px;height:12px;vertical-align:middle;margin:0 4px}
+.pillar-hero{max-width:var(--max);margin:0 auto;padding:40px var(--pad) 0}
+.pillar-hero-img{width:100%;border-radius:16px;overflow:hidden;aspect-ratio:21/9;position:relative}
+.pillar-hero-img img{width:100%;height:100%;object-fit:cover}
+.pillar-hero-img .ov{position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.6) 0%,transparent 50%)}
+.pillar-hero-img .txt{position:absolute;bottom:48px;left:48px;z-index:1;color:var(--white)}
+.pillar-hero-img h1{font-family:var(--serif);font-size:clamp(36px,5vw,56px);font-weight:500;letter-spacing:-.03em}
+.pillar-hero-img p{font-size:16px;color:rgba(255,255,255,.8);max-width:500px;margin-top:8px}
+.pg{max-width:var(--max);margin:0 auto;padding:48px var(--pad) 64px}
+.pg-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.pg-card{display:block;cursor:pointer}
+.pg-card .img{border-radius:10px;overflow:hidden;aspect-ratio:4/3;margin-bottom:14px}
+.pg-card .img img{width:100%;height:100%;object-fit:cover;transition:transform .5s var(--ease)}
+.pg-card:hover .img img{transform:scale(1.05)}
+.pg-card .badge{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:4px;margin-bottom:8px}
+.badge-trf{background:var(--accent-soft);color:var(--accent)}
+.badge-srn{background:#fef3c7;color:#92400e}
+.badge-reh{background:#dbeafe;color:#1e40af}
+.badge-kar{background:#ede9fe;color:#5b21b6}
+.badge-nas{background:#d1fae5;color:#065f46}
+.badge-hik{background:var(--g100);color:var(--g700)}
+.badge-mvs{background:#fce7f3;color:#9d174d}
+.pg-card h3{font-family:var(--serif);font-size:clamp(17px,1.5vw,21px);font-weight:500;line-height:1.3;margin-bottom:6px;transition:color .2s}
+.pg-card:hover h3{color:var(--accent)}
+.pg-card .meta{font-size:12px;color:var(--g400)}
+@media(max-width:1024px){.pg-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.pg-grid{grid-template-columns:1fr}.pillar-hero-img .txt{left:24px;bottom:24px}}
 
-/* ══════ ANIMATIONS ══════ */
-@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
-.art,.feat,.rel-card{animation:fadeUp .4s var(--ease) both}
-.art:nth-child(1){animation-delay:.05s}.art:nth-child(2){animation-delay:.1s}
-.art:nth-child(3){animation-delay:.15s}.art:nth-child(4){animation-delay:.2s}
-.art:nth-child(5){animation-delay:.25s}.art:nth-child(6){animation-delay:.3s}
 </style>
 </head>
 <body>
-
-<!-- ANNOUNCEMENT -->
-<div class="ann"><span>Tüm Siparişlerde Ücretsiz Kargo · 50. Yıl Özel Koleksiyonları Satışta</span></div>
-
-<!-- NAVBAR -->
-<nav class="nav" id="nav"><div class="c">
-  <div class="nav-top">
-    <a href="01-anasayfa.html" class="logo">Karaca <em>Dergi</em></a>
-    <div class="nav-search">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-      <input type="text" placeholder="Tarif, rehber veya ilham ara...">
-    </div>
-    <div class="nav-acts">
-      <a class="nav-icon" href="/hesap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></a>
-      <a class="nav-icon" href="/sepet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg></a>
-    </div>
-  </div>
-  <div class="pillars"><div class="pillar-row">
-    <a class="p-link" href="01-anasayfa.html">Ana Sayfa</a>
-    <a class="p-link active" href="02-pillar-mutfak-pisirme.html">Mutfak & Pişirme</a>
-    <a class="p-link" href="08-post-nasil-yapilir.html">Sofra & Sunum</a>
-    <a class="p-link" href="04-post-sorun-giderme.html">Kahve & Çay</a>
-    <a class="p-link" href="07-post-rehber-airfryer.html">Küçük Ev Aletleri</a>
-    <a class="p-link" href="06-post-karsilastirma.html">Ev & Yaşam</a>
-    <a class="p-link" href="08-post-nasil-yapilir.html">Bakım & Destek</a>
-    <a class="p-link" href="05-post-marka-hikayesi.html">Karaca Hikâyesi</a>
-    <a class="p-link" href="09-post-ramazan-2026.html">Yaşam Kılavuzları</a>
-  </div></div>
-</div></nav>
-
-<!-- BREADCRUMB -->
-<section><div class="c">
-  <div class="bread">
-    <a href="01-anasayfa.html">Dergi</a>
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
-    <span style="color:var(--bk);font-weight:600">Mutfak & Pişirme</span>
-  </div>
-</div></section>
-
-<!-- PILLAR HERO BANNER -->
-<section><div class="c">
-  <div class="ph">
-    <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1200&q=85" alt="Mutfak & Pişirme">
-    <div class="ph-ov"></div>
-    <div class="ph-content">
-      <div class="ph-label">Pillar</div>
-      <h1>Mutfak & <em>Pişirme</em></h1>
-      <p>Biogranit'ten döküm tavaya, airfryer tariflerinden pişirme tekniklerine: Karaca mutfak ürünleriyle test edilmiş tarifler, malzeme rehberleri ve uzman ipuçları.</p>
-      <div class="ph-stats">
-        <div class="ph-stat"><strong>240+</strong><span>Yazı</span></div>
-        <div class="ph-stat"><strong>16</strong><span>Rehber</span></div>
-        <div class="ph-stat"><strong>80+</strong><span>Tarif</span></div>
-      </div>
-    </div>
-  </div>
-</div></section>
-
-<!-- SUB-CATEGORY PILLS -->
-<section><div class="c">
-  <div class="sub-cats">
-    <button class="sc-pill active">Tümü</button>
-    <button class="sc-pill">🍳 Airfryer Tarifleri</button>
-    <button class="sc-pill">🫕 Döküm Tencere</button>
-    <button class="sc-pill">🔥 Biogranit Rehber</button>
-    <button class="sc-pill">🥘 Düdüklü Tencere</button>
-    <button class="sc-pill">🔪 Bıçak & Kesme</button>
-    <button class="sc-pill">📦 Depolama</button>
-    <button class="sc-pill">⚖️ Karşılaştırma</button>
-  </div>
-</div></section>
-
-<!-- FEATURED ARTICLE -->
-<section><div class="c">
-  <a href="03-post-tarif.html" class="feat">
-    <div class="feat-img">
-      <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=85" alt="Biogranit Rehber">
-      <div class="feat-prod"><span class="feat-prod-dot"></span> Biogranit Serisi</div>
-    </div>
-    <div class="feat-body">
-      <div class="feat-cat">Rehber · Biogranit</div>
-      <h2>Biogranit Nedir? Karaca'nın İmza Kaplaması Hakkında Bilmeniz Gereken Her Şey</h2>
-      <p>2014'te piyasaya sürülen Biogranit kaplama, Karaca'nın en bilinen teknolojisi. Sağlık güvenliği, dayanıklılık testleri, doğru kullanım ve bakım: kapsamlı rehber.</p>
-      <div class="feat-meta">
-        <div class="feat-avatar">EK</div>
-        <span>Elif Karaca · 12 dk okuma</span>
-        <span class="feat-read">Oku →</span>
-      </div>
-    </div>
-  </a>
-</div></section>
-
-<!-- MAIN + SIDEBAR -->
-<section><div class="c">
-<div class="blog-layout">
-
-<!-- ARTICLES -->
-<div>
-<div class="art-grid">
-
-  <article class="art"><a href="04-post-sorun-giderme.html">
-    <div class="art-img">
-      <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&q=80" alt="Tarif">
-      <div class="art-prod"><span class="art-prod-dot"></span> Air Pro Cook</div>
-    </div>
-    <div class="art-body">
-      <div class="art-tags"><span class="art-cat">Airfryer Tarifi</span><span class="art-time">· 5 dk</span></div>
-      <h3>Air Pro Cook ile Çıtır Tavuk Kanatları: Yağsız Lezzet</h3>
-      <p>Eşit hava dağıtım teknolojisiyle mükemmel çıtırlık. Adım adım tarif ve ipuçları.</p>
-    </div>
-    <div class="art-foot"><div class="art-avatar">AY</div><span class="art-author">Ayşe Yılmaz</span></div>
-  </a></article>
-
-  <article class="art"><a href="08-post-nasil-yapilir.html">
-    <div class="art-img">
-      <img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=600&q=80" alt="Tarif">
-    </div>
-    <div class="art-body">
-      <div class="art-tags"><span class="art-cat">Döküm Tencere</span><span class="art-time">· 7 dk</span></div>
-      <h3>Döküm Tencerede Yavaş Pişirme: Etli Nohut Yahnisi</h3>
-      <p>Karaca Cast Iron serisinin eşit ısı dağıtımıyla geleneksel lezzetler.</p>
-    </div>
-    <div class="art-foot"><div class="art-avatar">MK</div><span class="art-author">Mehmet Kaya</span></div>
-  </a></article>
-
-  <article class="art"><a href="06-post-karsilastirma.html">
-    <div class="art-img">
-      <img src="https://images.unsplash.com/photo-1585032226651-759b368d7246?w=600&q=80" alt="Karşılaştırma">
-    </div>
-    <div class="art-body">
-      <div class="art-tags"><span class="art-cat">Karşılaştırma</span><span class="art-time">· 9 dk</span></div>
-      <h3>BioDiamond vs Powersteel: Hangi Kaplama Size Uygun?</h3>
-      <p>İki premium kaplama teknolojisinin detaylı karşılaştırması: dayanıklılık, ısı dağılımı, fiyat.</p>
-    </div>
-    <div class="art-foot"><div class="art-avatar">SK</div><span class="art-author">Selin Koçer</span></div>
-  </a></article>
-
-  <article class="art"><a href="09-post-ramazan-2026.html">
-    <div class="art-img">
-      <img src="https://images.unsplash.com/photo-1556909172-54557c7e4fb7?w=600&q=80" alt="Güvenlik">
-    </div>
-    <div class="art-body">
-      <div class="art-tags"><span class="art-cat">Rehber</span><span class="art-time">· 6 dk</span></div>
-      <h3>Düdüklü Tencere Güvenli Kullanım Rehberi</h3>
-      <p>Kapak kilidi, basınç ayarı, ilk kullanım hazırlığı: düdüklü tencereyle güvenli pişirmenin kuralları.</p>
-    </div>
-    <div class="art-foot"><div class="art-avatar">TD</div><span class="art-author">Teknik Destek</span></div>
-  </a></article>
-
-  <article class="art"><a href="07-post-rehber-airfryer.html">
-    <div class="art-img">
-      <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80" alt="Tarif">
-      <div class="art-prod"><span class="art-prod-dot"></span> Air Pro Cook XL</div>
-    </div>
-    <div class="art-body">
-      <div class="art-tags"><span class="art-cat">Airfryer Tarifi</span><span class="art-time">· 4 dk</span></div>
-      <h3>30 Dakikada 5 İftar Tarifi: Airfryer ile Hızlı Menü</h3>
-      <p>Çıtır börek, falafel, tavuk kanat, sebze köfte ve patates: hepsi 30 dakikada.</p>
-    </div>
-    <div class="art-foot"><div class="art-avatar">AY</div><span class="art-author">Ayşe Yılmaz</span></div>
-  </a></article>
-
-  <article class="art"><a href="05-post-marka-hikayesi.html">
-    <div class="art-img">
-      <img src="https://images.unsplash.com/photo-1556909114-44e3e70034e2?w=600&q=80" alt="Döküm Tava">
-    </div>
-    <div class="art-body">
-      <div class="art-tags"><span class="art-cat">Başlangıç Rehberi</span><span class="art-time">· 8 dk</span></div>
-      <h3>Döküm Tava Başlangıç Rehberi: İlk Kullanımdan Bakıma</h3>
-      <p>Yağlama, ısıtma, temizlik ve saklama: döküm tavanızı yıllarca kullanmanın sırları.</p>
-    </div>
-    <div class="art-foot"><div class="art-avatar">MK</div><span class="art-author">Mehmet Kaya</span></div>
-  </a></article>
-
+<div class="topbar">2.500 TL üzeri alışverişlerde ücretsiz kargo &middot; <a href="https://www.karaca.com">karaca.com</a></div>
+<nav class="nav"><div class="nav-inner">
+<a href="01-anasayfa.html" class="nav-logo">Karaca <span>Dergi</span></a>
+<div class="nav-links">
+<a href="02-pillar-mutfak-pisirme.html">Mutfak &amp; Pişirme</a>
+<a href="08-post-nasil-yapilir.html">Sofra &amp; Sunum</a>
+<a href="04-post-sorun-giderme.html">Kahve &amp; Çay</a>
+<a href="07-post-rehber-airfryer.html">Küçük Ev Aletleri</a>
+<a href="08-post-nasil-yapilir.html">Bakım &amp; Destek</a>
+<a href="05-post-marka-hikayesi.html">Hikayemiz</a>
 </div>
-<div class="load-wrap"><button class="load-btn">Daha Fazla Göster</button></div>
+<div class="nav-icons">
+<a href="10-arama-sonuclari.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></a>
+<a href="https://www.karaca.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4zM3 6h18M16 10a4 4 0 01-8 0"/></svg></a>
+</div></div></nav>
+<div class="bc"><a href="01-anasayfa.html">Dergi</a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:12px;height:12px;vertical-align:middle;margin:0 4px"><path d="M9 18l6-6-6-6"/></svg><span>Mutfak &amp; Pişirme</span></div>
+<section class="pillar-hero">
+<div class="pillar-hero-img">
+<img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1200&q=85" alt="Mutfak">
+<div class="ov"></div>
+<div class="txt"><h1>Mutfak &amp; Pişirme</h1><p>Tariflerden bakım rehberlerine, karşılaştırmalardan sorun giderme kılavuzlarına.</p></div>
 </div>
-
-<!-- SIDEBAR -->
-<aside class="sidebar">
-
-  <!-- Sub-navigation -->
-  <div>
-    <div class="sb-hd">Alt Kategoriler</div>
-    <div class="sb-nav">
-      <a href="#" class="active">Tüm Yazılar <span class="count">240</span></a>
-      <a href="03-post-tarif.html">Airfryer Tarifleri <span class="count">84</span></a>
-      <a href="#">Döküm Tencere & Tava <span class="count">32</span></a>
-      <a href="08-post-nasil-yapilir.html">Biogranit Rehber <span class="count">18</span></a>
-      <a href="#">Düdüklü Tencere <span class="count">14</span></a>
-      <a href="#">Bıçak & Kesme <span class="count">12</span></a>
-      <a href="#">Pişirme Teknikleri <span class="count">28</span></a>
-      <a href="06-post-karsilastirma.html">Karşılaştırmalar <span class="count">16</span></a>
-      <a href="#">Malzeme Bilgisi <span class="count">22</span></a>
-      <a href="#">Depolama & Düzen <span class="count">14</span></a>
-    </div>
-  </div>
-
-  <!-- Product Widget -->
-  <div>
-    <div class="sb-hd">Öne Çıkan Ürün</div>
-    <div class="sb-prod">
-      <div class="sb-prod-vis">
-        <img src="https://images.unsplash.com/photo-1585032226651-759b368d7246?w=400&q=80" alt="Air Pro Cook">
-      </div>
-      <div class="sb-prod-bd">
-        <div class="sb-prod-tag">Airfryer</div>
-        <div class="sb-prod-name">Air Pro Cook XL 7.5L Airfryer</div>
-        <div class="sb-prod-stars">★★★★★ <span style="color:var(--g500);font-size:10px">(312)</span></div>
-        <div class="sb-prod-price">3.499 TL</div>
-        <div class="sb-prod-inst">9 Taksit × 389 TL</div>
-        <a href="https://www.karaca.com" class="sb-prod-cta">Ürünü İncele →</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Newsletter -->
-  <div>
-    <div class="sb-nl">
-      <h4>Mutfak İlhamı</h4>
-      <p>Her hafta yeni tarifler, pişirme ipuçları ve ürün rehberleri.</p>
-      <input placeholder="E-posta adresiniz">
-      <button>Abone Ol</button>
-    </div>
-  </div>
-
-</aside>
+</section>
+<section class="pg"><div class="pg-grid">
+<a href="03-post-tarif.html" class="pg-card"><div class="img"><img src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=600&q=80" alt="Tarif"></div><span class="badge badge-trf">Tarif</span><h3>Airfryer’da Çıtır Tavuk Kanatları: Adım Adım</h3><div class="meta">5 dk okuma &middot; Ayşe Yılmaz</div></a>
+<a href="04-post-sorun-giderme.html" class="pg-card"><div class="img"><img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&q=80" alt="Sorun Giderme"></div><span class="badge badge-srn">Sorun Giderme</span><h3>Hatır Kırmızı Işık Sorunu: Servise Göndermeden Çözün</h3><div class="meta">4 dk okuma &middot; Teknik Destek</div></a>
+<a href="06-post-karsilastirma.html" class="pg-card"><div class="img"><img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80" alt="Karşılaştırma"></div><span class="badge badge-kar">Karşılaştırma</span><h3>BioDiamond mı, Powersteel 5Ply mı? Detaylı Analiz</h3><div class="meta">8 dk okuma &middot; İçerik Ekibi</div></a>
+<a href="07-post-rehber-airfryer.html" class="pg-card"><div class="img"><img src="https://images.unsplash.com/photo-1585032226651-759b368d7246?w=600&q=80" alt="Rehber"></div><span class="badge badge-reh">Rehber</span><h3>Airfryer Satın Alma Rehberi 2026: Ailenize Göre Doğru Model</h3><div class="meta">8 dk okuma &middot; İçerik Ekibi</div></a>
+<a href="08-post-nasil-yapilir.html" class="pg-card"><div class="img"><img src="https://images.unsplash.com/photo-1556909172-54557c7e4fb7?w=600&q=80" alt="Nasıl Yapılır"></div><span class="badge badge-nas">Nasıl Yapılır</span><h3>Biogranit Tencere İlk Kullanım ve Bakım Rehberi</h3><div class="meta">6 dk okuma &middot; Teknik Destek</div></a>
+<a href="05-post-marka-hikayesi.html" class="pg-card"><div class="img"><img src="https://images.unsplash.com/photo-1556909114-44e3e70034e2?w=600&q=80" alt="Hikaye"></div><span class="badge badge-hik">Marka</span><h3>1973’ten Bugüne: Süleymaniye’den Dünyaya Açılan Bir Marka</h3><div class="meta">7 dk okuma &middot; İçerik Ekibi</div></a>
+<a href="09-post-ramazan-2026.html" class="pg-card"><div class="img"><img src="https://images.unsplash.com/photo-1567529692333-de9fd6772897?w=600&q=80" alt="Ramazan"></div><span class="badge badge-mvs">Mevsimsel</span><h3>Ramazan 2026 Sofra Rehberi: 4 Haftalık Menü Planı</h3><div class="meta">10 dk okuma &middot; İçerik Ekibi</div></a>
+<a href="03-post-tarif.html" class="pg-card"><div class="img"><img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80" alt="Tarif"></div><span class="badge badge-trf">Tarif</span><h3>Döküm Tencerede Yavaş Pişirme: Etli Nohut Yahnisi</h3><div class="meta">7 dk okuma &middot; Mehmet Kaya</div></a>
+<a href="08-post-nasil-yapilir.html" class="pg-card"><div class="img"><img src="https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?w=600&q=80" alt="Bakım"></div><span class="badge badge-nas">Bakım</span><h3>Fine Pearl Porselen: Yıllar Boyu Parlaklık İçin 7 Kural</h3><div class="meta">6 dk okuma &middot; Selin Koçer</div></a>
+</div></section>
+<footer class="footer"><div class="ft-inner">
+<div class="ft-grid">
+<div><div class="ft-brand">Karaca <span>Dergi</span></div><p class="ft-desc">Mutfak, sofra ve yaşama dair ilham veren içerikler. 1973’ten bu yana paylaşacak çok şeyimiz var.</p></div>
+<div class="ft-col"><h4>İçerikler</h4><a href="03-post-tarif.html">Tarifler</a><a href="07-post-rehber-airfryer.html">Rehberler</a><a href="06-post-karsilastirma.html">Karşılaştırmalar</a><a href="08-post-nasil-yapilir.html">Bakım İpuçları</a><a href="09-post-ramazan-2026.html">Mevsimsel</a></div>
+<div class="ft-col"><h4>Karaca</h4><a href="05-post-marka-hikayesi.html">Hikayemiz</a><a href="https://www.karaca.com/magazalar">Mağazalar</a><a href="https://www.karaca.com/kariyer">Kariyer</a><a href="https://www.karaca.com/iletisim">İletişim</a></div>
+<div class="ft-col"><h4>Yasal</h4><a href="https://www.karaca.com/kvkk">KVKK Aydınlatma</a><a href="https://www.karaca.com/cerez-politikasi">Çerez Politikası</a><a href="https://www.karaca.com/kullanim-kosullari">Kullanım Koşulları</a></div>
 </div>
-</div></section>
-
-<!-- RELATED PILLARS -->
-<section class="related"><div class="c">
-  <h2 class="rel-hd">Diğer <em>Konular</em></h2>
-  <div class="rel-grid">
-    <a href="08-post-nasil-yapilir.html" class="rel-card">
-      <img src="https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?w=400&q=80" alt="Sofra">
-      <div class="rel-card-ov"></div>
-      <div class="rel-card-meta"><span>60+ Yazı</span><h3>Sofra & Sunum</h3></div>
-    </a>
-    <a href="04-post-sorun-giderme.html" class="rel-card">
-      <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=400&q=80" alt="Kahve">
-      <div class="rel-card-ov"></div>
-      <div class="rel-card-meta"><span>45+ Yazı</span><h3>Kahve & Çay</h3></div>
-    </a>
-    <a href="09-post-ramazan-2026.html" class="rel-card">
-      <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=400&q=80" alt="Bakım">
-      <div class="rel-card-ov"></div>
-      <div class="rel-card-meta"><span>35+ Yazı</span><h3>Bakım & Destek</h3></div>
-    </a>
-    <a href="05-post-marka-hikayesi.html" class="rel-card">
-      <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=400&q=80" alt="Ev">
-      <div class="rel-card-ov"></div>
-      <div class="rel-card-meta"><span>80+ Yazı</span><h3>Ev & Yaşam</h3></div>
-    </a>
-  </div>
-</div></section>
-
-<!-- FOOTER -->
-<footer class="ft"><div class="c">
-  <div class="ft-grid">
-    <div>
-      <div class="ft-brand">Karaca <em>Dergi</em></div>
-      <p class="ft-desc">50 yıllık miras, binlerce tarif, yüzlerce rehber. Mutfağınıza, sofranıza ve evinize ilham veren içerikler.</p>
-    </div>
-    <div class="ft-col"><div class="ft-col-title">İçerikler</div>
-      <a href="03-post-tarif.html">Tarifler</a><a href="07-post-rehber-airfryer.html">Rehberler</a><a href="04-post-sorun-giderme.html">Kahve & Çay</a><a href="08-post-nasil-yapilir.html">Sofra & Porselen</a><a href="08-post-nasil-yapilir.html">Bakım & Destek</a>
-    </div>
-    <div class="ft-col"><div class="ft-col-title">Karaca</div>
-      <a href="05-post-marka-hikayesi.html">Hakkımızda</a><a href="05-post-marka-hikayesi.html">Hikâyemiz</a><a href="https://www.karaca.com/magazalar">Mağazalar</a><a href="https://www.karaca.com/kariyer">Kariyer</a><a href="https://www.karaca.com/iletisim">İletişim</a>
-    </div>
-    <div class="ft-col"><div class="ft-col-title">Yasal</div>
-      <a href="https://www.karaca.com/kvkk">KVKK Aydınlatma</a><a href="https://www.karaca.com/cerez-politikasi">Çerez Politikası</a><a href="https://www.karaca.com/kullanim-kosullari">Kullanım Koşulları</a><a href="https://www.karaca.com/mesafeli-satis-sozlesmesi">Mesafeli Satış Sözleşmesi</a>
-    </div>
-  </div>
-  <div class="ft-bottom">
-    <span class="ft-copy">© 2026 Karaca. Tüm hakları saklıdır.</span>
-    <div class="ft-links"><a href="https://www.instagram.com/karaborsa/">Instagram</a><a href="https://www.youtube.com/karaca">YouTube</a><a href="https://www.pinterest.com/karaca/">Pinterest</a><a href="https://www.karaca.com">karaca.com</a></div>
-  </div>
+<div class="ft-bottom"><span>&copy; 2026 Karaca Züccaciye A.Ş.</span><div class="ft-socials"><a href="https://www.instagram.com/karaca/">Instagram</a><a href="https://www.youtube.com/karaca">YouTube</a><a href="https://www.pinterest.com/karaca/">Pinterest</a><a href="https://www.karaca.com">karaca.com</a></div></div>
 </div></footer>
-
-<script>
-(function(){
-  // Sub-cat pills
-  document.querySelectorAll('.sc-pill').forEach(function(b){
-    b.addEventListener('click',function(){
-      document.querySelectorAll('.sc-pill').forEach(function(x){x.classList.remove('active')});
-      b.classList.add('active');
-    });
-  });
-  // Nav scroll
-  var nav=document.getElementById('nav');
-  window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>10)},{passive:true});
-})();
-</script>
 </body>
 </html>

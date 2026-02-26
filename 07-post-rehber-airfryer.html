@@ -2,481 +2,152 @@
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Airfryer Satın Alma Rehberi: Hangi Modeli Almalıyım? | Karaca Dergi</title>
-<meta name="description" content="Karaca airfryer modelleri arasında doğru seçimi yapın. Kapasite, özellik ve bütçeye göre 3 adımda ideal airfryer. Multifry, Air Pro Cook XL, Duo XXXL karşılaştırması.">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Airfryer Satın Alma Rehberi 2026: Ailenize Göre Doğru Model | Karaca Dergi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400&display=swap" rel="stylesheet">
 <style>
-:root{
-  --bk:#1a1a1a;--warm:#2c2420;--cream:#f7f3ee;--sand:#e8e0d4;
-  --gold:#b8956a;--gold-lt:#d4b896;--gold-dk:#96764d;
-  --g50:#faf9f7;--g100:#f2f0ec;--g200:#e5e2dc;--g300:#ccc8c0;
-  --g500:#8c8279;--g700:#5c554d;--wh:#fff;
-  --green:#2d7a4f;--green-lt:#f0faf4;--green-bd:#c6e9d4;
-  --blue:#2563eb;--blue-lt:#eff6ff;--blue-bd:#bfdbfe;
-  --amber:#92700a;--amber-lt:#fefbec;--amber-bd:#f5e6a3;
-  --purple:#7c3aed;--purple-lt:#f5f3ff;--purple-bd:#ddd6fe;
-  --serif:'Playfair Display',Georgia,serif;
-  --sans:'DM Sans',-apple-system,BlinkMacSystemFont,sans-serif;
-  --mx:1360px;--r:10px;--ease:cubic-bezier(.4,0,.2,1);
-}
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:var(--sans);color:var(--bk);background:var(--wh);-webkit-font-smoothing:antialiased;overflow-x:hidden;line-height:1.6}
-a{color:inherit;text-decoration:none}button{font-family:inherit;cursor:pointer;border:none;background:none}
-.c{max-width:var(--mx);margin:0 auto;padding:0 40px}
-
-/* NAV */
-.ann{background:var(--warm);padding:9px 16px;text-align:center}
-.ann span{font-size:12px;font-weight:600;color:var(--gold-lt);letter-spacing:.04em}
-.nav{position:sticky;top:0;z-index:100;background:var(--wh);border-bottom:1px solid var(--g200);transition:box-shadow .3s}
-.nav.scrolled{box-shadow:0 2px 20px rgba(0,0,0,.06)}
-.nav-top{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
-.logo{font-family:var(--serif);font-size:26px;font-weight:700;letter-spacing:-.5px}
-.logo em{font-weight:400;color:var(--gold);font-size:18px;margin-left:4px;font-style:italic}
-.pillars{border-top:1px solid var(--g200);overflow-x:auto;scrollbar-width:none}
-.pillars::-webkit-scrollbar{display:none}
-.pillar-row{display:flex;min-width:max-content}
-.p-link{padding:11px 18px;font-size:12.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--g500);white-space:nowrap;position:relative;transition:color .2s}
-.p-link:hover{color:var(--bk)}
-.p-link.active{color:var(--gold-dk)}
-.p-link.active::after{content:'';position:absolute;bottom:0;left:18px;right:18px;height:2px;background:var(--gold)}
-
-/* BREAD */
-.bread{padding:16px 0;font-size:12.5px;color:var(--g500);display:flex;align-items:center;gap:6px;flex-wrap:wrap}
-.bread a{transition:color .2s}.bread a:hover{color:var(--bk)}
-.bread svg{width:12px;height:12px;color:var(--g300)}
-
-/* LAYOUT */
-.post-layout{display:grid;grid-template-columns:1fr 320px;gap:56px;padding-bottom:56px}
-
-/* POST */
-.post{max-width:100%}
-.post-type{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--wh);background:var(--green);padding:5px 14px;border-radius:100px;margin-bottom:14px}
-.post-type svg{width:14px;height:14px}
-.post h1{font-family:var(--serif);font-size:clamp(26px,3.5vw,40px);font-weight:700;line-height:1.15;margin-bottom:12px}
-.post-excerpt{font-size:17px;color:var(--g500);line-height:1.6;margin-bottom:20px}
-.author-bar{display:flex;align-items:center;gap:14px;padding:20px 0;border-top:1px solid var(--g200);border-bottom:1px solid var(--g200);margin-bottom:32px}
-.ab-avatar{width:44px;height:44px;border-radius:50%;background:var(--sand);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;color:var(--g500);flex-shrink:0}
-.ab-info{flex:1}.ab-name{font-size:14px;font-weight:700}.ab-role{font-size:12px;color:var(--g500)}
-.ab-date{font-size:12px;color:var(--g500);text-align:right}
-.ab-date strong{display:block;font-weight:600;color:var(--g700)}
-.tldr{background:var(--warm);color:var(--wh);border-radius:var(--r);padding:20px 24px;margin-bottom:32px}
-.tldr-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--gold-lt);margin-bottom:6px}
-.tldr p{font-size:14px;line-height:1.6;opacity:.85;margin:0}
-.post-body{font-size:16px;line-height:1.8;color:var(--warm)}
-.post-body h2{font-family:var(--serif);font-size:clamp(20px,2.5vw,26px);font-weight:700;color:var(--bk);margin:40px 0 16px;padding-top:8px}
-.post-body h3{font-size:18px;font-weight:700;color:var(--bk);margin:28px 0 12px}
-.post-body p{margin-bottom:18px}
-.post-body strong{color:var(--bk);font-weight:600}
-
-/* ═══ DECISION TREE ═══ */
-.dtree{margin:28px 0;border-radius:var(--r);border:1px solid var(--g200);overflow:hidden}
-.dtree-header{background:var(--warm);color:var(--wh);padding:16px 20px;display:flex;align-items:center;gap:10px}
-.dtree-header svg{width:20px;height:20px;color:var(--gold-lt)}
-.dtree-header h3{font-size:15px;font-weight:700;margin:0}
-.dtree-body{padding:24px}
-.dt-q{font-size:14px;font-weight:700;color:var(--bk);margin-bottom:12px;display:flex;align-items:center;gap:8px}
-.dt-q svg{width:16px;height:16px;color:var(--gold);flex-shrink:0}
-.dt-opts{display:flex;flex-direction:column;gap:8px;margin-bottom:20px}
-.dt-opt{display:flex;align-items:center;gap:12px;padding:12px 16px;border-radius:8px;border:1px solid var(--g200);transition:all .2s;cursor:default}
-.dt-opt:hover{border-color:var(--gold);background:var(--cream)}
-.dt-arrow{font-size:18px;color:var(--gold)}
-.dt-answer{font-size:13px;flex:1;color:var(--g700)}
-.dt-result{font-size:12px;font-weight:700;padding:4px 12px;border-radius:100px;white-space:nowrap;flex-shrink:0}
-.res-compact{background:var(--green-lt);color:var(--green);border:1px solid var(--green-bd)}
-.res-xl{background:var(--blue-lt);color:var(--blue);border:1px solid var(--blue-bd)}
-.res-duo{background:var(--purple-lt);color:var(--purple);border:1px solid var(--purple-bd)}
-.res-xxxl{background:var(--amber-lt);color:var(--amber);border:1px solid var(--amber-bd)}
-.dt-divider{height:1px;background:var(--g200);margin:4px 0 16px}
-
-/* ═══ TIER CARDS ═══ */
-.tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin:28px 0}
-.tier{border-radius:var(--r);border:2px solid var(--g200);overflow:hidden;transition:all .3s var(--ease);display:flex;flex-direction:column}
-.tier:hover{border-color:var(--gold);box-shadow:0 8px 32px rgba(184,149,106,.12)}
-.tier-badge{padding:10px 16px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;text-align:center}
-.t-entry .tier-badge{background:var(--green-lt);color:var(--green)}
-.t-mid .tier-badge{background:var(--blue-lt);color:var(--blue)}
-.t-pro .tier-badge{background:var(--purple-lt);color:var(--purple)}
-.tier-body{padding:20px;flex:1;display:flex;flex-direction:column}
-.tier-icon{width:56px;height:56px;border-radius:50%;background:var(--g50);display:flex;align-items:center;justify-content:center;margin-bottom:12px}
-.tier-icon svg{width:24px;height:24px;color:var(--gold)}
-.tier h4{font-family:var(--serif);font-size:17px;font-weight:700;margin-bottom:4px}
-.tier-sub{font-size:12px;color:var(--g500);margin-bottom:12px}
-.tier-price{font-size:22px;font-weight:800;color:var(--bk);margin-bottom:4px}
-.tier-inst{font-size:11px;color:var(--g500);margin-bottom:16px}
-.tier-specs{list-style:none;flex:1}
-.tier-specs li{padding:6px 0;font-size:13px;color:var(--g700);display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--g100)}
-.tier-specs li:last-child{border-bottom:none}
-.tier-specs li svg{width:14px;height:14px;flex-shrink:0}
-.spec-yes{color:var(--green)}
-.spec-no{color:var(--g300)}
-.tier-profile{margin-top:16px;padding:12px;background:var(--g50);border-radius:8px;font-size:12px;color:var(--g500);line-height:1.5}
-.tier-profile strong{color:var(--bk);display:block;margin-bottom:2px}
-.tier-cta{display:block;text-align:center;padding:12px;margin-top:16px;border-radius:8px;font-size:13px;font-weight:700;transition:all .2s var(--ease)}
-.t-entry .tier-cta{background:var(--green);color:var(--wh)}
-.t-entry .tier-cta:hover{background:#236b42}
-.t-mid .tier-cta{background:var(--blue);color:var(--wh)}
-.t-mid .tier-cta:hover{background:#1d4ed8}
-.t-pro .tier-cta{background:var(--purple);color:var(--wh)}
-.t-pro .tier-cta:hover{background:#6d28d9}
-
-/* ═══ FEATURE MATRIX ═══ */
-.fmx{margin:28px 0;border-radius:var(--r);border:1px solid var(--g200);overflow-x:auto}
-.fmx table{width:100%;border-collapse:collapse;min-width:600px}
-.fmx th{background:var(--warm);color:var(--wh);padding:12px 16px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;text-align:left;white-space:nowrap}
-.fmx th:first-child{width:180px}
-.fmx td{padding:10px 16px;font-size:13px;color:var(--g700);border-bottom:1px solid var(--g100);vertical-align:middle}
-.fmx tr:last-child td{border-bottom:none}
-.fmx tr:hover td{background:var(--g50)}
-.fmx .ck{text-align:center}
-.ck svg{width:16px;height:16px}
-.ck-y{color:var(--green)}
-.ck-n{color:var(--g300)}
-
-/* ═══ CHECKLIST ═══ */
-.checklist{background:var(--cream);border:1px solid var(--sand);border-radius:var(--r);padding:24px;margin:28px 0}
-.checklist h3{font-size:16px;font-weight:700;margin-bottom:16px;display:flex;align-items:center;gap:8px}
-.checklist h3 svg{width:18px;height:18px;color:var(--gold)}
-.cl-items{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.cl-item{display:flex;align-items:center;gap:8px;padding:8px 12px;background:var(--wh);border-radius:6px;font-size:13px;color:var(--g700);border:1px solid var(--g200)}
-.cl-item svg{width:16px;height:16px;color:var(--gold);flex-shrink:0}
-
-/* FAQ */
-.faq{margin:40px 0;border-top:2px solid var(--bk);padding-top:24px}
-.faq h2{font-family:var(--serif);font-size:22px;font-weight:700;margin-bottom:16px}
-.faq-item{border-bottom:1px solid var(--g200)}
-.faq-q{display:flex;align-items:center;justify-content:space-between;padding:16px 0;font-size:15px;font-weight:600;cursor:pointer;gap:12px;width:100%;text-align:left;color:var(--bk);transition:color .2s}
-.faq-q:hover{color:var(--gold-dk)}
-.faq-q svg{width:18px;height:18px;flex-shrink:0;transition:transform .3s;color:var(--g500)}
-.faq-item.open .faq-q svg{transform:rotate(180deg)}
-.faq-a{max-height:0;overflow:hidden;transition:max-height .4s var(--ease)}
-.faq-item.open .faq-a{max-height:300px}
-.faq-a p{font-size:14px;color:var(--g700);line-height:1.7;padding:0 0 16px}
-
-/* Tags */
-.post-tags{display:flex;flex-wrap:wrap;gap:8px;margin:32px 0;padding-top:24px;border-top:1px solid var(--g200)}
-.post-tag{padding:6px 14px;border-radius:100px;font-size:12px;font-weight:600;border:1px solid var(--g200);color:var(--g700);transition:all .2s}
-.post-tag:hover{border-color:var(--gold);color:var(--gold-dk)}
-
-/* SIDEBAR */
-.sidebar{position:sticky;top:80px;align-self:start;display:flex;flex-direction:column;gap:24px}
-.sb-hd{font-size:13px;font-weight:800;color:var(--bk);text-transform:uppercase;letter-spacing:.07em;margin-bottom:14px;padding-bottom:10px;border-bottom:2px solid var(--bk)}
-.toc a{display:block;padding:8px 0;font-size:13px;color:var(--g500);border-bottom:1px solid var(--g100);transition:all .2s}
-.toc a:hover,.toc a.active{color:var(--bk);padding-left:6px}
-.toc a.active{color:var(--gold-dk);font-weight:600;border-left:2px solid var(--gold);padding-left:12px}
-.sb-related a{display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--g100);font-size:13px;color:var(--g700);transition:all .2s}
-.sb-related a:hover{color:var(--bk);padding-left:4px}
-.sb-related a span{font-size:11px;color:var(--g500)}
-.sb-nl{border-radius:var(--r);padding:24px;background:var(--warm);color:var(--wh)}
-.sb-nl h4{font-family:var(--serif);font-size:18px;font-weight:600;margin-bottom:6px}
-.sb-nl p{font-size:12px;color:rgba(255,255,255,.55);margin-bottom:14px;line-height:1.5}
-.sb-nl input{width:100%;padding:10px 12px;border-radius:8px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.06);color:var(--wh);font-family:var(--sans);font-size:13px;outline:none;margin-bottom:8px}
-.sb-nl input::placeholder{color:rgba(255,255,255,.3)}
-.sb-nl input:focus{border-color:var(--gold)}
-.sb-nl button{width:100%;padding:10px;border-radius:8px;background:var(--gold);color:var(--wh);font-size:13px;font-weight:700;transition:background .2s}
-.sb-nl button:hover{background:var(--gold-lt)}
-
-/* FOOTER */
-.ft{background:var(--g50);border-top:1px solid var(--g200);padding:48px 0 0}
-.ft-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;padding-bottom:32px;border-bottom:1px solid var(--g200)}
-.ft-brand{font-family:var(--serif);font-size:22px;font-weight:700;margin-bottom:12px}
-.ft-brand em{color:var(--gold);font-style:italic;font-weight:400;font-size:16px}
-.ft-desc{font-size:13px;color:var(--g500);line-height:1.6;max-width:280px}
-.ft-col-title{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;margin-bottom:12px}
-.ft-col a{display:block;font-size:13px;color:var(--g500);padding:3px 0;transition:color .2s}.ft-col a:hover{color:var(--bk)}
-.ft-bottom{display:flex;justify-content:space-between;align-items:center;padding:20px 0;flex-wrap:wrap;gap:12px}
-.ft-copy{font-size:11.5px;color:var(--g500)}
-.ft-links{display:flex;gap:20px}.ft-links a{font-size:12px;color:var(--g500)}.ft-links a:hover{color:var(--bk)}
-
-/* RESPONSIVE */
-@media(max-width:1100px){
-  .post-layout{grid-template-columns:1fr;gap:32px}
-  .sidebar{position:static;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-  .tiers{grid-template-columns:1fr}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{font-family:var(--sans);color:var(--bk);background:var(--white);line-height:1.7;overflow-x:hidden}
+a{text-decoration:none;color:inherit;transition:color .2s}
+img{display:block;max-width:100%;height:auto}
+:root{
+  --bk:#111;--g900:#1a1a1a;--g700:#333;--g500:#666;--g400:#888;--g300:#aaa;--g200:#ccc;--g100:#e5e5e5;--g50:#f5f5f5;
+  --white:#fff;--accent:#e63946;--accent-soft:#fef1f2;
+  --serif:'Fraunces',Georgia,serif;--sans:'Plus Jakarta Sans',-apple-system,sans-serif;
+  --ease:cubic-bezier(.22,1,.36,1);--max:1440px;--content:780px;--pad:clamp(20px,4vw,80px)
 }
-@media(max-width:768px){
-  .c{padding:0 16px}
-  .sidebar{grid-template-columns:1fr}
-  .cl-items{grid-template-columns:1fr}
-  .ft-grid{grid-template-columns:1fr 1fr;gap:24px}
-}
-@media(max-width:480px){.ft-grid{grid-template-columns:1fr}}
+.topbar{background:var(--bk);color:var(--white);text-align:center;padding:10px var(--pad);font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase}
+.topbar a{color:var(--white);text-decoration:underline;text-underline-offset:2px}
+.nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--g100)}
+.nav-inner{max-width:var(--max);margin:0 auto;padding:0 var(--pad);display:flex;align-items:center;justify-content:space-between;height:64px}
+.nav-logo{font-family:var(--serif);font-size:22px;font-weight:600;letter-spacing:-.02em}
+.nav-logo span{font-weight:300;color:var(--g400);margin-left:6px;font-size:16px}
+.nav-links{display:flex;align-items:center;gap:32px}
+.nav-links a{font-size:13px;font-weight:500;color:var(--g500);letter-spacing:.02em}
+.nav-links a:hover{color:var(--bk)}
+.nav-icons{display:flex;gap:16px;align-items:center}
+.nav-icons a{color:var(--g500)}.nav-icons a:hover{color:var(--bk)}
+.nav-icons svg{width:20px;height:20px}
+.footer{background:var(--bk);color:var(--white);padding:64px 0 32px}
+.ft-inner{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+.ft-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px}
+.ft-brand{font-family:var(--serif);font-size:24px;font-weight:600;margin-bottom:16px}
+.ft-brand span{font-weight:300;color:var(--g400);font-size:16px;margin-left:4px}
+.ft-desc{font-size:13px;color:var(--g400);line-height:1.6;max-width:300px}
+.ft-col h4{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--g400);margin-bottom:16px}
+.ft-col a{display:block;font-size:13px;color:var(--g300);margin-bottom:10px;transition:color .2s}
+.ft-col a:hover{color:var(--white)}
+.ft-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:24px;display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--g500)}
+.ft-socials{display:flex;gap:16px}.ft-socials a{color:var(--g400)}.ft-socials a:hover{color:var(--white)}
+@media(max-width:1024px){.ft-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.nav-links{display:none}.ft-grid{grid-template-columns:1fr}}
+.bc{max-width:var(--max);margin:0 auto;padding:24px var(--pad) 0;font-size:12px;color:var(--g400)}
+.bc a{color:var(--g400)}.bc a:hover{color:var(--bk)}.bc svg{width:12px;height:12px;vertical-align:middle;margin:0 4px}.article-hero{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+.article-hero img{width:100%;border-radius:16px;aspect-ratio:21/9;object-fit:cover;margin-top:24px}
+.article-header{max-width:var(--content);margin:0 auto;padding:40px var(--pad) 0}
+.article-header .tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+.article-header h1{font-family:var(--serif);font-size:clamp(32px,4vw,52px);font-weight:500;line-height:1.15;letter-spacing:-.02em;margin-bottom:16px}
+.article-header .subtitle{font-size:18px;color:var(--g500);line-height:1.5;margin-bottom:24px}
+.article-meta{display:flex;align-items:center;gap:16px;font-size:13px;color:var(--g400);padding-bottom:32px;border-bottom:1px solid var(--g100)}
+.article-meta .avatar{width:40px;height:40px;border-radius:50%;background:var(--g100);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;color:var(--g500)}
+.article-body{max-width:var(--content);margin:0 auto;padding:40px var(--pad) 64px}
+.article-body h2{font-family:var(--serif);font-size:clamp(24px,2.5vw,32px);font-weight:500;margin:48px 0 16px;letter-spacing:-.02em}
+.article-body h3{font-family:var(--serif);font-size:clamp(20px,2vw,24px);font-weight:500;margin:32px 0 12px}
+.article-body p{font-size:17px;line-height:1.8;color:var(--g700);margin-bottom:20px}
+.article-body ul,.article-body ol{margin:0 0 20px 24px;font-size:17px;color:var(--g700);line-height:1.8}
+.article-body li{margin-bottom:8px}
+.article-body .img-block{margin:32px 0;border-radius:12px;overflow:hidden}
+.article-body .img-block img{width:100%;aspect-ratio:16/9;object-fit:cover}
+.article-body .img-caption{font-size:12px;color:var(--g400);text-align:center;padding-top:8px}
+.article-body .callout{background:var(--g50);border-left:4px solid var(--accent);padding:20px 24px;border-radius:0 8px 8px 0;margin:24px 0;font-size:15px;color:var(--g700)}
+.article-body .callout strong{color:var(--bk)}
+.article-body .product-card{display:grid;grid-template-columns:120px 1fr;gap:20px;background:var(--g50);border-radius:12px;padding:20px;margin:24px 0}
+.article-body .product-card img{width:100%;border-radius:8px;aspect-ratio:1;object-fit:cover}
+.article-body .product-card h4{font-size:16px;font-weight:700;margin-bottom:4px}
+.article-body .product-card .price{font-size:18px;font-weight:700;color:var(--accent);margin-bottom:8px}
+.article-body .product-card .pc-link{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--bk);border:2px solid var(--bk);padding:8px 20px;border-radius:100px;transition:all .2s}
+.article-body .product-card .pc-link:hover{background:var(--bk);color:var(--white)}
+.related{max-width:var(--max);margin:0 auto;padding:0 var(--pad) 64px}
+.related h2{font-family:var(--serif);font-size:28px;font-weight:500;margin-bottom:24px}
+.related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.rel-card{border-radius:10px;overflow:hidden;cursor:pointer;display:block}
+.rel-card .ri{aspect-ratio:4/3;overflow:hidden}.rel-card .ri img{width:100%;height:100%;object-fit:cover;transition:transform .4s var(--ease)}
+.rel-card:hover .ri img{transform:scale(1.05)}
+.rel-card .rb{padding:16px 0}
+.rel-card .rb .cat{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:4px}
+.rel-card .rb h3{font-family:var(--serif);font-size:18px;font-weight:500;line-height:1.3}
+@media(max-width:768px){.related-grid{grid-template-columns:1fr}.article-body .product-card{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
+<div class="topbar">2.500 TL üzeri alışverişlerde ücretsiz kargo &middot; <a href="https://www.karaca.com">karaca.com</a></div>
+<nav class="nav"><div class="nav-inner">
+<a href="01-anasayfa.html" class="nav-logo">Karaca <span>Dergi</span></a>
+<div class="nav-links">
+<a href="02-pillar-mutfak-pisirme.html">Mutfak &amp; Pişirme</a>
+<a href="08-post-nasil-yapilir.html">Sofra &amp; Sunum</a>
+<a href="04-post-sorun-giderme.html">Kahve &amp; Çay</a>
+<a href="07-post-rehber-airfryer.html">Küçük Ev Aletleri</a>
+<a href="08-post-nasil-yapilir.html">Bakım &amp; Destek</a>
+<a href="05-post-marka-hikayesi.html">Hikayemiz</a>
+</div>
+<div class="nav-icons">
+<a href="10-arama-sonuclari.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></a>
+<a href="https://www.karaca.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4zM3 6h18M16 10a4 4 0 01-8 0"/></svg></a>
+</div></div></nav>
+<div class="bc"><a href="01-anasayfa.html">Dergi</a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:12px;height:12px;vertical-align:middle;margin:0 4px"><path d="M9 18l6-6-6-6"/></svg><a href="02-pillar-mutfak-pisirme.html">Küçük Ev Aletleri</a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:12px;height:12px;vertical-align:middle;margin:0 4px"><path d="M9 18l6-6-6-6"/></svg><span>Airfryer Satın Alma Rehberi 2026: Ailenize Göre Doğru Model...</span></div>
+<div class="article-hero"><img src="https://images.unsplash.com/photo-1585032226651-759b368d7246?w=1200&q=85" alt="Airfryer Satın Alma Rehberi 2026: Ailenize Göre Doğru Model"></div>
+<div class="article-header">
+<div class="tag">Satın Alma Rehberi</div>
+<h1>Airfryer Satın Alma Rehberi 2026: Ailenize Göre Doğru Model</h1>
+<p class="subtitle">Compact’tan XXXL’e, karar ağacı ve fiyat karşılaştırmasıyla doğru modeli bulun.</p>
+<div class="article-meta">
+<div class="avatar">KE</div>
+<div><strong>İçerik Ekibi</strong><br><span>Şubat 2026 &middot; 8 dk okuma</span></div>
+</div>
+</div>
+<div class="article-body">
+<h2>Doğru Airfryer Nasıl Seçilir?</h2>
+<p>İki soru her şeyi belirler: kaç kişilik pişiriyorsunuz ve hangi fonksiyonlara ihtiyacınız var?</p>
 
-<!-- NAV -->
-<div class="ann"><span>Tüm Siparişlerde Ücretsiz Kargo · 50. Yıl Özel Koleksiyonları Satışta</span></div>
-<nav class="nav" id="nav"><div class="c">
-  <div class="nav-top"><a href="01-anasayfa.html" class="logo">Karaca <em>Dergi</em></a></div>
-  <div class="pillars"><div class="pillar-row">
-    <a class="p-link" href="01-anasayfa.html">Ana Sayfa</a>
-    <a class="p-link" href="02-pillar-mutfak-pisirme.html">Mutfak & Pişirme</a>
-    <a class="p-link" href="08-post-nasil-yapilir.html">Sofra & Sunum</a>
-    <a class="p-link" href="04-post-sorun-giderme.html">Kahve & Çay</a>
-    <a class="p-link active" href="07-post-rehber-airfryer.html">Küçük Ev Aletleri</a>
-    <a class="p-link" href="06-post-karsilastirma.html">Ev & Yaşam</a>
-    <a class="p-link" href="08-post-nasil-yapilir.html">Bakım & Destek</a>
-    <a class="p-link" href="05-post-marka-hikayesi.html">Karaca Hikâyesi</a>
-    <a class="p-link" href="09-post-ramazan-2026.html">Yaşam Kılavuzları</a>
-  </div></div>
-</div></nav>
+<h3>1-2 Kişi: Smart Cook Compact 2.2L</h3>
+<p>Tek kişilik veya çift yaşayan evler için. 2.2 litre kapasite, kompakt tasarım, temel airfryer fonksiyonları. <strong>~1.299 TL</strong></p>
 
-<!-- BREADCRUMB -->
-<section><div class="c"><div class="bread">
-  <a href="01-anasayfa.html">Dergi</a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
-  <a href="07-post-rehber-airfryer.html">Küçük Ev Aletleri</a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
-  <a href="02-pillar-mutfak-pisirme.html">Airfryer Rehberleri</a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
-  <span style="color:var(--bk);font-weight:600">Satın Alma Rehberi</span>
-</div></div></section>
+<h3>3-4 Kişi: Air Pro Cook XL 4L</h3>
+<p>Standart aileler için en çok tercih edilen model. 4 litre kapasite, 1500W, biogranit kaplama, dijital dokunmatik ekran. <strong>~2.999 TL</strong></p>
 
-<!-- CONTENT -->
-<section><div class="c"><div class="post-layout">
+<h3>5+ Kişi veya Çift Hazırlık: Duo XXXL 4+4L</h3>
+<p>Çift hazneli tasarımla aynı anda iki farklı yemek. Toplam 8 litre kapasite. Kalabalık aileler, Ramazan iftarları ve misafir sofrası için ideal. <strong>~4.999 - 7.499 TL</strong></p>
 
-<!-- ARTICLE -->
-<article class="post">
-  <div class="post-type"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg> Satın Alma Rehberi</div>
-  <h1>Karaca Airfryer Rehberi: 3 Adımda Doğru Model Seçimi</h1>
-  <p class="post-excerpt">Kapasite, özellik ve bütçeye göre size en uygun Karaca airfryer. Multifry'dan Air Pro Cook Duo'ya tüm modellerin karşılaştırmalı analizi.</p>
-  <div class="author-bar">
-    <div class="ab-avatar">KE</div>
-    <div class="ab-info"><div class="ab-name">Karaca Küçük Ev Aletleri Editörü</div><div class="ab-role">Karaca Test Mutfağı</div></div>
-    <div class="ab-date"><strong>26 Şubat 2026</strong>Güncelleme: 26 Şub 2026</div>
-  </div>
-  <div class="tldr">
-    <div class="tldr-label">Hızlı Cevap</div>
-    <p>Tek/iki kişilik yaşam: Smart Cook Compact (2.2L, ~1.299 TL). 3-4 kişilik aile: Air Pro Cook XL 2in1 (4L, ~2.999 TL). 5+ kişi veya çift hazne isteyen: Air Pro Cook Duo XXXL (4+4L veya 8L tek hazne, ~4.999-7.499 TL).</p>
-  </div>
+<div class="img-block"><img src="https://images.unsplash.com/photo-1585032226651-759b368d7246?w=900&q=80" alt="Airfryer modelleri"><div class="img-caption">Karaca airfryer ailesi: Compact, XL ve Duo XXXL</div></div>
 
-  <div class="post-body">
-    <h2 id="adim1">Adım 1: Kapasitenizi Belirleyin</h2>
-    <p>Airfryer seçiminde ilk kriter her zaman kapasitedir. Kaç kişiye pişiriyorsunuz? Tek seferde çıkarmak mı istiyorsunuz, yoksa turlarla pişirmek sizin için sorun değil mi?</p>
-  </div>
+<h2>Kontrol Listesi</h2>
+<ul>
+<li>✓ Kapasite: Kaç porsiyonluk pişirme yapacaksınız?</li>
+<li>✓ Fonksiyon: Sadece kızartma mı, yoksa kurutma/yoğurt/ev yemeği de var mı?</li>
+<li>✓ Çift hazne: Aynı anda iki farklı yemek gerekli mi?</li>
+<li>✓ Sesli komut: Konusan airfryer özelliği isteniyor mu?</li>
+<li>✓ Tezgah alanı: Mutfağınızdaki boş alan kaç cm?</li>
+<li>✓ Bütçe: 1.299 - 7.499 TL arası hangi segment?</li>
+</ul>
 
-  <!-- DECISION TREE -->
-  <div class="dtree">
-    <div class="dtree-header">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-      <h3>Hızlı Karar Ağacı</h3>
-    </div>
-    <div class="dtree-body">
-      <div class="dt-q"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4m0 4h.01"/></svg> Kaç kişilik pişiriyorsunuz?</div>
-      <div class="dt-opts">
-        <div class="dt-opt"><span class="dt-arrow">→</span><span class="dt-answer">1-2 kişi; küçük porsiyonlar, hızlı atıştırmalık</span><span class="dt-result res-compact">Smart Cook Compact 2.2L</span></div>
-        <div class="dt-opt"><span class="dt-arrow">→</span><span class="dt-answer">3-4 kişi; günlük aile yemeği</span><span class="dt-result res-xl">Air Pro Cook XL 4L</span></div>
-        <div class="dt-opt"><span class="dt-arrow">→</span><span class="dt-answer">5+ kişi veya aynı anda 2 farklı yemek</span><span class="dt-result res-duo">Air Pro Cook Duo 4+4L</span></div>
-        <div class="dt-opt"><span class="dt-arrow">→</span><span class="dt-answer">Büyük aile, misafir ağırlama, tek hazne 8L</span><span class="dt-result res-xxxl">Air Pro Cook Duo XXXL 8L</span></div>
-      </div>
-      <div class="dt-divider"></div>
-      <div class="dt-q"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4m0 4h.01"/></svg> Hangi fonksiyonlara ihtiyacınız var?</div>
-      <div class="dt-opts">
-        <div class="dt-opt"><span class="dt-arrow">→</span><span class="dt-answer">Sadece kızartma ve basit pişirme</span><span class="dt-result res-compact">Multifry veya Compact</span></div>
-        <div class="dt-opt"><span class="dt-arrow">→</span><span class="dt-answer">Kızartma + fırın + kurutma + yoğurt</span><span class="dt-result res-xl">Air Pro Cook XL 2in1</span></div>
-        <div class="dt-opt"><span class="dt-arrow">→</span><span class="dt-answer">Tüm fonksiyonlar + ev yemeği modu + çift hazne</span><span class="dt-result res-duo">Air Pro Cook Duo XXXL</span></div>
-      </div>
-    </div>
-  </div>
+<div class="callout"><strong>Öneri:</strong> İlk airfryerınızı alıyorsanız ve ne yapacağınızdan emin değilseniz, Air Pro Cook XL ile başlayın. Fiyat-performans dengesi en iyi modeldir.</div>
 
-  <div class="post-body">
-    <h2 id="adim2">Adım 2: Modelleri Karşılaştırın</h2>
-    <p>Karaca'nın airfryer ailesi 4 ana segmentten oluşuyor. Her biri farklı bir kullanım profiline hitap ediyor.</p>
-  </div>
-
-  <!-- 3-TIER CARDS -->
-  <div class="tiers">
-    <div class="tier t-entry">
-      <div class="tier-badge">Giriş Seviye</div>
-      <div class="tier-body">
-        <div class="tier-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg></div>
-        <h4>Smart Cook Compact</h4>
-        <div class="tier-sub">2.2 lt · 1-2 kişilik</div>
-        <div class="tier-price">~1.299 TL</div>
-        <div class="tier-inst">6 taksit × ~217 TL</div>
-        <ul class="tier-specs">
-          <li><svg class="spec-yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Sıcak hava fritöz</li>
-          <li><svg class="spec-yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Dijital ekran</li>
-          <li><svg class="spec-no" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg> Çift hazne</li>
-          <li><svg class="spec-no" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg> Ev yemeği modu</li>
-          <li><svg class="spec-no" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg> Sesli yönlendirme</li>
-        </ul>
-        <div class="tier-profile"><strong>İdeal profil:</strong> Öğrenciler, tek yaşayanlar, küçük mutfaklar, atıştırmalık odaklı kullanım</div>
-        <a href="https://www.karaca.com/airfryer" class="tier-cta">İncele →</a>
-      </div>
-    </div>
-    <div class="tier t-mid">
-      <div class="tier-badge">En Çok Tercih Edilen</div>
-      <div class="tier-body">
-        <div class="tier-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
-        <h4>Air Pro Cook XL 2in1</h4>
-        <div class="tier-sub">4 lt · 3-4 kişilik · Konuşan</div>
-        <div class="tier-price">~2.999 TL</div>
-        <div class="tier-inst">6 taksit × ~500 TL</div>
-        <ul class="tier-specs">
-          <li><svg class="spec-yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Sıcak hava fritöz</li>
-          <li><svg class="spec-yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Dokunmatik dijital ekran</li>
-          <li><svg class="spec-no" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg> Çift hazne</li>
-          <li><svg class="spec-yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Kurutma + yoğurt modu</li>
-          <li><svg class="spec-yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Sesli yönlendirme (konuşan)</li>
-        </ul>
-        <div class="tier-profile"><strong>İdeal profil:</strong> 3-4 kişilik aileler, günlük yemek yapanlar, çok fonksiyon isteyenler</div>
-        <a href="https://www.karaca.com/airfryer" class="tier-cta">İncele →</a>
-      </div>
-    </div>
-    <div class="tier t-pro">
-      <div class="tier-badge">Profesyonel</div>
-      <div class="tier-body">
-        <div class="tier-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-        <h4>Air Pro Cook Duo XXXL</h4>
-        <div class="tier-sub">4+4 lt (veya 8 lt tek) · 5+ kişilik</div>
-        <div class="tier-price">~4.999 – 7.499 TL</div>
-        <div class="tier-inst">6 taksit × ~833-1.250 TL</div>
-        <ul class="tier-specs">
-          <li><svg class="spec-yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Sıcak hava fritöz</li>
-          <li><svg class="spec-yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Dokunmatik dijital ekran</li>
-          <li><svg class="spec-yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Duo Tech çift hazne</li>
-          <li><svg class="spec-yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> 8 mod: kızartma, fırın, kurutma, yoğurt, ev yemeği, buz çözme, kek, hamur işi</li>
-          <li><svg class="spec-yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Less Fat Technology</li>
-        </ul>
-        <div class="tier-profile"><strong>İdeal profil:</strong> 5+ kişilik aileler, misafir ağırlama, aynı anda 2 yemek, mutfak tutkunları</div>
-        <a href="https://www.karaca.com/airfryer" class="tier-cta">İncele →</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="post-body">
-    <h2 id="adim3">Adım 3: Özellik Detaylarını Kontrol Edin</h2>
-    <p>Kapasite kararını verdikten sonra, detay özellikleri kontrol edin:</p>
-  </div>
-
-  <!-- FEATURE MATRIX -->
-  <div class="fmx">
-    <table>
-      <thead>
-        <tr><th>Özellik</th><th>Smart Cook Compact</th><th>Air Pro Cook XL</th><th>Duo XXXL</th></tr>
-      </thead>
-      <tbody>
-        <tr><td><strong>Kapasite</strong></td><td>2.2 lt</td><td>4 lt</td><td>4+4 lt / 8 lt</td></tr>
-        <tr><td><strong>Watt</strong></td><td>1.000W</td><td>1.500W</td><td>1.800W</td></tr>
-        <tr><td><strong>Sıcaklık Aralığı</strong></td><td>80-200°C</td><td>80-200°C</td><td>80-200°C</td></tr>
-        <tr><td><strong>Konuşma (Sesli)</strong></td><td class="ck"><svg class="ck-n" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></td><td class="ck"><svg class="ck-y" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></td><td class="ck"><svg class="ck-y" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></td></tr>
-        <tr><td><strong>Çift Hazne</strong></td><td class="ck"><svg class="ck-n" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></td><td class="ck"><svg class="ck-n" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></td><td class="ck"><svg class="ck-y" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></td></tr>
-        <tr><td><strong>Ev Yemeği Modu</strong></td><td class="ck"><svg class="ck-n" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></td><td class="ck"><svg class="ck-n" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></td><td class="ck"><svg class="ck-y" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></td></tr>
-        <tr><td><strong>Kurutma / Yoğurt</strong></td><td class="ck"><svg class="ck-n" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></td><td class="ck"><svg class="ck-y" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></td><td class="ck"><svg class="ck-y" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></td></tr>
-        <tr><td><strong>Bulaşık Makinesine Uygun</strong></td><td class="ck"><svg class="ck-y" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></td><td class="ck"><svg class="ck-y" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></td><td class="ck"><svg class="ck-y" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></td></tr>
-        <tr><td><strong>Fiyat Aralığı</strong></td><td>~1.299 TL</td><td>~2.999 TL</td><td>~4.999-7.499 TL</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <!-- CHECKLIST -->
-  <div class="checklist">
-    <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg> Satın Almadan Önce Kontrol Listesi</h3>
-    <div class="cl-items">
-      <div class="cl-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg> Tezgahınızdaki boş alan ölçüsü</div>
-      <div class="cl-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg> Kaç kişilik pişireceksiniz?</div>
-      <div class="cl-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg> En çok hangi yemekleri pişiriyorsunuz?</div>
-      <div class="cl-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg> Çift hazneye ihtiyacınız var mı?</div>
-      <div class="cl-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg> Renk tercihiniz (beige, grey, black)?</div>
-      <div class="cl-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg> Bütçeniz ne kadar?</div>
-    </div>
-  </div>
-
-  <!-- FAQ -->
-  <div class="faq">
-    <h2>Sıkça Sorulan Sorular</h2>
-    <div class="faq-item open">
-      <button class="faq-q">Airfryer'da ev yemeği gerçekten yapılıyor mu?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
-      <div class="faq-a"><p>Air Pro Cook Duo XXXL modelinin "Ev Yemeği" modu, Circulation Air Tech ile düşük sıcaklıkta uzun süreli pişirme yaparak sulu yemekleri başarıyla hazırlıyor. Karnıyarık, etli sebze, güveç gibi tarifler için özel sıcaklık profilleri mevcut.</p></div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-q">2.2 litrelik model yeterli mi?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
-      <div class="faq-a"><p>Tek/iki kişilik kullanımda kesinlikle yeterli. Bir avuç patates, 2-3 adet tavuk kanadı veya 2 porsiyon sebze rahatlıkla sığar. 3+ kişilik aile için birden fazla tur gerekir; bu durumda 4L modeli tercih edin.</p></div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-q">"Konuşan" airfryer ne demek?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
-      <div class="faq-a"><p>Air Pro Cook XL ve Duo modellerinde sesli yönlendirme sistemi var. Cihaz, pişirme aşamalarını sesli olarak anlatır: "Yemeğinizi çevirme zamanı", "Pişirme tamamlandı" gibi uyarılar verir. Özellikle airfryer'a yeni başlayanlar için pratik.</p></div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-q">Less Fat Technology nedir?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
-      <div class="faq-a"><p>Karaca'nın tüm airfryer modellerinde bulunan sıcak hava sirkülasyon teknolojisi. Yiyecekleri sadece 1 kaşık yağla dışı çıtır, içi yumuşak pişirir. Geleneksel kızartmaya göre %85'e kadar daha az yağ kullanımı sağlar.</p></div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-q">Duo modelinde iki hazneyi bağımsız kullanabilir miyim?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
-      <div class="faq-a"><p>Evet; Duo Tech özelliği 3 farklı mod sunar: iki hazne bağımsız (farklı sıcaklık/süre), iki hazne senkron (aynı anda bitirme), ve tek büyük hazne (8L). Kokuların karışmaması için hazneler tamamen birbirinden izole.</p></div>
-    </div>
-  </div>
-
-  <div class="post-tags">
-    <a href="10-arama-sonuclari.html" class="post-tag">Airfryer</a>
-    <a href="10-arama-sonuclari.html" class="post-tag">Satın Alma Rehberi</a>
-    <a href="10-arama-sonuclari.html" class="post-tag">Air Pro Cook</a>
-    <a href="10-arama-sonuclari.html" class="post-tag">Multifry</a>
-    <a href="10-arama-sonuclari.html" class="post-tag">Yağsız Fritöz</a>
-    <a href="10-arama-sonuclari.html" class="post-tag">Küçük Ev Aletleri</a>
-  </div>
-</article>
-
-<!-- SIDEBAR -->
-<aside class="sidebar">
-  <div><div class="sb-hd">İçindekiler</div><div class="toc">
-    <a href="#adim1" class="active">Adım 1: Kapasite Belirleyin</a>
-    <a href="#adim2">Adım 2: Modelleri Karşılaştırın</a>
-    <a href="#adim3">Adım 3: Özellik Detayları</a>
-    <a href="#checklist">Kontrol Listesi</a>
-    <a href="#sss">SSS</a>
-  </div></div>
-  <div><div class="sb-hd">İlgili Rehberler</div><div class="sb-related">
-    <a href="03-post-tarif.html">Airfryer'da İlk 10 Tarif <span>8 dk</span></a>
-    <a href="08-post-nasil-yapilir.html">Airfryer Temizlik Rehberi <span>4 dk</span></a>
-    <a href="06-post-karsilastirma.html">BioDiamond vs Powersteel <span>7 dk</span></a>
-    <a href="04-post-sorun-giderme.html">Hatır Kırmızı Işık Çözümü <span>5 dk</span></a>
-  </div></div>
-  <div><div class="sb-nl">
-    <h4>Satın Alma Danışmanı</h4>
-    <p>Kişisel ürün önerileri ve kampanya bildirimleri.</p>
-    <input placeholder="E-posta adresiniz">
-    <button>Abone Ol</button>
-  </div></div>
-</aside>
-</div></div></section>
-
-<!-- FOOTER -->
-<footer class="ft"><div class="c">
-  <div class="ft-grid">
-    <div><div class="ft-brand">Karaca <em>Dergi</em></div><p class="ft-desc">50 yıllık miras, binlerce tarif, yüzlerce rehber.</p></div>
-    <div class="ft-col"><div class="ft-col-title">İçerikler</div><a href="03-post-tarif.html">Tarifler</a><a href="07-post-rehber-airfryer.html">Rehberler</a><a href="04-post-sorun-giderme.html">Kahve & Çay</a><a href="08-post-nasil-yapilir.html">Bakım & Destek</a></div>
-    <div class="ft-col"><div class="ft-col-title">Karaca</div><a href="05-post-marka-hikayesi.html">Hakkımızda</a><a href="05-post-marka-hikayesi.html">Hikâyemiz</a><a href="https://www.karaca.com/magazalar">Mağazalar</a><a href="https://www.karaca.com/iletisim">İletişim</a></div>
-    <div class="ft-col"><div class="ft-col-title">Yasal</div><a href="https://www.karaca.com/kvkk">KVKK Aydınlatma</a><a href="https://www.karaca.com/cerez-politikasi">Çerez Politikası</a><a href="https://www.karaca.com/kullanim-kosullari">Kullanım Koşulları</a></div>
-  </div>
-  <div class="ft-bottom">
-    <span class="ft-copy">© 2026 Karaca. Tüm hakları saklıdır.</span>
-    <div class="ft-links"><a href="https://www.instagram.com/karaborsa/">Instagram</a><a href="https://www.youtube.com/karaca">YouTube</a><a href="https://www.pinterest.com/karaca/">Pinterest</a><a href="https://www.karaca.com">karaca.com</a></div>
-  </div>
+<div class="product-card">
+<img src="https://images.unsplash.com/photo-1585032226651-759b368d7246?w=300&q=80" alt="Air Pro Cook XL">
+<div><h4>Karaca Air Pro Cook XL 4L</h4><div class="price">2.999 TL</div><p style="font-size:13px;color:var(--g500);margin-bottom:12px">Biogranit kaplama, 1500W, 200°C, dijital ekran</p><a href="https://www.karaca.com/airfryer" class="pc-link">Ürünü İncele</a></div>
+</div>
+</div>
+<div class="related"><h2>İlgili Yazılar</h2><div class="related-grid"><a href="03-post-tarif.html" class="rel-card"><div class="ri"><img src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=400&q=80" alt="Airfryer’da Çıtır Tavuk"></div><div class="rb"><div class="cat">Tarif</div><h3>Airfryer’da Çıtır Tavuk</h3></div></a><a href="06-post-karsilastirma.html" class="rel-card"><div class="ri"><img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&q=80" alt="BioDiamond vs Powersteel"></div><div class="rb"><div class="cat">Karşılaştırma</div><h3>BioDiamond vs Powersteel</h3></div></a><a href="09-post-ramazan-2026.html" class="rel-card"><div class="ri"><img src="https://images.unsplash.com/photo-1567529692333-de9fd6772897?w=400&q=80" alt="Ramazan 2026 Rehberi"></div><div class="rb"><div class="cat">Mevsimsel</div><h3>Ramazan 2026 Rehberi</h3></div></a></div></div>
+<footer class="footer"><div class="ft-inner">
+<div class="ft-grid">
+<div><div class="ft-brand">Karaca <span>Dergi</span></div><p class="ft-desc">Mutfak, sofra ve yaşama dair ilham veren içerikler. 1973’ten bu yana paylaşacak çok şeyimiz var.</p></div>
+<div class="ft-col"><h4>İçerikler</h4><a href="03-post-tarif.html">Tarifler</a><a href="07-post-rehber-airfryer.html">Rehberler</a><a href="06-post-karsilastirma.html">Karşılaştırmalar</a><a href="08-post-nasil-yapilir.html">Bakım İpuçları</a><a href="09-post-ramazan-2026.html">Mevsimsel</a></div>
+<div class="ft-col"><h4>Karaca</h4><a href="05-post-marka-hikayesi.html">Hikayemiz</a><a href="https://www.karaca.com/magazalar">Mağazalar</a><a href="https://www.karaca.com/kariyer">Kariyer</a><a href="https://www.karaca.com/iletisim">İletişim</a></div>
+<div class="ft-col"><h4>Yasal</h4><a href="https://www.karaca.com/kvkk">KVKK Aydınlatma</a><a href="https://www.karaca.com/cerez-politikasi">Çerez Politikası</a><a href="https://www.karaca.com/kullanim-kosullari">Kullanım Koşulları</a></div>
+</div>
+<div class="ft-bottom"><span>&copy; 2026 Karaca Züccaciye A.Ş.</span><div class="ft-socials"><a href="https://www.instagram.com/karaca/">Instagram</a><a href="https://www.youtube.com/karaca">YouTube</a><a href="https://www.pinterest.com/karaca/">Pinterest</a><a href="https://www.karaca.com">karaca.com</a></div></div>
 </div></footer>
-
-<script>
-(function(){
-  document.querySelectorAll('.faq-q').forEach(function(btn){
-    btn.addEventListener('click',function(){
-      var item=btn.parentElement;var wasOpen=item.classList.contains('open');
-      document.querySelectorAll('.faq-item').forEach(function(fi){fi.classList.remove('open')});
-      if(!wasOpen) item.classList.add('open');
-    });
-  });
-  var nav=document.getElementById('nav');
-  window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>10)},{passive:true});
-  var tocLinks=document.querySelectorAll('.toc a');
-  var ids=['adim1','adim2','adim3'];
-  var headings=ids.map(function(id){return document.getElementById(id)}).filter(Boolean);
-  if(headings.length){
-    window.addEventListener('scroll',function(){
-      var y=window.scrollY+120;var active=0;
-      headings.forEach(function(h,i){if(h.offsetTop<=y) active=i});
-      tocLinks.forEach(function(l,i){l.classList.toggle('active',i===active)});
-    },{passive:true});
-  }
-})();
-</script>
 </body>
 </html>

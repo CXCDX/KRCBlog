@@ -2,140 +2,100 @@
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Sayfa Bulunamadı | Karaca Dergi</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400&display=swap" rel="stylesheet">
 <style>
-:root{
-  --bk:#1a1a1a;--warm:#2c2420;--cream:#f7f3ee;--sand:#e8e0d4;
-  --gold:#b8956a;--gold-lt:#d4b896;--gold-dk:#96764d;
-  --g50:#faf9f7;--g100:#f2f0ec;--g200:#e5e2dc;--g300:#ccc8c0;
-  --g500:#8c8279;--g700:#5c554d;--wh:#fff;
-  --serif:'Playfair Display',Georgia,serif;
-  --sans:'DM Sans',-apple-system,BlinkMacSystemFont,sans-serif;
-  --mx:1360px;--r:10px;--ease:cubic-bezier(.4,0,.2,1);
-}
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth;height:100%}
-body{font-family:var(--sans);color:var(--bk);background:var(--cream);-webkit-font-smoothing:antialiased;min-height:100%;display:flex;flex-direction:column}
-a{color:inherit;text-decoration:none}button{font-family:inherit;cursor:pointer;border:none;background:none}
-.c{max-width:var(--mx);margin:0 auto;padding:0 40px}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{font-family:var(--sans);color:var(--bk);background:var(--white);line-height:1.7;overflow-x:hidden}
+a{text-decoration:none;color:inherit;transition:color .2s}
+img{display:block;max-width:100%;height:auto}
+:root{
+  --bk:#111;--g900:#1a1a1a;--g700:#333;--g500:#666;--g400:#888;--g300:#aaa;--g200:#ccc;--g100:#e5e5e5;--g50:#f5f5f5;
+  --white:#fff;--accent:#e63946;--accent-soft:#fef1f2;
+  --serif:'Fraunces',Georgia,serif;--sans:'Plus Jakarta Sans',-apple-system,sans-serif;
+  --ease:cubic-bezier(.22,1,.36,1);--max:1440px;--content:780px;--pad:clamp(20px,4vw,80px)
+}
+.topbar{background:var(--bk);color:var(--white);text-align:center;padding:10px var(--pad);font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase}
+.topbar a{color:var(--white);text-decoration:underline;text-underline-offset:2px}
+.nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--g100)}
+.nav-inner{max-width:var(--max);margin:0 auto;padding:0 var(--pad);display:flex;align-items:center;justify-content:space-between;height:64px}
+.nav-logo{font-family:var(--serif);font-size:22px;font-weight:600;letter-spacing:-.02em}
+.nav-logo span{font-weight:300;color:var(--g400);margin-left:6px;font-size:16px}
+.nav-links{display:flex;align-items:center;gap:32px}
+.nav-links a{font-size:13px;font-weight:500;color:var(--g500);letter-spacing:.02em}
+.nav-links a:hover{color:var(--bk)}
+.nav-icons{display:flex;gap:16px;align-items:center}
+.nav-icons a{color:var(--g500)}.nav-icons a:hover{color:var(--bk)}
+.nav-icons svg{width:20px;height:20px}
+.footer{background:var(--bk);color:var(--white);padding:64px 0 32px}
+.ft-inner{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+.ft-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px}
+.ft-brand{font-family:var(--serif);font-size:24px;font-weight:600;margin-bottom:16px}
+.ft-brand span{font-weight:300;color:var(--g400);font-size:16px;margin-left:4px}
+.ft-desc{font-size:13px;color:var(--g400);line-height:1.6;max-width:300px}
+.ft-col h4{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--g400);margin-bottom:16px}
+.ft-col a{display:block;font-size:13px;color:var(--g300);margin-bottom:10px;transition:color .2s}
+.ft-col a:hover{color:var(--white)}
+.ft-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:24px;display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--g500)}
+.ft-socials{display:flex;gap:16px}.ft-socials a{color:var(--g400)}.ft-socials a:hover{color:var(--white)}
+@media(max-width:1024px){.ft-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.nav-links{display:none}.ft-grid{grid-template-columns:1fr}}
 
-/* NAV */
-.nav{background:var(--wh);border-bottom:1px solid var(--g200)}
-.nav-top{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
-.logo{font-family:var(--serif);font-size:26px;font-weight:700;letter-spacing:-.5px}
-.logo em{font-weight:400;color:var(--gold);font-size:18px;margin-left:4px;font-style:italic}
-.nav-home{font-size:13px;font-weight:600;color:var(--g500);display:flex;align-items:center;gap:4px;transition:color .2s}
-.nav-home:hover{color:var(--bk)}
-.nav-home svg{width:16px;height:16px}
-
-/* ═══ 404 HERO ═══ */
-.e404{flex:1;display:flex;align-items:center;justify-content:center;padding:40px 0}
-.e404-inner{text-align:center;max-width:560px}
-
-/* SVG Illustration */
-.e404-illust{position:relative;width:200px;height:200px;margin:0 auto 32px}
-.e404-plate{width:200px;height:200px}
-
-/* Typography */
-.e404-code{font-family:var(--serif);font-size:120px;font-weight:700;color:var(--sand);line-height:1;margin-bottom:-10px;letter-spacing:-4px}
-.e404-inner h1{font-family:var(--serif);font-size:clamp(24px,3vw,32px);font-weight:700;color:var(--bk);margin-bottom:8px}
-.e404-inner p{font-size:15px;color:var(--g500);line-height:1.6;margin-bottom:28px}
-
-/* Search */
-.e404-search{display:flex;gap:0;max-width:420px;margin:0 auto 32px}
-.e404-input{flex:1;padding:12px 16px;font-size:14px;font-family:var(--sans);border:2px solid var(--g200);border-right:none;border-radius:var(--r) 0 0 var(--r);outline:none;background:var(--wh);transition:border-color .2s}
-.e404-input:focus{border-color:var(--gold)}
-.e404-btn{padding:12px 20px;background:var(--warm);color:var(--wh);border-radius:0 var(--r) var(--r) 0;font-size:13px;font-weight:700;display:flex;align-items:center;gap:6px;transition:background .2s}
-.e404-btn:hover{background:var(--bk)}
-.e404-btn svg{width:16px;height:16px}
-
-/* Quick Links */
+.e404{min-height:80vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:var(--pad)}
+.e404-icon{width:120px;height:120px;margin-bottom:24px}
+.e404-icon svg{width:100%;height:100%}
+.e404 h1{font-family:var(--serif);font-size:clamp(48px,8vw,96px);font-weight:600;letter-spacing:-.04em;color:var(--g200);margin-bottom:8px}
+.e404 h2{font-family:var(--serif);font-size:clamp(20px,2.5vw,28px);font-weight:500;margin-bottom:12px}
+.e404 p{font-size:15px;color:var(--g500);margin-bottom:32px;max-width:400px}
 .e404-links{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:24px}
-.e404-link{padding:8px 18px;border-radius:100px;font-size:13px;font-weight:600;border:1px solid var(--g200);color:var(--g700);background:var(--wh);transition:all .2s var(--ease)}
-.e404-link:hover{border-color:var(--gold);color:var(--gold-dk);box-shadow:0 2px 12px rgba(184,149,106,.1)}
+.e404-links a{padding:8px 20px;border-radius:100px;font-size:13px;font-weight:600;background:var(--g50);color:var(--g500);transition:all .2s}
+.e404-links a:hover{background:var(--bk);color:var(--white)}
+.e404-home{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;background:var(--bk);color:var(--white);border-radius:100px;font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;transition:background .2s}
+.e404-home:hover{background:var(--g700);color:var(--white)}
 
-/* Divider */
-.e404-or{font-size:12px;color:var(--g300);margin-bottom:20px;display:flex;align-items:center;gap:12px}
-.e404-or::before,.e404-or::after{content:'';flex:1;height:1px;background:var(--g200)}
-
-/* Home CTA */
-.e404-home{display:inline-flex;align-items:center;gap:6px;padding:10px 24px;background:var(--gold);color:var(--wh);border-radius:8px;font-size:13px;font-weight:700;transition:background .2s}
-.e404-home:hover{background:var(--gold-dk)}
-.e404-home svg{width:16px;height:16px}
-
-/* FOOTER */
-.ft{background:var(--wh);border-top:1px solid var(--g200);padding:24px 0;margin-top:auto}
-.ft-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
-.ft-copy{font-size:11.5px;color:var(--g500)}
-.ft-links{display:flex;gap:20px}.ft-links a{font-size:12px;color:var(--g500)}.ft-links a:hover{color:var(--bk)}
-
-@media(max-width:768px){.c{padding:0 16px}.e404-code{font-size:80px}}
 </style>
 </head>
 <body>
-
-<!-- NAV -->
-<nav class="nav"><div class="c">
-  <div class="nav-top">
-    <a href="01-anasayfa.html" class="logo">Karaca <em>Dergi</em></a>
-    <a href="01-anasayfa.html" class="nav-home"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg> Ana Sayfa</a>
-  </div>
-</div></nav>
-
-<!-- 404 -->
-<section class="e404"><div class="e404-inner">
-  <!-- Broken plate SVG illustration -->
-  <div class="e404-illust">
-    <svg class="e404-plate" viewBox="0 0 200 200" fill="none">
-      <!-- Plate base -->
-      <ellipse cx="100" cy="120" rx="80" ry="30" fill="#e8e0d4" stroke="#ccc8c0" stroke-width="1.5"/>
-      <ellipse cx="100" cy="115" rx="80" ry="30" fill="#f7f3ee" stroke="#ccc8c0" stroke-width="1.5"/>
-      <ellipse cx="100" cy="115" rx="60" ry="22" fill="none" stroke="#e5e2dc" stroke-width="1"/>
-      <!-- Crack lines -->
-      <path d="M85 100 L95 125 L88 140" stroke="#b8956a" stroke-width="1.5" stroke-linecap="round" fill="none"/>
-      <path d="M95 125 L110 118" stroke="#b8956a" stroke-width="1.5" stroke-linecap="round" fill="none"/>
-      <path d="M110 102 L105 120 L115 135" stroke="#b8956a" stroke-width="1" stroke-linecap="round" fill="none" opacity=".5"/>
-      <!-- Sparkle accents -->
-      <circle cx="60" cy="80" r="2" fill="#b8956a" opacity=".3"/>
-      <circle cx="145" cy="85" r="1.5" fill="#b8956a" opacity=".2"/>
-      <circle cx="90" cy="70" r="1" fill="#b8956a" opacity=".4"/>
-      <!-- 404 on plate -->
-      <text x="100" y="110" text-anchor="middle" font-family="'Playfair Display',Georgia,serif" font-size="28" font-weight="700" fill="#ccc8c0">404</text>
-    </svg>
-  </div>
-
-  <div class="e404-code">404</div>
-  <h1>Bu Tabak Boş Kaldı</h1>
-  <p>Aradığınız sayfa taşınmış, kaldırılmış veya hiç var olmamış olabilir. Ama mutfakta her zaman yeni bir tarif vardır.</p>
-
-  <div class="e404-search">
-    <input class="e404-input" type="text" placeholder="Ne arıyordunuz?">
-    <button class="e404-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg> Ara</button>
-  </div>
-
-  <div class="e404-links">
-    <a href="03-post-tarif.html" class="e404-link">Tarifler</a>
-    <a href="07-post-rehber-airfryer.html" class="e404-link">Airfryer Rehberi</a>
-    <a href="06-post-karsilastirma.html" class="e404-link">Tencere Karşılaştırma</a>
-    <a href="08-post-nasil-yapilir.html" class="e404-link">Bakım İpuçları</a>
-    <a href="09-post-ramazan-2026.html" class="e404-link">Ramazan Sofrası</a>
-    <a href="05-post-marka-hikayesi.html" class="e404-link">Karaca Hikâyesi</a>
-  </div>
-
-  <div class="e404-or">veya</div>
-
-  <a href="01-anasayfa.html" class="e404-home"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg> Ana Sayfaya Dön</a>
-</div></section>
-
-<!-- FOOTER -->
-<footer class="ft"><div class="c">
-  <div class="ft-bottom">
-    <span class="ft-copy">© 2026 Karaca. Tüm hakları saklıdır.</span>
-    <div class="ft-links"><a href="https://www.instagram.com/karaborsa/">Instagram</a><a href="https://www.youtube.com/karaca">YouTube</a><a href="https://www.pinterest.com/karaca/">Pinterest</a><a href="https://www.karaca.com">karaca.com</a></div>
-  </div>
+<div class="topbar">2.500 TL üzeri alışverişlerde ücretsiz kargo &middot; <a href="https://www.karaca.com">karaca.com</a></div>
+<nav class="nav"><div class="nav-inner">
+<a href="01-anasayfa.html" class="nav-logo">Karaca <span>Dergi</span></a>
+<div class="nav-links">
+<a href="02-pillar-mutfak-pisirme.html">Mutfak &amp; Pişirme</a>
+<a href="08-post-nasil-yapilir.html">Sofra &amp; Sunum</a>
+<a href="04-post-sorun-giderme.html">Kahve &amp; Çay</a>
+<a href="07-post-rehber-airfryer.html">Küçük Ev Aletleri</a>
+<a href="08-post-nasil-yapilir.html">Bakım &amp; Destek</a>
+<a href="05-post-marka-hikayesi.html">Hikayemiz</a>
+</div>
+<div class="nav-icons">
+<a href="10-arama-sonuclari.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></a>
+<a href="https://www.karaca.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4zM3 6h18M16 10a4 4 0 01-8 0"/></svg></a>
+</div></div></nav>
+<div class="e404">
+<div class="e404-icon"><svg viewBox="0 0 120 120" fill="none"><circle cx="60" cy="60" r="56" stroke="#e5e5e5" stroke-width="2"/><text x="60" y="68" text-anchor="middle" font-family="Fraunces,serif" font-size="36" font-weight="500" fill="#ccc">404</text></svg></div>
+<h1>404</h1>
+<h2>Bu Tabak Boş Kaldı</h2>
+<p>Aradığınız sayfa taşınmış veya kaldırılmış olabilir.</p>
+<div class="e404-links">
+<a href="03-post-tarif.html">Tarifler</a>
+<a href="07-post-rehber-airfryer.html">Airfryer Rehberi</a>
+<a href="06-post-karsilastirma.html">Tencere Karşılaştırma</a>
+<a href="08-post-nasil-yapilir.html">Bakım İpuçları</a>
+<a href="09-post-ramazan-2026.html">Ramazan Sofrası</a>
+<a href="05-post-marka-hikayesi.html">Karaca Hikayesi</a>
+</div>
+<a href="01-anasayfa.html" class="e404-home">Ana Sayfaya Dön</a>
+</div>
+<footer class="footer"><div class="ft-inner">
+<div class="ft-grid">
+<div><div class="ft-brand">Karaca <span>Dergi</span></div><p class="ft-desc">Mutfak, sofra ve yaşama dair ilham veren içerikler. 1973’ten bu yana paylaşacak çok şeyimiz var.</p></div>
+<div class="ft-col"><h4>İçerikler</h4><a href="03-post-tarif.html">Tarifler</a><a href="07-post-rehber-airfryer.html">Rehberler</a><a href="06-post-karsilastirma.html">Karşılaştırmalar</a><a href="08-post-nasil-yapilir.html">Bakım İpuçları</a><a href="09-post-ramazan-2026.html">Mevsimsel</a></div>
+<div class="ft-col"><h4>Karaca</h4><a href="05-post-marka-hikayesi.html">Hikayemiz</a><a href="https://www.karaca.com/magazalar">Mağazalar</a><a href="https://www.karaca.com/kariyer">Kariyer</a><a href="https://www.karaca.com/iletisim">İletişim</a></div>
+<div class="ft-col"><h4>Yasal</h4><a href="https://www.karaca.com/kvkk">KVKK Aydınlatma</a><a href="https://www.karaca.com/cerez-politikasi">Çerez Politikası</a><a href="https://www.karaca.com/kullanim-kosullari">Kullanım Koşulları</a></div>
+</div>
+<div class="ft-bottom"><span>&copy; 2026 Karaca Züccaciye A.Ş.</span><div class="ft-socials"><a href="https://www.instagram.com/karaca/">Instagram</a><a href="https://www.youtube.com/karaca">YouTube</a><a href="https://www.pinterest.com/karaca/">Pinterest</a><a href="https://www.karaca.com">karaca.com</a></div></div>
 </div></footer>
-
 </body>
 </html>
